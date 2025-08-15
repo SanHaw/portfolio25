@@ -1,8 +1,20 @@
+import HeroTitle from '../components/Home/heroTitle.tsx';
+
 export default function Home() {
   return (
-    <section className="mx-auto max-w-[var(--page-max)] px-4 py-8">
-      <h1 className="text-3xl md:text-4xl font-bold">Home</h1>
-      <p className="mt-3 text-stone-700">Welcome to my portfolio. Replace this with your Home content.</p>
+    <section id="HOME_hero" className="mx-auto max-w-[var(--page-max)] px-4 py-12">
+      <div>
+        <div>
+          <div>
+        
+        <HeroTitle/>
+      </div></div></div>
+
+      <div>
+        <p className="mt-8 text-stone-700 max-w-2xl mx-auto text-center">
+          Welcome to my portfolio.
+        </p>
+      </div>
     </section>
   );
 }

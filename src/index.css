@@ -6,3 +6,99 @@
 :root {
   --page-max: 1200px;
 }
+
+/* ==== Webfont aliases for your files (paths are from src/index.css) ==== */
+
+/* title - gamelia (your file is GamiliaPixel-Regular.otf) */
+@font-face {
+  font-family: "Title";
+  src: url("./assets/fonts/GamiliaPixel-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* body - geist (variable weight) */
+@font-face {
+  font-family: "Body";
+  src: url("./assets/fonts/Geist-VariableFont_wght.ttf") format("truetype-variations");
+  font-weight: 100 900;   /* full variable range */
+  font-style: normal;
+  font-display: swap;
+}
+
+/* t1 - condiment */
+@font-face {
+  font-family: "T1";
+  src: url("./assets/fonts/Condiment-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* t2 - amstir */
+@font-face {
+  font-family: "T2";
+  src: url("./assets/fonts/AmstirPixel-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* t3 - beonty  ⟶ I don’t see a Beonty file in your list.
+   Leave this commented until you add it (e.g., Beonty-Regular.ttf).
+
+@font-face {
+  font-family: "T3";
+  src: url("./assets/fonts/Beonty-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+*/
+
+/* t4 - Pixel script */
+@font-face {
+  font-family: "T4";
+  src: url("./assets/fonts/PixelScriptRegular-0WnDG.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* t5 - helvine */
+@font-face {
+  font-family: "T5";
+  src: url("./assets/fonts/Helvine-ExtrudeRight_demo.otf") format("opentype");
+  font-weight: 700; /* it’s an extruded display cut—treat as bold */
+  font-style: normal;
+  font-display: swap;
+}
+
+/* t6 - ari-w9 */
+@font-face {
+  font-family: "T6";
+  src: url("./assets/fonts/ari-w9500.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* t7 - ansela */
+@font-face {
+  font-family: "T7";
+  src: url("./assets/fonts/AnselaPixel-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* t8 - league (variable width) */
+@font-face {
+  font-family: "T8";
+  src: url("./assets/fonts/LeagueGothic-Regular-VariableFont_wdth.ttf") format("truetype-variations");
+  font-weight: 400;          /* this cut is “Regular”; keep as 400 */
+  font-stretch: 75% 125%;    /* enables width axis if you use it */
+  font-style: normal;
+  font-display: swap;
+}

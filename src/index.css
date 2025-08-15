@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global tokens (example) */
+:root {
+  --page-max: 1200px;
+}

@@ -17,7 +17,7 @@ export default function HeroText() {
       className="relative mx-auto max-w-[var(--page-max)] px-4 py-12"
     >
       {/* ===== Main Title ===== */}
-    <div className="relative z-10 translate-y-[33svh]">
+    <div className="relative z-10 translate-y-[33svh] text-navy">
         <HeroTitle />
     </div>
 
@@ -25,7 +25,7 @@ export default function HeroText() {
     <p
     className="relative z-50 mt-8 w-fit mx-auto
                 translate-y-[3.5em] translate-x-[5em]
-                text-center text-gray-600 leading-[0.95]"
+                text-center !text-brand-purple leading-[0.95]"
     style={{ fontFamily: "T8", fontSize: "clamp(32px, 7vw, 110px)" }}
     >
     MEET MY WORK

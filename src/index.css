@@ -103,7 +103,9 @@
   font-display: swap;
 }
 
-/* fallback spin in case animate-spin isn't emitted */
-@keyframes star-spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
-.star-spin { animation: star-spin 12s linear infinite; }
-@media (prefers-reduced-motion: reduce) { .star-spin { animation: none; } }
+@keyframes spinSlow {
+  to { transform: rotate(360deg); }
+}
+.spin-slow {
+  animation: spinSlow 12s linear infinite;
+}

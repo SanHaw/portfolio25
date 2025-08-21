@@ -1,143 +1,184 @@
-import HeroTitle from "./heroTitle";
+// src/components/HeroText.tsx
+import Folder from '../../assets/HOME/hero/title/folder.svg';
+import HeroTitile from './heroTitle';
 
-import decoBottomLeft from "../../assets/HOME/hero/deco/bottom_left.png";
-import decoBottomRight from "../../assets/HOME/hero/deco/bottom_right.png";
-import decoLeft from "../../assets/HOME/hero/deco/left.png";
-import decoRight from "../../assets/HOME/hero/deco/right.png";
-import decoShock from "../../assets/HOME/hero/deco/shock.svg";
-import decoTop from "../../assets/HOME/hero/deco/top.png";
-import decoTopLeft from "../../assets/HOME/hero/deco/top_left.png";
-import decoTopRight from "../../assets/HOME/hero/deco/top_right.png";
-import folderUrl from "../../assets/HOME/hero/title/folder.svg";
+// Deco (excluding shock & swirl)
+import DecoBottomLeft from '../../assets/HOME/hero/deco/bottom_left.png';
+import DecoBottomRight from '../../assets/HOME/hero/deco/bottom_right.png';
+import DecoLeft from '../../assets/HOME/hero/deco/left.png';
+import DecoRight from '../../assets/HOME/hero/deco/right.png';
+import DecoTop from '../../assets/HOME/hero/deco/top.png';
+import DecoTopLeft from '../../assets/HOME/hero/deco/top_left.png';
+import DecoTopRight from '../../assets/HOME/hero/deco/top_right.png';
 
 export default function HeroText() {
   return (
-    <section
-      id="HOME_hero"
-      className="relative mx-auto max-w-[var(--page-max)] px-4 py-12"
-    >
-      {/* ===== Main Title ===== */}
-    <div className="relative z-10 translate-y-[33svh] text-navy">
-        <HeroTitle />
-    </div>
-
-      {/* ===== Subtitle (always in front) ===== */}
-    <p
-    className="relative z-50 mt-8 w-fit mx-auto
-                translate-y-[3.5em] translate-x-[5em]
-                text-center !text-brand-purple leading-[0.95]"
-    style={{ fontFamily: "T8", fontSize: "clamp(32px, 7vw, 110px)" }}
-    >
-    MEET MY WORK
-    </p>
-
-
-      {/* ================== DECORATIONS (all em, no outlines) ================== */}
-
-      {/* TOP – centered above the title */}
-      <img
-        src={decoTop}
-        alt=""
+    <section className="relative py-12 isolate">
+      {/* === FOREGROUND DECO OVERLAY (in front of folder) === */}
+      <div
         className="
-          pointer-events-none select-none absolute z-20
-          left-[2.5em] top-[1.15em] w-[80em] h-auto
+          pointer-events-none select-none
+          absolute left-1/2 top-1/2 -translate-x-1/2
+          translate-y-[18%] sm:translate-y-[16%] md:translate-y-[14%]
+          lg:translate-y-[20%] xl:translate-y-[-5%]
+          w-[80vw] md:w-[60vw] max-w-[1400px]
+          z-0
+        "
+        style={{ aspectRatio: '2 / 1' }}
+      >
+        {/* Top center */}
+        <img
+          src={DecoTop}
+          alt=""
+          className="absolute"
+          style={{
+            left: '55%',
+            top: '25%',
+            transform: 'translate(-50%, -50%) translate(0%, -52%)',
+            width: '90%',
+          }}
+        />
+        {/* Bottom left */}
+        <img
+          src={DecoBottomLeft}
+          alt=""
+          className="absolute"
+          style={{
+            left: '18%',
+            top: '100%',
+            transform: 'translate(-50%, -50%) translate(-48%, 40%)',
+            width: '40%',
+          }}
+        />
+        {/* Bottom right */}
+        <img
+          src={DecoBottomRight}
+          alt=""
+          className="absolute"
+          style={{
+            left: '80%',
+            top: '100%',
+            transform: 'translate(-50%, -50%) translate(48%, 40%)',
+            width: '50%',
+          }}
+        />
+
+        {/* === NEW: Middle-right label === */}
+        <div
+          className="absolute"
+          style={{
+            left: '50%',
+            top: '50%',
+            transform: 'translate(-50%, -50%) translate(12%, 0%)', // nudge right
+          }}
+        >
+          
+          
+        <span
+          className="inline-block transform text-[#131F5E] whitespace-nowrap leading-none
+                    text-base sm:text-2xl md:text-4xl lg:text-6xl xl:text-7xl
+                    translate-x-[40%] sm:translate-x-[34%] md:translate-x-[38%] lg:translate-x-[50%] xl:translate-x-[120%]
+                    translate-y-[10%] sm:translate-y-[12%] md:translate-y-[14%] lg:translate-y-[16%] xl:translate-y-[80%]"
+          style={{ fontFamily: 'T8, sans-serif' }}
+        >
+          MEET MY WORKS
+        </span>
+
+
+
+
+
+
+        </div>
+      </div>
+
+      {/* === FOLDER (unchanged) — sits behind the three foreground decos === */}
+      <img
+        src={Folder}
+        alt=""
+        aria-hidden
+        className="
+          pointer-events-none select-none
+          absolute left-1/2 top-1/2 -translate-x-1/2
+          translate-y-[18%] sm:translate-y-[16%] md:translate-y-[14%]
+          lg:translate-y-[20%] xl:translate-y-[1%]
+          origin-center scale-90 md:scale-80 lg:scale-95
+          -z-10
         "
       />
 
-      {/* TOP RIGHT */}
-      <img
-        src={decoTopRight}
-        alt=""
+      {/* === BACKGROUND DECO OVERLAY (behind folder) === */}
+      <div
         className="
-          pointer-events-none select-none absolute z-20
-          right-[-25em] top-[5em] w-[27em] h-auto
+          pointer-events-none select-none
+          absolute left-1/2 top-1/2 -translate-x-1/2
+          translate-y-[18%] sm:translate-y-[16%] md:translate-y-[14%]
+          lg:translate-y-[20%] xl:translate-y-[-5%]
+          w-[80vw] md:w-[60vw] max-w-[1400px]
+          -z-20
         "
-      />
+        style={{ aspectRatio: '2 / 1' }}
+      >
+        {/* Top-left */}
+        <img
+          src={DecoTopLeft}
+          alt=""
+          className="absolute"
+          style={{
+            left: '15%',
+            top: '27%',
+            transform: 'translate(-50%, -50%) translate(-48%, -40%)',
+            width: '40%',
+          }}
+        />
+        {/* Top-right */}
+        <img
+          src={DecoTopRight}
+          alt=""
+          className="absolute"
+          style={{
+            left: '90%',
+            top: '5%',
+            transform: 'translate(-50%, -50%) translate(48%, -40%)',
+            width: '30%',
+          }}
+        />
+        {/* Left side */}
+        <img
+          src={DecoLeft}
+          alt=""
+          className="absolute"
+          style={{
+            left: '1%',
+            top: '80%',
+            transform: 'translate(-50%, -50%) translate(-45%, 0%)',
+            width: '30%',
+          }}
+        />
+        {/* Right side */}
+        <img
+          src={DecoRight}
+          alt=""
+          className="absolute"
+          style={{
+            left: '99%',
+            top: '65%',
+            transform: 'translate(-50%, -50%) translate(45%, 0%)',
+            width: '30%',
+          }}
+        />
+      </div>
 
-      {/* TOP LEFT */}
-      <img
-        src={decoTopLeft}
-        alt=""
-        className="
-          pointer-events-none select-none absolute z-20
-          left-[-30.7em] top-[4.1em] w-[39em] h-auto
+      {/* === HERO TITLE (front-most) — unchanged === */}
+      <div
+        className="relative z-10 mx-auto w-fit px-4
+          pt-[10%] sm:pt-[50%] md:pt-[50%]
+          lg:pt-[10%] xl:pt-[12%]
+          origin-center scale-90 md:scale-100 lg:scale-140
         "
-      />
-
-      {/* LEFT (slides behind folder on mobile) */}
-      <img
-        src={decoLeft}
-        alt=""
-        className="
-          pointer-events-none select-none absolute md:z-20 -z-10
-          left-[-30.1em] top-[28em] w-[26em] h-auto
-          md:translate-y-0 translate-y-[10em] transition-transform duration-500
-        "
-      />
-
-      {/* RIGHT (slides behind folder on mobile) */}
-      <img
-        src={decoRight}
-        alt=""
-        className="
-          pointer-events-none select-none absolute md:z-20 -z-10
-          -right-[32em] top-[25em] w-[27em] h-auto
-          md:translate-y-0 translate-y-[10em] transition-transform duration-500
-        "
-      />
-
-      {/* BOTTOM LEFT (slides behind folder on mobile) */}
-      <img
-        src={decoBottomLeft}
-        alt=""
-        className="
-          pointer-events-none select-none absolute md:z-20 -z-10
-          -left-[23em] -bottom-[53em] w-[30em] h-auto
-          md:translate-y-0 translate-y-[8em] transition-transform duration-500
-        "
-      />
-
-      {/* BOTTOM RIGHT (slides behind folder on mobile) */}
-      <img
-        src={decoBottomRight}
-        alt=""
-        className="
-          pointer-events-none select-none absolute md:z-20 -z-10
-          -right-[33em] -bottom-[61em] w-[50em] h-auto
-          md:translate-y-0 translate-y-[8em] transition-transform duration-500
-        "
-      />
-
-      {/* wrapper keeps position & translate */}
-<div
-  className="
-    pointer-events-none select-none absolute md:z-20 -z-10
-    -right-[20em] -bottom-[38em] w-[13em]
-    md:translate-y-0 translate-y-[8em]
-    transition-transform duration-500 transform-gpu
-  "
->
-  {/* inner image spins */}
-  <img
-    src={decoShock}
-    alt=""
-    className="block w-full h-auto spin-slow"
-    style={{ transformOrigin: "center" }}
-  />
-</div>
-
-
-      {/* Mobile folder overlay (top half a bit below center) */}
-      <img
-        src={folderUrl}
-        alt=""
-        className="
-            pointer-events-none select-none absolute -z-20 md:hidden
-            left-1/2 -translate-x-1/2 top-[28em]
-            w-[80em] h-auto
-        "
-    />
-
+      >
+        <HeroTitile />
+      </div>
     </section>
   );
 }

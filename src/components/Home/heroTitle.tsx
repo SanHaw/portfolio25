@@ -1,56 +1,39 @@
-// src/components/Home/heroTitle.tsx
-import starUrl from "../../assets/HOME/hero/title/Star.svg";
+// src/components/DualHello.tsx
+import Hello from '../../assets/HOME/hero/title/hello.svg';
+import Star from '../../assets/HOME/hero/title/Star.svg';
+import World from '../../assets/HOME/hero/title/world.svg';
 
-type Props = {
-  sizeClass?: string;
-  colorClass?: string;
-  align?: "left" | "center" | "right";
-  spaceWidth?: string | number;
-};
-
-export default function HeroTitle(props: Props) {
-  const {
-    sizeClass = "text-[clamp(72px,18vw,250px)]", // ← was 48px,12vw,160px
-    colorClass = "text-[#0f2746]",
-    align = "center",
-    spaceWidth = "0.6em",
-  } = props;
-
-  const justify =
-    align === "center" ? "justify-center" : align === "right" ? "justify-end" : "justify-start";
-
-  const base = `inline-block align-baseline leading-none ${sizeClass} ${colorClass}`;
-
+export default function HeroTitle() {
   return (
-    <div className="w-full">
-      <div className={`relative isolate flex flex-nowrap ${justify}`}>
-        <span className={`${base} ml-[0rem] mr-[0.5rem] mt-[0rem] mb-[0rem]`} style={{ fontFamily: "Title" }}>H</span>
-        <span className={`${base} ml-[0.25rem] mr-[0.25rem] mt-[-.5rem] mb-[0rem]`} style={{ fontFamily: "T4" }}>e</span>
-        <span className={`${base} ml-[-.250rem] mr-[0.5rem] mt-[0rem] mb-[0rem]`} style={{ fontFamily: "Title" }}>l</span>
-        <span className={`${base} ml-[1.5rem] mr-[1rem] mt-[1.5rem] mb-[0rem]`} style={{ fontFamily: "T5" }}>l</span>
+    <section className="w-full py-8">
+      {/* Center the whole group */}
+      <div className="mx-auto w-fit px-4">
+        <div className="inline-flex flex-col md:flex-row items-center justify-center gap-6">
+          {/* Hello + spinning star */}
+          <div className="relative">
+            <img
+              src={Star}
+              alt=""
+              aria-hidden
+              className="spin-slow absolute top-1/2 left-[90%]
+                        -translate-x-1/2 -translate-y-1/2
+                        w-[115%] max-w-none pointer-events-none select-none -z-10"
+            />
+            <img
+              src={Hello}
+              alt="Hello"
+              className="block mx-auto w-[clamp(12rem,40vw,22rem)] h-auto"
+            />
+          </div>
 
-        {/* o with star anchored behind it */}
-        <span className="relative inline-flex align-baseline leading-none">
+          {/* World (stacks under Hello on mobile) */}
           <img
-            src={starUrl}
-            alt=""
-            className="
-              pointer-events-none absolute -z-10
-              left-1/2 top-1/2 translate-x-[calc(-50%+0.13em)] -translate-y-1/2
-              w-[45em] h-auto spin-slow
-            "
+            src={World}
+            alt="World"
+            className="block mx-auto w-[clamp(12rem,40vw,22rem)] h-auto md:pt-3"
           />
-          <span className={`${base}`} style={{ fontFamily: "Title" }}>o</span>
-        </span>
-
-        <span className="inline-block" style={{ width: spaceWidth }} />
-
-        <span className={`${base} ml-[4rem] -mr-[1rem] mt-[-0.5rem] mb-[0rem]`} style={{ fontFamily: "T4" }}>W</span>
-        <span className={`${base} -ml-[3rem] mr-[0.25rem] mt-[1rem] mb-[0rem]`} style={{ fontFamily: "Title" }}>o</span>
-        <span className={`${base} ml-[0rem] mr-[0rem] mt-[1rem] mb-[0rem]`} style={{ fontFamily: "Body" }}>r</span>
-        <span className={`${base} ml-[-0.25rem] mr-[0.5rem] mt-[1rem] mb-[0rem]`} style={{ fontFamily: "Title" }}>l</span>
-        <span className={`${base} ml-[0.25rem] mr-[0rem] mt-[-.5rem] mb-[0rem]`} style={{ fontFamily: "T6" }}>d</span>
+        </div>
       </div>
-    </div>
+    </section>
   );
 }

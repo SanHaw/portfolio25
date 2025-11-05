@@ -1,0 +1,167 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+	--site-bg: #fafafa; /* stone-50 */
+	--site-text: #1c1917; /* stone-800 */
+	--accent: #fbbf24;   /* amber-400 */
+	--accent-600: #fbbf24; /* amber-400 for hover */
+	--muted: rgba(251,191,36,0.06); /* amber-400 with opacity */
+}
+
+/* Prevent accidental horizontal scroll from very large text or elements */
+html, body, #root {
+	overflow-x: hidden;
+}
+
+/* Page-level background and base text color */
+body {
+	background-color: var(--site-bg);
+	color: var(--site-text);
+}
+
+/* Ensure media don't exceed their containers */
+img, video, iframe { max-width: 100%; height: auto; display: block }
+
+/* profile image helpers
+	 - mobile: landscape 5:4 (image on top)
+	 - md+: portrait 4:5 (image on left)
+*/
+.profile-image {
+	width: 100%;
+	aspect-ratio: 5 / 4;
+	object-fit: cover;
+	border-radius: 0.5rem;
+	box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+}
+
+@media (min-width: 768px) {
+	.profile-image {
+		width: 12rem; /* ~192px */
+		aspect-ratio: 4 / 5;
+	}
+}
+
+/* component helpers */
+.container { max-width: 1100px; }
+.btn-primary {
+	padding: 0.5rem 1rem; /* py-2 px-4 */
+	border-radius: 0.25rem; /* rounded */
+	font-weight: 500; /* font-medium */
+	color: var(--site-text);
+	background-color: var(--accent);
+}
+.btn-secondary {
+	border: 1px solid rgba(56,55,49,0.12);
+	padding: 0.5rem 1rem; /* py-2 px-4 */
+	border-radius: 0.25rem; /* rounded */
+}
+.tag {
+	padding: 0.5rem 1rem; /* py-2 px-4 */
+	border-radius: 0.375rem;
+	font-size: 1rem; /* text-base */
+	background-color: var(--muted);
+	color: var(--site-text);
+}
+
+.bg-site { background-color: var(--site-bg) }
+.text-site { color: var(--site-text) }
+.accent { background-color: var(--accent) }
+.accent-text { color: var(--accent) }
+
+/* Hero heading scales with viewport width to always fit on screen
+*/
+.hero-heading {
+	font-size: 17vw; /* Scales proportionally with viewport width */
+	max-width: 95%; /* Never exceeds 95% of screen width */
+	word-break: break-word; /* ensure very long words wrap */
+	hyphens: auto;
+}
+
+/* content-wrap constrains non-hero content to a percentage of the viewport
+	 - mobile: 95%
+	 - small tablet: 90%
+	 - tablet: 85%
+	 - desktop/xl: 70%
+*/
+.content-wrap {
+	width: 95%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+@media (min-width: 640px) {
+	.content-wrap { width: 90%; }
+}
+
+@media (min-width: 768px) {
+	.content-wrap { width: 85%; }
+}
+
+@media (min-width: 1280px) {
+	.content-wrap { width: 70%; }
+}
+
+	/* icon circle styles: accent background with site-text icon color */
+	.icon-circle {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 36px;
+		height: 36px;
+		border-radius: 9999px;
+		background-color: var(--accent);
+		color: var(--site-text);
+	}
+
+	.icon-circle--large {
+		width: 56px;
+		height: 56px;
+	}
+
+	.icon-circle svg { display: block }
+
+	/* microinteractions */
+	/* card hover: use scale rather than translate to avoid layout shift of surrounding items.
+	   Also apply a gentle image zoom and border accent to give emphasis. */
+	.card {
+		transition: transform 220ms cubic-bezier(.2,.9,.2,1), box-shadow 220ms cubic-bezier(.2,.9,.2,1), border-color 220ms ease;
+		border: 1px solid rgba(56,55,49,0.06);
+	}
+	.card:hover {
+		transform: scale(1.02);
+		box-shadow: 0 18px 40px rgba(56,55,49,0.10);
+		border-color: rgba(229,205,45,0.45); /* soft accent tint */
+	}
+	.card:focus-within {
+		transform: scale(1.02);
+		box-shadow: 0 18px 40px rgba(56,55,49,0.10);
+		border-color: rgba(229,205,45,0.45);
+	}
+	/* image zoom inside card */
+	.card img { transition: transform 320ms cubic-bezier(.2,.9,.2,1); }
+	.card:hover img { transform: scale(1.06); }
+	/* icon-circle: hover should not move the element position (no translateY).
+	   Use scale + color/background changes instead to avoid layout shift. */
+	.icon-circle {
+		transition: transform 180ms ease, box-shadow 180ms ease, background-color 180ms ease, color 180ms ease;
+	}
+	.icon-circle:hover {
+		transform: scale(1.05);
+		box-shadow: 0 8px 22px rgba(0,0,0,0.08);
+		background-color: var(--accent-600);
+		color: var(--site-bg); /* svg uses currentColor - use site-bg instead of pure white */
+	}
+	.icon-circle:focus-visible {
+		outline: 3px solid rgba(0,0,0,0.06);
+		outline-offset: 3px;
+	}
+
+	/* details arrow hover: subtle color/scale change without moving its layout position */
+	.details-link svg { transition: transform 160ms ease, stroke 160ms ease; }
+	.details-link:hover svg { transform: scale(1.06); stroke: var(--accent); }
+	.btn-primary { transition: transform 160ms ease, box-shadow 160ms ease; }
+	.btn-primary:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
+	.btn-primary:focus { outline: 2px solid rgba(0,0,0,0.12); outline-offset: 2px }

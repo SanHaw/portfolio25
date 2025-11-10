@@ -2,6 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Custom font for hero heading */
+@font-face {
+	font-family: 'Stack Sans Headline';
+	src: url('../assets/fonts/StackSansHeadline-VariableFont_wght.ttf') format('truetype');
+	font-optical-sizing: auto;
+	font-weight: 100 900;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Scratchy Lemon';
+	src: url('../assets/fonts/Scratchy Lemon.otf') format('opentype');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@layer base {
+	/* Headings use font-weight 200 */
+	h1, h2, h3, h4, h5, h6 {
+		font-weight: 200;
+		text-transform: uppercase;
+	}
+	
+	/* Body text and subtitles use font-weight 200 */
+	body, p, span, div, a, li {
+		font-weight: 200;
+	}
+}
 
 :root {
 	--site-bg: #fafafa; /* stone-50 */
@@ -74,10 +104,30 @@ img, video, iframe { max-width: 100%; height: auto; display: block }
 /* Hero heading scales with viewport width to always fit on screen
 */
 .hero-heading {
-	font-size: 17vw; /* Scales proportionally with viewport width */
+	font-family: 'Scratchy Lemon', cursive, sans-serif;
+	font-size: clamp(3rem, 12vw + 1rem, 15rem); /* Responsive scaling using clamp with rem units */
 	max-width: 95%; /* Never exceeds 95% of screen width */
 	word-break: break-word; /* ensure very long words wrap */
 	hyphens: auto;
+}
+
+/* Responsive breakpoints for hero heading */
+@media (min-width: 640px) {
+	.hero-heading {
+		font-size: clamp(4rem, 10vw + 1rem, 15rem);
+	}
+}
+
+@media (min-width: 768px) {
+	.hero-heading {
+		font-size: clamp(5rem, 8vw + 1rem, 15rem);
+	}
+}
+
+@media (min-width: 1024px) {
+	.hero-heading {
+		font-size: clamp(6rem, 7vw + 1rem, 15rem);
+	}
 }
 
 /* content-wrap constrains non-hero content to a percentage of the viewport

@@ -20,8 +20,8 @@ export default function About() {
   <div className="content-wrap px-6 py-12 relative">
       <h1 className="text-6xl md:text-7xl lg:text-8xl font-light leading-snug tracking-tight text-center mb-12">About Me</h1>
 
-      <section className="mt-8 grid md:grid-cols-2 gap-6 md:items-center">
-        <div className="order-1 md:order-1">
+      <section className="mt-8 grid grid-cols-1 lg:grid-cols-[60%_40%] gap-6 lg:items-center">
+        <div className="order-1 lg:order-1">
           <h2 className="text-2xl font-semibold">My story</h2>
           <p className="mt-3 text-gray-700">I used to live a school–home–school 
               kind of life. In high school, I was the type who chased grades and 
@@ -67,14 +67,14 @@ export default function About() {
                 work that reminds me why I fell in love with design in the first 
                 place.</p>
         </div>
-        <div className="flex justify-center order-2 md:order-2">
-          <img src="/src/assets/about_me_pic.jpg" alt="about" className="w-full max-w-md rounded object-cover aspect-[3/4]" />
+        <div className="flex justify-center order-2 lg:order-2 h-full">
+          <img src="/src/assets/about_me_pic.jpg" alt="about" className="w-full h-full rounded object-cover" />
         </div>
       </section>
 
       <section className="mt-12">
         {/* <h2 className="text-2xl font-semibold mb-6">Photos</h2> */}
-        <div className="grid grid-cols-3 md:grid-cols-4 gap-6">
+        <div className="grid grid-cols-3 lg:grid-cols-4 gap-6">
           {[
             { title: 'SAMAHAN Systems Development', position: 'UX/UI Head', image: '/src/assets/gallery/sysdev.jpg', link: 'https://www.facebook.com/SAMAHANSysDev' },
             { title: 'UXPH Mini', position: 'Volunteer', image: '/src/assets/gallery/uxph.jpg', link: 'https://uxph.org' },

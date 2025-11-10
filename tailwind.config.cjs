@@ -11,7 +11,7 @@ module.exports = {
   'accent': '#fcd22a',
       },
       fontFamily: {
-        sans: ['Roboto', 'ui-sans-serif', 'system-ui'],
+        sans: ['Stack Sans Headline', 'ui-sans-serif', 'system-ui'],
       },
     },
   },

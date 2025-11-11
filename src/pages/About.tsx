@@ -96,7 +96,8 @@ export default function About() {
                 alt={item.title} 
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
               />
-              <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-40 transition-opacity duration-300 flex items-end">
+              <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-40 transition-opacity duration-300"></div>
+              <div className="absolute inset-0 flex items-end opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="p-4 w-full">
                   <p className="text-white font-medium text-2xl">{item.title}</p>
                   <p className="text-white text-lg">{item.position}</p>

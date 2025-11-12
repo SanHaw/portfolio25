@@ -1,4 +1,5 @@
 import { Route, Routes } from 'react-router-dom'
+import { Analytics } from "@vercel/analytics/react"
 import Footer from './components/Footer'
 import Navbar from './components/Navbar'
 import About from './pages/About'
@@ -29,6 +30,7 @@ export default function App() {
       <div className="relative z-20">
         <Footer />
       </div>
+      <Analytics />
     </div>
   )
 }

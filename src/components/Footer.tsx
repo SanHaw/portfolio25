@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 
 export default function Footer() {
   return (
-    <footer className="relative bg-site-bg overflow-hidden">
+    <footer className="relative bg-gray-900 overflow-hidden">
       {/* Background image */}
       <div 
         className="absolute inset-0 w-full h-full bg-cover bg-bottom bg-no-repeat"

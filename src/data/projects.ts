@@ -75,205 +75,6 @@ export function text(strings: TemplateStringsArray, ...values: any[]) {
 
 export const projects: Project[] = [
   {
-    id: 'ux-001',
-    title: 'Duyog 2025 Website',
-    subheading: 'An official event microsite for Ateneo U-Fest 2025',
-    category: 'uxui',
-    tags: ['UI Design', 'Web Design','Mobile Design', 'Figma', 'QA Testing'],
-    image: workImages.duyog.duyog000,
-    website: 'https://duyog2025.addu.edu.ph',
-    figma: 'https://embed.figma.com/design/n7At6dIqG4GtaT4BL7Y6Ds/%F0%9F%8C%BB-Showcase--Duyog?node-id=0-1&embed-host=share',
-    role: 'Lead UX/UI Designer',
-    date: '2025',
-    organization: 'SAMAHAN Systems Development',
-    description: text`Duyog is the theme of this year's Ateneo U-Fest, the university's
-                  biggest annual festival. The official website serves as the event's
-                  digital hub — a multi-page platform covering everything from
-                  U-Fest's history, branding, and schedule, to featured games,
-                  winners, and a dedicated ticketing page for the main show.`,
-    process: text`We had just a month to design, build, and test the entire site. I
-                  took charge of the overall design direction — sketching wireframes,
-                  building reusable components, and overseeing the visual identity
-                  across both mobile and desktop layouts. Collaboration with the
-                  frontend and backend teams was constant; we synced daily to ensure
-                  each transition from design to code was seamless.
-                  
-                  My work didn't stop there. After handing off the design and after the devs had finished
-                  the website, I also assisted both in quality assurance testing and Usability testing. 
-                  unfortunately due to the time constraints, the website isn't as polished as I wouldv'e
-                  hoped, and as a designer there are definetly things I notice that I would much rather have
-                  had fixed, but the end result is still something I'm proud of given the time constraints 
-                  and resources we had.`,
-    tech: 'Figma, React, Tailwind',
-    images: [
-      workImages.duyog.duyog000,
-      workImages.duyog.duyog004,
-      workImages.duyog.duyog005,
-      workImages.duyog.duyog003,
-      workImages.duyog.duyog002,
-      workImages.duyog.duyog006
-    ],
-    galleryLayout: 'nwsfd-grid'
-  },
-  {
-    id: 'ux-002',
-    title: 'PYCON 2025 Website',
-    subheading: 'An official event microsite for PYCON Davao2025',
-    category: 'uxui',
-    tags: ['UI Design', 'System Design', 'Web Design','Mobile Design', 'Figma'],
-    image: workImages.pycon.pycon000,
-    website: 'https://pycon-davao.durianpy.org/',
-    figma: 'https://embed.figma.com/design/pU0eCPgtF0TmdfG2PYChdc/%F0%9F%8C%BB-Showcase--PYCON-2025?node-id=0-1&embed-host=share',
-    role: 'UX/UI Designer',
-    date: '2025',
-    organization: 'Durian Py',
-    description: text`PyCon Davao 2025 is the first-ever regional Python Conference
-                  in Mindanao — a two-day celebration of technology, collaboration,
-                  and community. The official website served as the digital face of
-                  the event, providing attendees with access to key information
-                  like the program schedule, speaker lineup, venue details, sponsors,
-                  and registration links — all while capturing the creativity and
-                  energy that define Davao's growing tech scene.`,
-    process: text`This was a large-scale project, and working on it alongside two
-                  other ongoing website builds pushed my multitasking and organization
-                  skills to their limits. Our team was composed of people I had
-                  never collaborated with before, which meant communication had
-                  to be clear, consistent, and respectful. I made sure to document
-                  every design decision, explain design intentions to the developers,
-                  and stay open to feedback during the implementation process.`,
-    tech: 'Figma',
-    images: [
-      { src: workImages.pycon.pycon000, align: 'bottom' },
-      workImages.pycon.pycon002,
-      workImages.pycon.pycon003,
-      workImages.pycon.pycon004,
-      workImages.pycon.pycon005
-    ],
-    galleryLayout: 'custom-grid'
-  },
-  {
-    id: 'ux-003',
-    title: 'Block Diary',
-    subheading: 'A mobile companion app for Minecraft players',
-    category: 'uxui',
-    tags: ['UI Design', 'Mobile Design', 'Prototype', 'Figma'],
-    image: workImages.bd.bd001,
-    website: '',
-    figma: 'https://embed.figma.com/design/4GeasETcLd8s7pIyNNZAyj/%F0%9F%8C%BB-Showcase--Block-Diary-%7C-Minecraft-Companion-App?node-id=8-1597&embed-host=share',
-    role: 'Lead UX/UI Designer',
-    date: '2025',
-    organization: '',
-    description: text`Block Diary is a mobile companion app for Minecraft players designed to help
-                  them log adventures, track coordinates, and save build ideas. Created in just four
-                  days for the IT Week 2025 UI/UX Competition, the app includes a journal feed,
-                  a location tracker, and a build library.`,
-    process: text`Given the brief, we hit the ground running—breaking down requirements, mapping
-                  user flows, and dividing tasks. I led the design process: sketching wireframes,
-                  crafting reusable components, and turning layouts into animated prototypes.
-                  We tested, tweaked, and polished within four days.`,
-    tech: 'Figma, Mobile Development, App Development, Prototype',
-    images: [
-      workImages.bd.bd001,
-      workImages.bd.bd008,
-      workImages.bd.bd004,
-      workImages.bd.bd005
-    ],
-    galleryLayout: 'bd-grid'
-  },
-  {
-    id: 'ux-004',
-    title: 'Divine Jewel POS',
-    subheading: 'Custom Point of Sales System for our Software Engineering Project',
-    category: 'uxui',
-    tags: ['UI Design', 'System Design', 'Case Study', 'Figma'],
-    image: workImages.djpos.djpos001,
-    website: '',
-    figma: 'https://embed.figma.com/design/Nq800CNDFQMzJnFhkHWNRa/Divine-Jewels-POS?node-id=0-1&embed-host=share',
-    role: 'UX/UI Designer',
-    date: '2023',
-    organization: '-',
-    description: text`Divine Jewels is a local small business specializing in handcrafted
-                  trinkets and accessories. As the business grew, so did the need
-                  for a more organized and scalable way to manage operations. To
-                  support this expansion, we proposed and developed a custom Point
-                  of Sales (POS) system with integrated inventory management.
-                  `,
-    background: text`Divine Jewel is a small accessories business in Davao City known for handmade beaded jewelry and charms.
-                  
-                  As the business grew, its owner still relied on pen, paper, and Excel to manage sales and inventory. This caused constant problems — stock errors, lost records, and confusion among new staff.
-                  
-                  Our team was asked to design a Point of Sales (POS) and Inventory Management System that could simplify daily operations and reduce errors while keeping things easy for the team to use.`,
-    problemSolution: [
-      {
-        problem: 'Manual Inventory Management – Inventory tracking is done using pen and paper, which is prone to errors, data loss, and inefficiencies.',
-        solution: 'Develop a digital inventory management system that allows the admin to add, view, edit, and delete products, automatically update stock levels after transactions, and generate real-time inventory reports.'
-      },
-      {
-        problem: 'Lack of Online Visibility and Accessibility – Customers have limited awareness of the shop\'s online ordering options due to the absence of a proper online catalog or store.',
-        solution: 'Create an online product catalog or e-commerce platform integrated with social media, allowing customers to browse, view product availability, and place orders easily.'
-      },
-      {
-        problem: 'Inefficient Sales Tracking – Sales are recorded manually, making it difficult to analyze performance or identify sales trends.',
-        solution: 'Implement a Point-of-Sale (POS) system that records every transaction, stores data in sales history, and provides daily, weekly, monthly, and annual sales summaries for performance tracking.'
-      },
-      {
-        problem: 'Employee Management Challenges – Adding, editing, or removing staff information is unstructured and not recorded systematically.',
-        solution: 'Integrate an employee management module that enables admins to securely manage employee accounts, assign roles, and monitor access to system features.'
-      },
-      {
-        problem: 'Hiring and Training Difficulties Due to Manual Processes – Manual systems are difficult to use for new employees and lead to training inefficiencies.',
-        solution: 'Introduce a user-friendly interface with guided features to simplify employee onboarding and operations through an automated, organized system.'
-      }
-    ],
-
-    uxInsights: {
-      insights: [
-        {
-          title: 'Centralize everything',
-          description: 'Staff wanted inventory, sales, and transactions in one place to avoid switching between notebooks and spreadsheets.'
-        },
-        {
-          title: 'Reduce errors',
-          description: 'Too many mistakes happened during manual entry and calculation.'
-        },
-        {
-          title: 'Make data visual',
-          description: 'Owners wanted to see trends clearly — like which products are selling fast or which month had the best sales.'
-        }
-      ],
-      solutionIntro: "We created a role-based POS system that's simple, visual, and aligned with how the business already works.",
-      coreFeatures: [
-        {
-          title: 'Inventory Management',
-          description: 'Track all products in one table. Quickly update stock after each sale. Add new items fast.'
-        },
-        {
-          title: 'Transactions',
-          description: 'Record sales in real-time. Automatically adjust inventory. Keep a full sales history.'
-        },
-        {
-          title: 'Sales Dashboard',
-          description: 'See total sales, revenue, and trends at a glance. Filter by day, week, or month.'
-        },
-        {
-          title: 'Employee Management',
-          description: 'Manage staff accounts with role-based access. Keep track of who did what and when.'
-        }
-      ],
-      closingText: 'The design focused on clarity — clean layouts, easy navigation, and confirmation messages to assure users their actions were successful.'
-    },
-  
-    tech: 'Figma',
-    images: [
-      { src: workImages.djpos.djpos001, cols: 2, rows: 2 },
-      { src: workImages.djpos.djpos003, cols: 1, rows: 1 },
-      { src: workImages.djpos.djpos004, cols: 1, rows: 1 },
-      { src: workImages.djpos.djpos005, cols: 1, rows: 1 },
-      { src: workImages.djpos.djpos007, cols: 1, rows: 1 }
-    ],
-    galleryLayout: 'grid'
-  },
-  {
     id: 'ux-007',
     title: 'CosMediTour',
     subheading: 'A modern, responsive website redesign for CosMediTour.',
@@ -384,6 +185,205 @@ export const projects: Project[] = [
       }
     ]
   },
+  {
+    id: 'ux-002',
+    title: 'PYCON 2025 Website',
+    subheading: 'An official event microsite for PYCON Davao2025',
+    category: 'uxui',
+    tags: ['UI Design', 'System Design', 'Web Design','Mobile Design', 'Figma'],
+    image: workImages.pycon.pycon000,
+    website: 'https://pycon-davao.durianpy.org/',
+    figma: 'https://embed.figma.com/design/pU0eCPgtF0TmdfG2PYChdc/%F0%9F%8C%BB-Showcase--PYCON-2025?node-id=0-1&embed-host=share',
+    role: 'UX/UI Designer',
+    date: '2025',
+    organization: 'Durian Py',
+    description: text`PyCon Davao 2025 is the first-ever regional Python Conference
+                  in Mindanao — a two-day celebration of technology, collaboration,
+                  and community. The official website served as the digital face of
+                  the event, providing attendees with access to key information
+                  like the program schedule, speaker lineup, venue details, sponsors,
+                  and registration links — all while capturing the creativity and
+                  energy that define Davao's growing tech scene.`,
+    process: text`This was a large-scale project, and working on it alongside two
+                  other ongoing website builds pushed my multitasking and organization
+                  skills to their limits. Our team was composed of people I had
+                  never collaborated with before, which meant communication had
+                  to be clear, consistent, and respectful. I made sure to document
+                  every design decision, explain design intentions to the developers,
+                  and stay open to feedback during the implementation process.`,
+    tech: 'Figma',
+    images: [
+      { src: workImages.pycon.pycon000, align: 'bottom' },
+      workImages.pycon.pycon002,
+      workImages.pycon.pycon003,
+      workImages.pycon.pycon004,
+      workImages.pycon.pycon005
+    ],
+    galleryLayout: 'custom-grid'
+  },
+  {
+    id: 'ux-003',
+    title: 'Block Diary',
+    subheading: 'A mobile companion app for Minecraft players',
+    category: 'uxui',
+    tags: ['UI Design', 'Mobile Design', 'Prototype', 'Figma'],
+    image: workImages.bd.bd001,
+    website: '',
+    figma: 'https://embed.figma.com/design/4GeasETcLd8s7pIyNNZAyj/%F0%9F%8C%BB-Showcase--Block-Diary-%7C-Minecraft-Companion-App?node-id=8-1597&embed-host=share',
+    role: 'Lead UX/UI Designer',
+    date: '2025',
+    organization: '',
+    description: text`Block Diary is a mobile companion app for Minecraft players designed to help
+                  them log adventures, track coordinates, and save build ideas. Created in just four
+                  days for the IT Week 2025 UI/UX Competition, the app includes a journal feed,
+                  a location tracker, and a build library.`,
+    process: text`Given the brief, we hit the ground running—breaking down requirements, mapping
+                  user flows, and dividing tasks. I led the design process: sketching wireframes,
+                  crafting reusable components, and turning layouts into animated prototypes.
+                  We tested, tweaked, and polished within four days.`,
+    tech: 'Figma, Mobile Development, App Development, Prototype',
+    images: [
+      workImages.bd.bd001,
+      workImages.bd.bd008,
+      workImages.bd.bd004,
+      workImages.bd.bd005
+    ],
+    galleryLayout: 'bd-grid'
+  },
+  {
+    id: 'ux-001',
+    title: 'Duyog 2025 Website',
+    subheading: 'An official event microsite for Ateneo U-Fest 2025',
+    category: 'uxui',
+    tags: ['UI Design', 'Web Design','Mobile Design', 'Figma', 'QA Testing'],
+    image: workImages.duyog.duyog000,
+    website: 'https://duyog2025.addu.edu.ph',
+    figma: 'https://embed.figma.com/design/n7At6dIqG4GtaT4BL7Y6Ds/%F0%9F%8C%BB-Showcase--Duyog?node-id=0-1&embed-host=share',
+    role: 'Lead UX/UI Designer',
+    date: '2025',
+    organization: 'SAMAHAN Systems Development',
+    description: text`Duyog is the theme of this year's Ateneo U-Fest, the university's
+                  biggest annual festival. The official website serves as the event's
+                  digital hub — a multi-page platform covering everything from
+                  U-Fest's history, branding, and schedule, to featured games,
+                  winners, and a dedicated ticketing page for the main show.`,
+    process: text`We had just a month to design, build, and test the entire site. I
+                  took charge of the overall design direction — sketching wireframes,
+                  building reusable components, and overseeing the visual identity
+                  across both mobile and desktop layouts. Collaboration with the
+                  frontend and backend teams was constant; we synced daily to ensure
+                  each transition from design to code was seamless.
+                  
+                  My work didn't stop there. After handing off the design and after the devs had finished
+                  the website, I also assisted both in quality assurance testing and Usability testing. 
+                  unfortunately due to the time constraints, the website isn't as polished as I wouldv'e
+                  hoped, and as a designer there are definetly things I notice that I would much rather have
+                  had fixed, but the end result is still something I'm proud of given the time constraints 
+                  and resources we had.`,
+    tech: 'Figma, React, Tailwind',
+    images: [
+      workImages.duyog.duyog000,
+      workImages.duyog.duyog004,
+      workImages.duyog.duyog005,
+      workImages.duyog.duyog003,
+      workImages.duyog.duyog002,
+      workImages.duyog.duyog006
+    ],
+    galleryLayout: 'nwsfd-grid'
+  },
+  {
+    id: 'ux-004',
+    title: 'Divine Jewel POS',
+    subheading: 'Custom Point of Sales System for our Software Engineering Project',
+    category: 'uxui',
+    tags: ['UI Design', 'System Design', 'Case Study', 'Figma'],
+    image: workImages.djpos.djpos001,
+    website: '',
+    figma: 'https://embed.figma.com/design/Nq800CNDFQMzJnFhkHWNRa/Divine-Jewels-POS?node-id=0-1&embed-host=share',
+    role: 'UX/UI Designer',
+    date: '2023',
+    organization: '-',
+    description: text`Divine Jewels is a local small business specializing in handcrafted
+                  trinkets and accessories. As the business grew, so did the need
+                  for a more organized and scalable way to manage operations. To
+                  support this expansion, we proposed and developed a custom Point
+                  of Sales (POS) system with integrated inventory management.
+                  `,
+    background: text`Divine Jewel is a small accessories business in Davao City known for handmade beaded jewelry and charms.
+                  
+                  As the business grew, its owner still relied on pen, paper, and Excel to manage sales and inventory. This caused constant problems — stock errors, lost records, and confusion among new staff.
+                  
+                  Our team was asked to design a Point of Sales (POS) and Inventory Management System that could simplify daily operations and reduce errors while keeping things easy for the team to use.`,
+    problemSolution: [
+      {
+        problem: 'Manual Inventory Management – Inventory tracking is done using pen and paper, which is prone to errors, data loss, and inefficiencies.',
+        solution: 'Develop a digital inventory management system that allows the admin to add, view, edit, and delete products, automatically update stock levels after transactions, and generate real-time inventory reports.'
+      },
+      {
+        problem: 'Lack of Online Visibility and Accessibility – Customers have limited awareness of the shop\'s online ordering options due to the absence of a proper online catalog or store.',
+        solution: 'Create an online product catalog or e-commerce platform integrated with social media, allowing customers to browse, view product availability, and place orders easily.'
+      },
+      {
+        problem: 'Inefficient Sales Tracking – Sales are recorded manually, making it difficult to analyze performance or identify sales trends.',
+        solution: 'Implement a Point-of-Sale (POS) system that records every transaction, stores data in sales history, and provides daily, weekly, monthly, and annual sales summaries for performance tracking.'
+      },
+      {
+        problem: 'Employee Management Challenges – Adding, editing, or removing staff information is unstructured and not recorded systematically.',
+        solution: 'Integrate an employee management module that enables admins to securely manage employee accounts, assign roles, and monitor access to system features.'
+      },
+      {
+        problem: 'Hiring and Training Difficulties Due to Manual Processes – Manual systems are difficult to use for new employees and lead to training inefficiencies.',
+        solution: 'Introduce a user-friendly interface with guided features to simplify employee onboarding and operations through an automated, organized system.'
+      }
+    ],
+
+    uxInsights: {
+      insights: [
+        {
+          title: 'Centralize everything',
+          description: 'Staff wanted inventory, sales, and transactions in one place to avoid switching between notebooks and spreadsheets.'
+        },
+        {
+          title: 'Reduce errors',
+          description: 'Too many mistakes happened during manual entry and calculation.'
+        },
+        {
+          title: 'Make data visual',
+          description: 'Owners wanted to see trends clearly — like which products are selling fast or which month had the best sales.'
+        }
+      ],
+      solutionIntro: "We created a role-based POS system that's simple, visual, and aligned with how the business already works.",
+      coreFeatures: [
+        {
+          title: 'Inventory Management',
+          description: 'Track all products in one table. Quickly update stock after each sale. Add new items fast.'
+        },
+        {
+          title: 'Transactions',
+          description: 'Record sales in real-time. Automatically adjust inventory. Keep a full sales history.'
+        },
+        {
+          title: 'Sales Dashboard',
+          description: 'See total sales, revenue, and trends at a glance. Filter by day, week, or month.'
+        },
+        {
+          title: 'Employee Management',
+          description: 'Manage staff accounts with role-based access. Keep track of who did what and when.'
+        }
+      ],
+      closingText: 'The design focused on clarity — clean layouts, easy navigation, and confirmation messages to assure users their actions were successful.'
+    },
+  
+    tech: 'Figma',
+    images: [
+      { src: workImages.djpos.djpos001, cols: 2, rows: 2 },
+      { src: workImages.djpos.djpos003, cols: 1, rows: 1 },
+      { src: workImages.djpos.djpos004, cols: 1, rows: 1 },
+      { src: workImages.djpos.djpos005, cols: 1, rows: 1 },
+      { src: workImages.djpos.djpos007, cols: 1, rows: 1 }
+    ],
+    galleryLayout: 'grid'
+  },
   
   {
     id: 'gd-001',
@@ -437,46 +437,46 @@ export const projects: Project[] = [
     ],
     galleryLayout: 'eds-grid'
   },
-  {
-    id: 'ux-005',
-    title: 'SAMAHAN NewsFeed',
-    subheading: 'An annual publication space for Ateneans to see their journeys reflected',
-    category: 'uxui',
-    tags: ['QA Testing', 'Web Design', 'Project Management', 'Figma'],
-    image: workImages.nwsfd.nwsfd000,
-    website: 'https://samahan.addu.edu.ph/newsfeed/archive/2025/',
-    figma: 'https://embed.figma.com/design/VI1gzBAvqDpcXRVFTxJrOP/%F0%9F%8C%BB-Showcase--SMHN-Newsfeed?node-id=0-1&embed-host=share',
-    role: 'Project Manager | QA Tester | UX/UI Consultant',
-    date: '2025',
-    organization: 'SAMAHAN Communications',
-    description: text`The SAMAHAN NewsFeed is an annual publication led by the SAMAHAN Communications,
-                  the official public affairs and information arm of SAMAHAN. Over the years, the
-                  SAMAHAN NewsFeed has become more than just a publication—it has evolved into a
-                  space where Ateneans see their journeys reflected not as isolated experiences,
-                  but as shared milestones of a tightly knit community.`,
-    process: text`This website was built as part of our ongoing initiatives. What started as a simple 
-                  archive for articles evolved into a self-sustaining platform, after we realized the 
-                  team needed to manage content independently with minimal dev support. Alongside my 
-                  co-manager Ellyanna, I helped lead the project from planning to release. As the 
-                  project manager, I primarily negotiated technicalities with clients, organized 
-                  documents, and oversaw the UX/UI process—while also assisting with QA testing to 
-                  ensure a smooth user experience.`,
-    tech: text`Our tech stack supports efficient collaboration across all roles. Project
-                  management and documentation are handled using Google Docs and Sheets for task
-                  tracking, content planning, and progress updates. For UI/UX design, we use Figma to
-                  create and iterate on wireframes and mockups. The frontend is built with Next.js
-                  and TypeScript, styled with CSS modules, and optimized using next/font and
-                  Vercel's Geist font. On the backend, we use TypeScript with Supabase for authentication
-                  and PostgreSQL storage, and Prisma for database management.`,
-    images: [
-      workImages.nwsfd.nwsfd000,
-      workImages.nwsfd.smhnnwsfd001,
-      workImages.nwsfd.smhnnwsfd003,
-      workImages.nwsfd.smhnnwsfd004,
-      workImages.nwsfd.smhnnwsfd005
-    ],
-    galleryLayout: 'custom-grid'
-  },
+  // {
+  //   id: 'ux-005',
+  //   title: 'SAMAHAN NewsFeed',
+  //   subheading: 'An annual publication space for Ateneans to see their journeys reflected',
+  //   category: 'uxui',
+  //   tags: ['QA Testing', 'Web Design', 'Project Management', 'Figma'],
+  //   image: workImages.nwsfd.nwsfd000,
+  //   website: 'https://samahan.addu.edu.ph/newsfeed/archive/2025/',
+  //   figma: 'https://embed.figma.com/design/VI1gzBAvqDpcXRVFTxJrOP/%F0%9F%8C%BB-Showcase--SMHN-Newsfeed?node-id=0-1&embed-host=share',
+  //   role: 'Project Manager | QA Tester | UX/UI Consultant',
+  //   date: '2025',
+  //   organization: 'SAMAHAN Communications',
+  //   description: text`The SAMAHAN NewsFeed is an annual publication led by the SAMAHAN Communications,
+  //                 the official public affairs and information arm of SAMAHAN. Over the years, the
+  //                 SAMAHAN NewsFeed has become more than just a publication—it has evolved into a
+  //                 space where Ateneans see their journeys reflected not as isolated experiences,
+  //                 but as shared milestones of a tightly knit community.`,
+  //   process: text`This website was built as part of our ongoing initiatives. What started as a simple 
+  //                 archive for articles evolved into a self-sustaining platform, after we realized the 
+  //                 team needed to manage content independently with minimal dev support. Alongside my 
+  //                 co-manager Ellyanna, I helped lead the project from planning to release. As the 
+  //                 project manager, I primarily negotiated technicalities with clients, organized 
+  //                 documents, and oversaw the UX/UI process—while also assisting with QA testing to 
+  //                 ensure a smooth user experience.`,
+  //   tech: text`Our tech stack supports efficient collaboration across all roles. Project
+  //                 management and documentation are handled using Google Docs and Sheets for task
+  //                 tracking, content planning, and progress updates. For UI/UX design, we use Figma to
+  //                 create and iterate on wireframes and mockups. The frontend is built with Next.js
+  //                 and TypeScript, styled with CSS modules, and optimized using next/font and
+  //                 Vercel's Geist font. On the backend, we use TypeScript with Supabase for authentication
+  //                 and PostgreSQL storage, and Prisma for database management.`,
+  //   images: [
+  //     workImages.nwsfd.nwsfd000,
+  //     workImages.nwsfd.smhnnwsfd001,
+  //     workImages.nwsfd.smhnnwsfd003,
+  //     workImages.nwsfd.smhnnwsfd004,
+  //     workImages.nwsfd.smhnnwsfd005
+  //   ],
+  //   galleryLayout: 'custom-grid'
+  // },
   
   {
     id: 'gd-002',

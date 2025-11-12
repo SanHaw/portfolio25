@@ -9,8 +9,9 @@ export type ProjectImage =
 
 export type GallerySection = {
   title: string
+  description?: string
   images: ProjectImage[]
-  layout?: 'grid' | 'masonry' | 'carousel' | 'fixed-grid' | 'hero-grid' | 'cham-grid' | 'purple-grid' | 'itweek-grid' | 'eds-grid' | 'tedx-grid' | 'nwsfd-grid' | 'cmt-grid' | 'custom-grid'
+  layout?: 'grid' | 'masonry' | 'carousel' | 'fixed-grid' | 'hero-grid' | 'cham-grid' | 'purple-grid' | 'itweek-grid' | 'eds-grid' | 'tedx-grid' | 'nwsfd-grid' | 'cmt-grid' | 'custom-grid' | 'bd-grid'
 }
 
 export type ProblemSolutionRow = {
@@ -76,8 +77,8 @@ export const projects: Project[] = [
     title: 'Duyog 2025 Website',
     subheading: 'An official event microsite for Ateneo U-Fest 2025',
     category: 'uxui',
-    tags: ['UI Design', 'Web Design','Mobile Design', 'Figma'],
-    image: '/src/assets/work/duyog/duyog001.png',
+    tags: ['UI Design', 'Web Design','Mobile Design', 'Figma', 'QA Testing'],
+    image: '/src/assets/work/duyog/duyog000.png',
     website: 'https://duyog2025.addu.edu.ph',
     figma: 'https://embed.figma.com/design/n7At6dIqG4GtaT4BL7Y6Ds/%F0%9F%8C%BB-Showcase--Duyog?node-id=0-1&embed-host=share',
     role: 'Lead UX/UI Designer',
@@ -93,10 +94,12 @@ export const projects: Project[] = [
                   building reusable components, and overseeing the visual identity
                   across both mobile and desktop layouts. Collaboration with the
                   frontend and backend teams was constant; we synced daily to ensure
-                  each transition from design to code was seamless.`,
+                  each transition from design to code was seamless.
+                  
+                  [Add your new paragraph text here]`,
     tech: 'Figma, React, Tailwind',
     images: [
-      '/src/assets/work/duyog/duyog001.png',
+      '/src/assets/work/duyog/duyog000.png',
       '/src/assets/work/duyog/duyog004.png',
       '/src/assets/work/duyog/duyog005.png',
       '/src/assets/work/duyog/duyog003.png',
@@ -110,7 +113,7 @@ export const projects: Project[] = [
     title: 'PYCON 2025 Website',
     subheading: 'An official event microsite for PYCON Davao2025',
     category: 'uxui',
-    tags: ['UI Design', 'Web Design','Mobile Design', 'Figma'],
+    tags: ['UI Design', 'System Design', 'Web Design','Mobile Design', 'Figma'],
     image: '/src/assets/work/pycon/pycon000.png',
     website: 'https://pycon-davao.durianpy.org/',
     figma: 'https://embed.figma.com/design/pU0eCPgtF0TmdfG2PYChdc/%F0%9F%8C%BB-Showcase--PYCON-2025?node-id=0-1&embed-host=share',
@@ -146,7 +149,7 @@ export const projects: Project[] = [
     title: 'Block Diary',
     subheading: 'A mobile companion app for Minecraft players',
     category: 'uxui',
-    tags: ['UI Design', 'Case Study', 'Mobile Design', 'Prototype', 'Figma'],
+    tags: ['UI Design', 'Web Design', 'Mobile Design', 'Prototype', 'Figma'],
     image: '/src/assets/work/bd/bd001.jpg',
     website: '',
     figma: 'https://embed.figma.com/design/4GeasETcLd8s7pIyNNZAyj/%F0%9F%8C%BB-Showcase--Block-Diary-%7C-Minecraft-Companion-App?node-id=8-1597&embed-host=share',
@@ -175,7 +178,7 @@ export const projects: Project[] = [
     title: 'Divine Jewel POS',
     subheading: 'Custom Point of Sales System for our Software Engineering Project',
     category: 'uxui',
-    tags: ['UI Design', 'UI Design', 'Case Study', 'Figma'],
+    tags: ['UI Design', 'System Design', 'Case Study', 'Figma'],
     image: '/src/assets/work/djpos/djpos001.jpg',
     website: '',
     figma: 'https://embed.figma.com/design/Nq800CNDFQMzJnFhkHWNRa/Divine-Jewels-POS?node-id=0-1&embed-host=share',
@@ -266,30 +269,113 @@ export const projects: Project[] = [
   {
     id: 'ux-007',
     title: 'CosMediTour',
-    subheading: '',
+    subheading: 'A modern, responsive website redesign for CosMediTour.',
     category: 'uxui',
-    tags: ['UI Design', 'UI Design', 'Case Study', 'Figma'],
+    tags: ['UI Design', 'Web Design', 'Mobile Design', 'Case Study', 'Figma'],
     image: '/src/assets/work/cmt/cmt000.png',
     website: '',
     figma: 'https://embed.figma.com/design/OdoqbDS41EDMAMNeam3AA6/%F0%9F%8C%BB-Showcase--CosMediTour-Website?node-id=0-1&embed-host=share',
     role: 'UX/UI Designer',
     date: '2025',
-    organization: '-',
+    organization: '',
     description: text``,
+    background: text`CosMediTour's website serves as the first touchpoint for potential clients seeking cosmetic surgery packages abroad. However, their previous design lacked cohesion and failed to visually convey the brand's blend of medical professionalism and luxurious travel experience.
+                  
+                  The redesign aimed to build trust through an elevated user experience — improving readability, accessibility, and aesthetics while aligning with the brand's premium image.`,
+    problemSolution: [
+      {
+        problem: 'Outdated and inconsistent website visuals failed to reflect a premium, trusted medical brand.',
+        solution: 'Create a refined visual identity combining modern luxury and clinical credibility through consistent color, imagery, and typography.'
+      },
+      {
+        problem: 'Navigation and content layout made it difficult for users to explore services and destinations.',
+        solution: 'Design an intuitive information hierarchy and responsive layout with clear CTAs, easy-to-read sections, and a guided browsing experience.'
+      },
+      {
+        problem: 'Lack of accessible, mobile-friendly experience for international clients browsing on smartphones.',
+        solution: 'Develop responsive desktop and mobile interfaces following WCAG accessibility standards and modern UI patterns.'
+      }
+    ],
+    uxInsights: {
+      insights: [
+        {
+          title: 'Trust and reassurance',
+          description: 'Users expect trust and reassurance from medical tourism websites — professional tone, credible imagery, and testimonials build confidence.'
+        },
+        {
+          title: 'High-quality imagery',
+          description: 'High-quality imagery of destinations and clinics increases perceived reliability.'
+        },
+        {
+          title: 'Clear typography and visual hierarchy',
+          description: 'Clear typography and visual hierarchy help clients quickly compare procedures and packages.'
+        },
+        {
+          title: 'Minimal, breathable layouts',
+          description: 'Minimal, breathable layouts outperform dense text blocks when explaining surgical information.'
+        }
+      ],
+      solutionIntro: 'The final design integrates premium aesthetics and usability through structured content, clean typography, and elegant visual cues.\n\nBoth desktop and mobile versions emphasize clarity, balance, and conversion-focused CTAs.\n\nKey design choices included:',
+      coreFeatures: [
+        {
+          title: 'Neutral, calm color palette',
+          description: 'A neutral, calm color palette inspired by soft medical tones (cadet gray, blush pink, white).'
+        },
+        {
+          title: 'Large hero banners',
+          description: 'Large hero banners featuring serene imagery of Thailand and post-surgery confidence.'
+        },
+        {
+          title: 'Scrollable sections',
+          description: 'Scrollable sections that combine lifestyle photography with clear text content.'
+        },
+        {
+          title: 'Trustworthy, elegant, and user-centered',
+          description: 'The redesign modernized CosMediTour\'s online identity, presenting it as trustworthy, elegant, and user-centered.'
+        },
+        {
+          title: 'Improved readability and navigation',
+          description: 'Improved readability and navigation encourage users to explore more pages.'
+        },
+        {
+          title: 'Medical professionalism and lifestyle appeal',
+          description: 'The layout now highlights both medical professionalism and lifestyle appeal, resonating with target audiences seeking safe yet aspirational transformation experiences.'
+        }
+      ],
+      closingText: ''
+    },
     process: text``,
     tech: 'Figma',
-    images: [
-      '/src/assets/work/cmt/cmt000.png',
-      '/src/assets/work/cmt/cmt001.png',
-      '/src/assets/work/cmt/cmt002.png',
-      '/src/assets/work/cmt/cmt003.png',
-      '/src/assets/work/cmt/cmt004.png',
-      '/src/assets/work/cmt/cmt005.png',
-      '/src/assets/work/cmt/cmt007.png',
-      '/src/assets/work/cmt/cmt006.png',
-      '/src/assets/work/cmt/cmt008.png'
-    ],
-    galleryLayout: 'cmt-grid'
+    gallerySections: [
+      {
+        title: 'Background',
+        description: `CosMediTour's website serves as the first touchpoint for potential clients seeking cosmetic surgery packages abroad. However, their previous design lacked cohesion and failed to visually convey the brand's blend of medical professionalism and luxurious travel experience.\n\nThe redesign aimed to build trust through an elevated user experience — improving readability, accessibility, and aesthetics while aligning with the brand's premium image.`,
+        images: [
+          { src: '/src/assets/work/cmt/cmt000.png', align: 'center' }
+        ],
+        layout: 'custom-grid'
+      },
+      {
+        title: '',
+        description: 'Design #1: Focusing more on nude tones, keeping the color palette and style of the original website.',
+        images: [
+          '/src/assets/work/cmt/cmt100.png',
+          '/src/assets/work/cmt/cmt001.png',
+          '/src/assets/work/cmt/cmt003.png'
+        ],
+        layout: 'custom-grid'
+      },
+      {
+        title: '',
+        description: 'Design #2: A reinterpretation with a different take on their color palette and a slightly different style.',
+        images: [
+          '/src/assets/work/cmt/cmt200.png',
+          '/src/assets/work/cmt/cmt005.png',
+          '/src/assets/work/cmt/cmt006.png'
+        ],
+        layout: 'custom-grid'
+      }
+    ]
   },
   
   {
@@ -297,7 +383,7 @@ export const projects: Project[] = [
     title: 'Elysan Design Studios',
     subheading: 'Online Business',
     category: 'graphic design',
-    tags: ['UI Design', 'Graphic Design', 'Social Media', 'Customer Service', 'Canva'],
+    tags: ['Graphic Design', 'Social Media', 'Canva'],
     image: 'src/assets/work/eds/eds.jpg',
     facebook: 'https://web.facebook.com/elysan.designstudios',
     instagram: 'https://www.instagram.com/elysan.designstudios/',
@@ -349,7 +435,7 @@ export const projects: Project[] = [
     title: 'SAMAHAN NewsFeed',
     subheading: 'An annual publication space for Ateneans to see their journeys reflected',
     category: 'uxui',
-    tags: ['UI Design', 'QA Testing', 'Web Design', 'Project Management', 'QA Testing', 'Figma', 'Agile'],
+    tags: ['UI Design', 'QA Testing', 'Web Design', 'Project Management', 'Figma'],
     image: '/src/assets/work/nwsfd/nwsfd000.jpg',
     website: 'https://samahan.addu.edu.ph/newsfeed/archive/2025/',
     figma: 'https://embed.figma.com/design/VI1gzBAvqDpcXRVFTxJrOP/%F0%9F%8C%BB-Showcase--SMHN-Newsfeed?node-id=0-1&embed-host=share',
@@ -390,7 +476,7 @@ export const projects: Project[] = [
     title: 'CSSEC',
     subheading: 'All the projects I handled as the Computer Studies Student Executive Council Creatives Head',
     category: 'uxui',
-    tags: ['UI Design', 'Graphic Design', 'Social Media', 'Project Management', 'Canva', 'Figma'],
+    tags: ['Graphic Design', 'Social Media', 'Branding Design', 'Canva'],
     image: 'src/assets/work/cssec/cssec000.jpg',
     facebook: 'https://www.facebook.com/addu.cs',
     instagram: 'https://www.instagram.com/addu_cs/',
@@ -505,7 +591,7 @@ export const projects: Project[] = [
     title: 'TEDxLanang Ave',
     subheading: 'The Official Branding for TEDxLanang Ave 2024',
     category: 'graphic design',
-    tags: ['UI Design', 'Graphic Design', 'Branding', 'Event Branding', 'Poster Design', 'Figma', 'Procreate'],
+    tags: ['Graphic Design', 'Social Media', 'Branding Design', 'Canva', 'Figma'],
     image: '/src/assets/work/tedx/tedx001.jpg',
     website: '',
     figma: '',
@@ -550,7 +636,7 @@ export const projects: Project[] = [
     title: 'MISSCON 2024',
     subheading: "Official website for the Mindanao-wide International Studies Students' Convention",
     category: 'uxui',
-    tags: ['UI Design', 'UI Design', 'Web Design', 'Figma', 'Agile'],
+    tags: ['UI Design', 'Web Design', 'Mobile Design', 'Figma'],
     image: '/src/assets/work/mssc/mssc001.jpg',
     website: 'https://misscon2025.info',
     figma: '',

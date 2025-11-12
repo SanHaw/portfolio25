@@ -1,4 +1,3 @@
-
 type Props = {
   figmaUrl: string
 }
@@ -10,7 +9,9 @@ export default function ProjectFigmaEmbed({ figmaUrl }: Props) {
         title="figma" 
         src={figmaUrl} 
         className="w-full border" 
-        style={{ height: '80vh' }} 
+        style={{ height: '80vh' }}
+        allowFullScreen
+        loading="lazy"
       />
     </div>
   )

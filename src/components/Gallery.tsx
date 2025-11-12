@@ -897,13 +897,16 @@ export default function Gallery({ images, layout = 'grid' }: Props) {
     const heroAlign = typeof heroImage === 'string' ? 'top' : (heroImage.align || 'top')
     const heroAlignClass = heroAlign === 'bottom' ? 'object-bottom' : heroAlign === 'center' ? 'object-center' : 'object-top'
     
+    // Use shorter aspect ratio (2.5:1) if only one image, otherwise use standard 1920/1080
+    const heroAspectRatio = gridImages.length === 0 ? '2.5/1' : '1920/1080'
+    
     return (
       <>
         <div className="mt-6 flex justify-center">
           <div className="w-full lg:max-w-[75%]">
             <div className="flex flex-col gap-4">
               {/* Hero image at top */}
-              <div className="rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity" style={{ aspectRatio: '1920/1080' }} onClick={() => openImage(typeof heroImage === 'string' ? heroImage : heroImage.src)}>
+              <div className="rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity" style={{ aspectRatio: heroAspectRatio }} onClick={() => openImage(typeof heroImage === 'string' ? heroImage : heroImage.src)}>
                 <img 
                   src={typeof heroImage === 'string' ? heroImage : heroImage.src}
                   alt="hero"

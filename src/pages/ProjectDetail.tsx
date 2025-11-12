@@ -37,11 +37,32 @@ export default function ProjectDetail() {
         
         <ProjectLinks project={project} />
         
-        <ProjectGallery project={project} />
-        
-        {project.background && <ProjectBackground background={project.background} />}
-        
-        {project.problemSolution && <ProjectProblemSolution rows={project.problemSolution} />}
+        {/* Special handling for CosMediTour to insert problem table after first gallery (Background) */}
+        {project.id === 'ux-007' && project.gallerySections ? (
+          <>
+            {project.gallerySections.slice(0, 1).map((section, idx) => (
+              <div key={idx} className="mt-8">
+                <ProjectGallery project={{ ...project, gallerySections: [section] }} />
+              </div>
+            ))}
+            
+            {project.problemSolution && <ProjectProblemSolution rows={project.problemSolution} />}
+            
+            {project.gallerySections.slice(1).map((section, idx) => (
+              <div key={idx + 1} className="mt-12">
+                <ProjectGallery project={{ ...project, gallerySections: [section] }} />
+              </div>
+            ))}
+          </>
+        ) : (
+          <>
+            <ProjectGallery project={project} />
+            
+            {project.background && <ProjectBackground background={project.background} />}
+            
+            {project.problemSolution && <ProjectProblemSolution rows={project.problemSolution} />}
+          </>
+        )}
         
         {project.uxInsights && (
           <ProjectDesignSolution

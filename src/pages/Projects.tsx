@@ -9,6 +9,8 @@ export default function Projects() {
     'QA Testing',
     'Project Management',
     'Graphic Design',
+    'Branding Design',
+    'System Design',
     'Web Design',
     'Mobile Design',
     'Social Media',

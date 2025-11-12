@@ -1,5 +1,15 @@
 
 import { useNavigate } from 'react-router-dom'
+import aboutMePic from '../assets/about_me_pic.jpg'
+import afccImg from '../assets/gallery/afcc.jpg'
+import blockdiaryImg from '../assets/gallery/blockdiary.jpg'
+import cssecImg from '../assets/gallery/cssec.jpg'
+import powerImg from '../assets/gallery/power.jpg'
+import pyconImg from '../assets/gallery/pycon.jpg'
+import sysdevImg from '../assets/gallery/sysdev.jpg'
+import tactivImg from '../assets/gallery/tactiv.jpg'
+import uxdavaoImg from '../assets/gallery/uxdavao.jpg'
+import uxphImg from '../assets/gallery/uxph.jpg'
 
 export default function About() {
   const navigate = useNavigate()
@@ -67,8 +77,8 @@ export default function About() {
                 work that reminds me why I fell in love with design in the first 
                 place.</p>
         </div>
-        <div className="flex justify-center order-2 lg:order-2 w-full h-full min-w-0 rounded overflow-hidden">
-          <img src="/src/assets/about_me_pic.jpg" alt="about" className=" w-full h-full object-cover" />
+        <div className="flex justify-center order-2 lg:order-2 h-full min-w-0 rounded overflow-hidden">
+          <img src={aboutMePic} alt="about" className=" w-full h-full object-cover" />
         </div>
       </section>
 
@@ -136,15 +146,15 @@ export default function About() {
         {/* <h2 className="text-2xl font-semibold mb-6">Photos</h2> */}
         <div className="grid grid-cols-3 lg:grid-cols-4 gap-6">
           {[
-            { title: 'SAMAHAN Systems Development', position: 'UX/UI Head', image: '/src/assets/gallery/sysdev.jpg', link: 'https://www.facebook.com/SAMAHANSysDev' },
-            { title: 'UXPH Mini', position: 'Volunteer', image: '/src/assets/gallery/uxph.jpg', link: 'https://uxph.org' },
-            { title: 'AFCC', position: 'Creatives Director', image: '/src/assets/gallery/afcc.jpg', link: 'https://facebook.com/afccadmu' },
-            { title: 'Tactiv', position: 'UX/UI Intern', image: '/src/assets/gallery/tactiv.jpg', link: 'https://tactiv.ph' },
-            { title: 'PYCON 2025', position: 'Volunteer', image: '/src/assets/gallery/pycon.jpg', link: 'https://pycon.ph' },
-            { title: 'CSSEC', position: 'Creatives Head', image: '/src/assets/gallery/cssec.jpg', link: 'https://facebook.com/cssecadmu' },
-            { title: 'UX Davao', position: 'Volunteer', image: '/src/assets/gallery/uxdavao.jpg', link: 'https://uxdavao.org' },
-            { title: 'POWER', position: 'CS Liaison, Undersecretary', image: '/src/assets/gallery/power.jpg', link: 'https://facebook.com/poweradmu' },
-            { title: 'Block Diary', position: 'UX/UI Head', image: '/src/assets/gallery/blockdiary.jpg', link: '/work/ux-005' }
+            { title: 'SAMAHAN Systems Development', position: 'UX/UI Head', image: sysdevImg, link: 'https://www.facebook.com/SAMAHANSysDev' },
+            { title: 'UXPH Mini', position: 'Volunteer', image: uxphImg, link: 'https://uxph.org' },
+            { title: 'AFCC', position: 'Creatives Director', image: afccImg, link: 'https://facebook.com/afccadmu' },
+            { title: 'Tactiv', position: 'UX/UI Intern', image: tactivImg, link: 'https://tactiv.ph' },
+            { title: 'PYCON 2025', position: 'Volunteer', image: pyconImg, link: 'https://pycon.ph' },
+            { title: 'CSSEC', position: 'Creatives Head', image: cssecImg, link: 'https://facebook.com/cssecadmu' },
+            { title: 'UX Davao', position: 'Volunteer', image: uxdavaoImg, link: 'https://uxdavao.org' },
+            { title: 'POWER', position: 'CS Liaison, Undersecretary', image: powerImg, link: 'https://facebook.com/poweradmu' },
+            { title: 'Block Diary', position: 'UX/UI Head', image: blockdiaryImg, link: '/work/ux-005' }
           ].map((item, index) => (
             <div 
               key={`${item.title}-${index}`} 

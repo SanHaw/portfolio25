@@ -1,4 +1,6 @@
 import { Link } from 'react-router-dom'
+import heroBg from '../assets/hero_bg.png'
+import logo from '../assets/logo/logo2.svg'
 
 export default function Footer() {
   return (
@@ -7,7 +9,7 @@ export default function Footer() {
       <div 
         className="absolute inset-0 w-full h-full bg-cover bg-bottom bg-no-repeat"
         style={{
-          backgroundImage: `url(/src/assets/hero_bg.png)`
+          backgroundImage: `url(${heroBg})`
         }}
       />
       
@@ -17,7 +19,7 @@ export default function Footer() {
         {/* Logo and Navigation Column */}
         <div className="flex flex-col md:flex-row justify-start gap-16">
           <div className="flex items-center">
-          <img src="/src/assets/logo/logo2.svg" alt="logo" className="h-16 brightness-0 invert" />
+          <img src={logo} alt="logo" className="h-16 brightness-0 invert" />
         </div>
         
         {/* Navigation Column */}

@@ -1,3 +1,5 @@
+import { workImages } from '../assets'
+
 export type ProjectImage =
   | string
   | {
@@ -68,7 +70,7 @@ export function text(strings: TemplateStringsArray, ...values: any[]) {
   const lines = normalized.split('\n')
   const indents = lines.filter(Boolean).map((l) => l.match(/^\s*/)?.[0].length || 0)
   const minIndent = indents.length ? Math.min(...indents) : 0
-  return lines.map((l) => l.slice(minIndent)).join('\n')
+  return lines.map((l) => l.slice(minIndent)).join(' ').replace(/\s+/g, ' ').trim()
 }
 
 export const projects: Project[] = [
@@ -78,7 +80,7 @@ export const projects: Project[] = [
     subheading: 'An official event microsite for Ateneo U-Fest 2025',
     category: 'uxui',
     tags: ['UI Design', 'Web Design','Mobile Design', 'Figma', 'QA Testing'],
-    image: '/src/assets/work/duyog/duyog000.png',
+    image: workImages.duyog.duyog000,
     website: 'https://duyog2025.addu.edu.ph',
     figma: 'https://embed.figma.com/design/n7At6dIqG4GtaT4BL7Y6Ds/%F0%9F%8C%BB-Showcase--Duyog?node-id=0-1&embed-host=share',
     role: 'Lead UX/UI Designer',
@@ -104,12 +106,12 @@ export const projects: Project[] = [
                   and resources we had.`,
     tech: 'Figma, React, Tailwind',
     images: [
-      '/src/assets/work/duyog/duyog000.png',
-      '/src/assets/work/duyog/duyog004.png',
-      '/src/assets/work/duyog/duyog005.png',
-      '/src/assets/work/duyog/duyog003.png',
-      '/src/assets/work/duyog/duyog002.png',
-      '/src/assets/work/duyog/duyog006.png'
+      workImages.duyog.duyog000,
+      workImages.duyog.duyog004,
+      workImages.duyog.duyog005,
+      workImages.duyog.duyog003,
+      workImages.duyog.duyog002,
+      workImages.duyog.duyog006
     ],
     galleryLayout: 'nwsfd-grid'
   },
@@ -119,7 +121,7 @@ export const projects: Project[] = [
     subheading: 'An official event microsite for PYCON Davao2025',
     category: 'uxui',
     tags: ['UI Design', 'System Design', 'Web Design','Mobile Design', 'Figma'],
-    image: '/src/assets/work/pycon/pycon000.png',
+    image: workImages.pycon.pycon000,
     website: 'https://pycon-davao.durianpy.org/',
     figma: 'https://embed.figma.com/design/pU0eCPgtF0TmdfG2PYChdc/%F0%9F%8C%BB-Showcase--PYCON-2025?node-id=0-1&embed-host=share',
     role: 'UX/UI Designer',
@@ -141,11 +143,11 @@ export const projects: Project[] = [
                   and stay open to feedback during the implementation process.`,
     tech: 'Figma',
     images: [
-      { src: '/src/assets/work/pycon/pycon000.png', align: 'bottom' },
-      '/src/assets/work/pycon/pycon002.png',
-      '/src/assets/work/pycon/pycon003.png',
-      '/src/assets/work/pycon/pycon004.png',
-      '/src/assets/work/pycon/pycon005.png'
+      { src: workImages.pycon.pycon000, align: 'bottom' },
+      workImages.pycon.pycon002,
+      workImages.pycon.pycon003,
+      workImages.pycon.pycon004,
+      workImages.pycon.pycon005
     ],
     galleryLayout: 'custom-grid'
   },
@@ -155,7 +157,7 @@ export const projects: Project[] = [
     subheading: 'A mobile companion app for Minecraft players',
     category: 'uxui',
     tags: ['UI Design', 'Mobile Design', 'Prototype', 'Figma'],
-    image: '/src/assets/work/bd/bd001.jpg',
+    image: workImages.bd.bd001,
     website: '',
     figma: 'https://embed.figma.com/design/4GeasETcLd8s7pIyNNZAyj/%F0%9F%8C%BB-Showcase--Block-Diary-%7C-Minecraft-Companion-App?node-id=8-1597&embed-host=share',
     role: 'Lead UX/UI Designer',
@@ -171,10 +173,10 @@ export const projects: Project[] = [
                   We tested, tweaked, and polished within four days.`,
     tech: 'Figma, Mobile Development, App Development, Prototype',
     images: [
-      '/src/assets/work/bd/bd001.jpg',
-      '/src/assets/work/bd/bd008.jpg',
-      '/src/assets/work/bd/bd004.jpg',
-      '/src/assets/work/bd/bd005.jpg'
+      workImages.bd.bd001,
+      workImages.bd.bd008,
+      workImages.bd.bd004,
+      workImages.bd.bd005
     ],
     galleryLayout: 'bd-grid'
   },
@@ -184,7 +186,7 @@ export const projects: Project[] = [
     subheading: 'Custom Point of Sales System for our Software Engineering Project',
     category: 'uxui',
     tags: ['UI Design', 'System Design', 'Case Study', 'Figma'],
-    image: '/src/assets/work/djpos/djpos001.jpg',
+    image: workImages.djpos.djpos001,
     website: '',
     figma: 'https://embed.figma.com/design/Nq800CNDFQMzJnFhkHWNRa/Divine-Jewels-POS?node-id=0-1&embed-host=share',
     role: 'UX/UI Designer',
@@ -263,11 +265,11 @@ export const projects: Project[] = [
   
     tech: 'Figma',
     images: [
-      { src: '/src/assets/work/djpos/djpos001.jpg', cols: 2, rows: 2 },
-      { src: '/src/assets/work/djpos/djpos003.jpg', cols: 1, rows: 1 },
-      { src: '/src/assets/work/djpos/djpos004.jpg', cols: 1, rows: 1 },
-      { src: '/src/assets/work/djpos/djpos005.jpg', cols: 1, rows: 1 },
-      { src: '/src/assets/work/djpos/djpos007.jpg', cols: 1, rows: 1 }
+      { src: workImages.djpos.djpos001, cols: 2, rows: 2 },
+      { src: workImages.djpos.djpos003, cols: 1, rows: 1 },
+      { src: workImages.djpos.djpos004, cols: 1, rows: 1 },
+      { src: workImages.djpos.djpos005, cols: 1, rows: 1 },
+      { src: workImages.djpos.djpos007, cols: 1, rows: 1 }
     ],
     galleryLayout: 'grid'
   },

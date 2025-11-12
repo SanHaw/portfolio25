@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import aboutMeGif from '../assets/about_me.GIF'
 import Button from '../components/Button'
 import Hero from '../components/Hero'
 import ProjectCard from '../components/ProjectCard'
@@ -37,7 +38,7 @@ export default function Home() {
             
             {/* L column - Image */}
             <div className="flex items-center justify-center">
-              <img src="/src/assets/about_me.GIF" alt="Profile photo" className="w-auto h-auto rounded-lg" />
+              <img src={aboutMeGif} alt="Profile photo" className="w-auto h-auto rounded-lg" />
             </div>
           
           {/* R column - Text */}

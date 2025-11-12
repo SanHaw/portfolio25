@@ -1,6 +1,7 @@
 // import anime from 'animejs/lib/anime.es.js'
 // import { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
+import fill3Svg from '../assets/Fill 3.svg'
 
 export default function NotFound() {
   // const dotRef = useRef<SVGCircleElement>(null)
@@ -56,7 +57,7 @@ export default function NotFound() {
 
       {/* Decorative SVG at bottom - full width */}
       <div className="absolute left-0 right-0 w-full overflow-visible pointer-events-none z-0 flex items-center" style={{ bottom: '-50px' }}>
-        <img src="/src/assets/Fill 3.svg" alt="" className="w-full h-auto opacity-100 brightness-0" />
+        <img src={fill3Svg} alt="" className="w-full h-auto opacity-100 brightness-0" />
       </div>
     </div>
   )

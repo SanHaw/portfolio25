@@ -26,6 +26,24 @@ import djpos004 from './work/djpos/djpos004.jpg'
 import djpos005 from './work/djpos/djpos005.jpg'
 import djpos007 from './work/djpos/djpos007.jpg'
 
+// Work images - CosMediTour
+import cmt000 from './work/cmt/cmt000.png'
+
+// Work images - Elysan Design Studios
+import eds from './work/eds/eds.jpg'
+
+// Work images - SAMAHAN NewsFeed
+import nwsfd000 from './work/nwsfd/nwsfd000.jpg'
+
+// Work images - CSSEC
+import cssec000 from './work/cssec/cssec000.jpg'
+
+// Work images - TEDx
+import tedx001 from './work/tedx/tedx001.jpg'
+
+// Work images - MSSC
+import mssc001 from './work/mssc/mssc001.jpg'
+
 // Blog images
 import beyondTheWireframe from './blog/beyond-the-wireframe.jpg'
 import buildingForwardSysdev from './blog/building-forward-sysdev.jpg'
@@ -65,6 +83,24 @@ export const workImages = {
     djpos004,
     djpos005,
     djpos007,
+  },
+  cmt: {
+    cmt000,
+  },
+  eds: {
+    eds,
+  },
+  nwsfd: {
+    nwsfd000,
+  },
+  cssec: {
+    cssec000,
+  },
+  tedx: {
+    tedx001,
+  },
+  mssc: {
+    mssc001,
   },
 }
 

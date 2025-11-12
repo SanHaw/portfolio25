@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import aboutMeGif from '../assets/about_me.GIF'
+import aboutMeGif from '../assets/about_me.GIF?url'
 import Button from '../components/Button'
 import Hero from '../components/Hero'
 import ProjectCard from '../components/ProjectCard'

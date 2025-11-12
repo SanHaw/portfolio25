@@ -85,7 +85,7 @@ export default function Blogs() {
         {currentBlogs.map((post, index) => (
           <article 
             key={post.id}
-            className="w-full py-8 bg-site"
+            className="w-full py-8"
           >
             <div className="content-wrap px-20">
               <div className="grid grid-cols-1 lg:grid-cols-[2fr_3fr] gap-8">

@@ -35,7 +35,7 @@ export function ProjectCard({ project }: { project: Project }) {
         src={project.image} 
         alt={project.title} 
         className="w-full h-44 object-cover" 
-        style={{ objectPosition: project.id === 'gd-001' ? '50% 50%' : '50% 7%' }} 
+        style={{ objectPosition: (project.id === 'gd-001' || project.id === 'ux-007') ? '50% 50%' : '50% 7%' }} 
       />
       <div className="p-4 text-site flex flex-col flex-grow">
       <h3 className="font-semibold text-2xl md:text-3xl leading-snug">{project.title}</h3>
@@ -43,7 +43,7 @@ export function ProjectCard({ project }: { project: Project }) {
         <div className="mt-auto pt-3 flex items-center justify-between">
           <div className="flex gap-3 items-center">
             {/* For graphic design projects, show Facebook and Instagram icons */}
-            {project.tags?.includes('graphic design') ? (
+            {project.tags?.includes('Graphic Design') ? (
               <>
                 {/* Facebook icon */}
                 {project.facebook && (

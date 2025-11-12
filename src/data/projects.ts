@@ -4,12 +4,35 @@ export type ProjectImage =
       src: string
       cols?: number
       rows?: number
+      align?: 'top' | 'center' | 'bottom'
     }
 
 export type GallerySection = {
   title: string
   images: ProjectImage[]
-  layout?: 'grid' | 'masonry' | 'carousel' | 'fixed-grid' | 'hero-grid' | 'cham-grid' | 'purple-grid' | 'itweek-grid' | 'eds-grid' | 'tedx-grid' | 'nwsfd-grid' | 'nwsfd-grid-2' | 'bd-grid'
+  layout?: 'grid' | 'masonry' | 'carousel' | 'fixed-grid' | 'hero-grid' | 'cham-grid' | 'purple-grid' | 'itweek-grid' | 'eds-grid' | 'tedx-grid' | 'nwsfd-grid' | 'cmt-grid' | 'custom-grid'
+}
+
+export type ProblemSolutionRow = {
+  problem: string
+  solution: string
+}
+
+export type UxInsight = {
+  title: string
+  description: string
+}
+
+export type CoreFeature = {
+  title: string
+  description: string
+}
+
+export type UxInsightsData = {
+  insights: UxInsight[]
+  solutionIntro: string
+  coreFeatures: CoreFeature[]
+  closingText: string
 }
 
 export type Project = {
@@ -28,11 +51,14 @@ export type Project = {
   date?: string
   organization?: string
   description?: string
+  background?: string
+  problemSolution?: ProblemSolutionRow[]
+  uxInsights?: UxInsightsData
   process?: string
   tech?: string
   images?: ProjectImage[]
   gallerySections?: GallerySection[]
-  galleryLayout?: 'grid' | 'masonry' | 'carousel' | 'fixed-grid' | 'hero-grid' | 'eds-grid' | 'tedx-grid' | 'nwsfd-grid' | 'nwsfd-grid-2' | 'bd-grid'
+  galleryLayout?: 'grid' | 'masonry' | 'carousel' | 'fixed-grid' | 'hero-grid' | 'eds-grid' | 'tedx-grid' | 'nwsfd-grid' | 'cmt-grid' | 'bd-grid' | 'custom-grid'
 }
 
 export function text(strings: TemplateStringsArray, ...values: any[]) {
@@ -50,7 +76,7 @@ export const projects: Project[] = [
     title: 'Duyog 2025 Website',
     subheading: 'An official event microsite for Ateneo U-Fest 2025',
     category: 'uxui',
-    tags: ['UI Design', 'Web Design','Mobile Design','Case Study', 'Figma'],
+    tags: ['UI Design', 'Web Design','Mobile Design', 'Figma'],
     image: '/src/assets/work/duyog/duyog001.png',
     website: 'https://duyog2025.addu.edu.ph',
     figma: 'https://embed.figma.com/design/n7At6dIqG4GtaT4BL7Y6Ds/%F0%9F%8C%BB-Showcase--Duyog?node-id=0-1&embed-host=share',
@@ -84,8 +110,8 @@ export const projects: Project[] = [
     title: 'PYCON 2025 Website',
     subheading: 'An official event microsite for PYCON Davao2025',
     category: 'uxui',
-    tags: ['UI Design', 'Web Design','Mobile Design','Case Study', 'Figma'],
-    image: '/src/assets/work/pycon/pycon001.png',
+    tags: ['UI Design', 'Web Design','Mobile Design', 'Figma'],
+    image: '/src/assets/work/pycon/pycon000.png',
     website: 'https://pycon-davao.durianpy.org/',
     figma: 'https://embed.figma.com/design/pU0eCPgtF0TmdfG2PYChdc/%F0%9F%8C%BB-Showcase--PYCON-2025?node-id=0-1&embed-host=share',
     role: 'UX/UI Designer',
@@ -107,20 +133,20 @@ export const projects: Project[] = [
                   and stay open to feedback during the implementation process.`,
     tech: 'Figma',
     images: [
-      '/src/assets/work/pycon/pycon001.png',
+      { src: '/src/assets/work/pycon/pycon000.png', align: 'bottom' },
       '/src/assets/work/pycon/pycon002.png',
       '/src/assets/work/pycon/pycon003.png',
       '/src/assets/work/pycon/pycon004.png',
       '/src/assets/work/pycon/pycon005.png'
     ],
-    galleryLayout: 'nwsfd-grid'
+    galleryLayout: 'custom-grid'
   },
   {
     id: 'ux-003',
     title: 'Block Diary',
     subheading: 'A mobile companion app for Minecraft players',
     category: 'uxui',
-    tags: ['UI Design', 'UI design', 'mobile design', 'prototype', 'figma'],
+    tags: ['UI Design', 'Case Study', 'Mobile Design', 'Prototype', 'Figma'],
     image: '/src/assets/work/bd/bd001.jpg',
     website: '',
     figma: 'https://embed.figma.com/design/4GeasETcLd8s7pIyNNZAyj/%F0%9F%8C%BB-Showcase--Block-Diary-%7C-Minecraft-Companion-App?node-id=8-1597&embed-host=share',
@@ -149,7 +175,7 @@ export const projects: Project[] = [
     title: 'Divine Jewel POS',
     subheading: 'Custom Point of Sales System for our Software Engineering Project',
     category: 'uxui',
-    tags: ['UI Design', 'UI design', 'case study', 'figma'],
+    tags: ['UI Design', 'UI Design', 'Case Study', 'Figma'],
     image: '/src/assets/work/djpos/djpos001.jpg',
     website: '',
     figma: 'https://embed.figma.com/design/Nq800CNDFQMzJnFhkHWNRa/Divine-Jewels-POS?node-id=0-1&embed-host=share',
@@ -160,11 +186,73 @@ export const projects: Project[] = [
                   trinkets and accessories. As the business grew, so did the need
                   for a more organized and scalable way to manage operations. To
                   support this expansion, we proposed and developed a custom Point
-                  of Sales (POS) system with integrated inventory management.`,
-    process: text`As part of our Software Engineering course, we were tasked to approach
-                  a local business, identify a real-world problem, and develop a
-                  working software solution. We partnered with Divine Jewels and
-                  developed a POS system with inventory and employee management.`,
+                  of Sales (POS) system with integrated inventory management.
+                  `,
+    background: text`Divine Jewel is a small accessories business in Davao City known for handmade beaded jewelry and charms.
+                  
+                  As the business grew, its owner still relied on pen, paper, and Excel to manage sales and inventory. This caused constant problems — stock errors, lost records, and confusion among new staff.
+                  
+                  Our team was asked to design a Point of Sales (POS) and Inventory Management System that could simplify daily operations and reduce errors while keeping things easy for the team to use.`,
+    problemSolution: [
+      {
+        problem: 'Manual Inventory Management – Inventory tracking is done using pen and paper, which is prone to errors, data loss, and inefficiencies.',
+        solution: 'Develop a digital inventory management system that allows the admin to add, view, edit, and delete products, automatically update stock levels after transactions, and generate real-time inventory reports.'
+      },
+      {
+        problem: 'Lack of Online Visibility and Accessibility – Customers have limited awareness of the shop\'s online ordering options due to the absence of a proper online catalog or store.',
+        solution: 'Create an online product catalog or e-commerce platform integrated with social media, allowing customers to browse, view product availability, and place orders easily.'
+      },
+      {
+        problem: 'Inefficient Sales Tracking – Sales are recorded manually, making it difficult to analyze performance or identify sales trends.',
+        solution: 'Implement a Point-of-Sale (POS) system that records every transaction, stores data in sales history, and provides daily, weekly, monthly, and annual sales summaries for performance tracking.'
+      },
+      {
+        problem: 'Employee Management Challenges – Adding, editing, or removing staff information is unstructured and not recorded systematically.',
+        solution: 'Integrate an employee management module that enables admins to securely manage employee accounts, assign roles, and monitor access to system features.'
+      },
+      {
+        problem: 'Hiring and Training Difficulties Due to Manual Processes – Manual systems are difficult to use for new employees and lead to training inefficiencies.',
+        solution: 'Introduce a user-friendly interface with guided features to simplify employee onboarding and operations through an automated, organized system.'
+      }
+    ],
+
+    uxInsights: {
+      insights: [
+        {
+          title: 'Centralize everything',
+          description: 'Staff wanted inventory, sales, and transactions in one place to avoid switching between notebooks and spreadsheets.'
+        },
+        {
+          title: 'Reduce errors',
+          description: 'Too many mistakes happened during manual entry and calculation.'
+        },
+        {
+          title: 'Make data visual',
+          description: 'Owners wanted to see trends clearly — like which products are selling fast or which month had the best sales.'
+        }
+      ],
+      solutionIntro: "We created a role-based POS system that's simple, visual, and aligned with how the business already works.",
+      coreFeatures: [
+        {
+          title: 'Inventory Management',
+          description: 'Track all products in one table. Quickly update stock after each sale. Add new items fast.'
+        },
+        {
+          title: 'Transactions',
+          description: 'Record sales in real-time. Automatically adjust inventory. Keep a full sales history.'
+        },
+        {
+          title: 'Sales Dashboard',
+          description: 'See total sales, revenue, and trends at a glance. Filter by day, week, or month.'
+        },
+        {
+          title: 'Employee Management',
+          description: 'Manage staff accounts with role-based access. Keep track of who did what and when.'
+        }
+      ],
+      closingText: 'The design focused on clarity — clean layouts, easy navigation, and confirmation messages to assure users their actions were successful.'
+    },
+  
     tech: 'Figma',
     images: [
       { src: '/src/assets/work/djpos/djpos001.jpg', cols: 2, rows: 2 },
@@ -180,8 +268,8 @@ export const projects: Project[] = [
     title: 'CosMediTour',
     subheading: '',
     category: 'uxui',
-    tags: ['UI Design', 'UI design', 'case study', 'figma'],
-    image: '',
+    tags: ['UI Design', 'UI Design', 'Case Study', 'Figma'],
+    image: '/src/assets/work/cmt/cmt000.png',
     website: '',
     figma: 'https://embed.figma.com/design/OdoqbDS41EDMAMNeam3AA6/%F0%9F%8C%BB-Showcase--CosMediTour-Website?node-id=0-1&embed-host=share',
     role: 'UX/UI Designer',
@@ -191,14 +279,17 @@ export const projects: Project[] = [
     process: text``,
     tech: 'Figma',
     images: [
-      { src: '/src/assets/work/cmt/cmt001.png', cols: 2, rows: 2 },
-      { src: '/src/assets/work/cmt/cmt002.png', cols: 1, rows: 1 },
-      { src: '/src/assets/work/cmt/cmt003.png', cols: 1, rows: 1 },
-      { src: '/src/assets/work/cmt/cmt004.png', cols: 1, rows: 1 },
-      { src: '/src/assets/work/cmt/cmt005.png', cols: 1, rows: 1 },
-      { src: '/src/assets/work/cmt/cmt006.png', cols: 1, rows: 1 }
+      '/src/assets/work/cmt/cmt000.png',
+      '/src/assets/work/cmt/cmt001.png',
+      '/src/assets/work/cmt/cmt002.png',
+      '/src/assets/work/cmt/cmt003.png',
+      '/src/assets/work/cmt/cmt004.png',
+      '/src/assets/work/cmt/cmt005.png',
+      '/src/assets/work/cmt/cmt007.png',
+      '/src/assets/work/cmt/cmt006.png',
+      '/src/assets/work/cmt/cmt008.png'
     ],
-    galleryLayout: 'nwsfd-grid'
+    galleryLayout: 'cmt-grid'
   },
   
   {
@@ -206,9 +297,9 @@ export const projects: Project[] = [
     title: 'Elysan Design Studios',
     subheading: 'Online Business',
     category: 'graphic design',
-    tags: ['UI Design', 'graphic design', 'social media', 'customer service', 'canva'],
+    tags: ['UI Design', 'Graphic Design', 'Social Media', 'Customer Service', 'Canva'],
     image: 'src/assets/work/eds/eds.jpg',
-    facebook: 'https://www.facebook.com/elysandesignstudios',
+    facebook: 'https://web.facebook.com/elysan.designstudios',
     instagram: 'https://www.instagram.com/elysan.designstudios/',
     tiktok: 'https://www.tiktok.com/@elysan.designstudios',
     role: 'Founder | Graphic Designer | Customer Service | Social Media Manager',
@@ -258,7 +349,7 @@ export const projects: Project[] = [
     title: 'SAMAHAN NewsFeed',
     subheading: 'An annual publication space for Ateneans to see their journeys reflected',
     category: 'uxui',
-    tags: ['UI Design', 'QA Testing', 'web design', 'project management', 'QA testing', 'figma', 'agile'],
+    tags: ['UI Design', 'QA Testing', 'Web Design', 'Project Management', 'QA Testing', 'Figma', 'Agile'],
     image: '/src/assets/work/nwsfd/nwsfd000.jpg',
     website: 'https://samahan.addu.edu.ph/newsfeed/archive/2025/',
     figma: 'https://embed.figma.com/design/VI1gzBAvqDpcXRVFTxJrOP/%F0%9F%8C%BB-Showcase--SMHN-Newsfeed?node-id=0-1&embed-host=share',
@@ -291,7 +382,7 @@ export const projects: Project[] = [
       '/src/assets/work/nwsfd/smhnnwsfd004.jpg',
       '/src/assets/work/nwsfd/smhnnwsfd005.jpg'
     ],
-    galleryLayout: 'nwsfd-grid'
+    galleryLayout: 'custom-grid'
   },
   
   {
@@ -299,7 +390,7 @@ export const projects: Project[] = [
     title: 'CSSEC',
     subheading: 'All the projects I handled as the Computer Studies Student Executive Council Creatives Head',
     category: 'uxui',
-    tags: ['UI Design', 'graphic design', 'social media', 'project management', 'canva', 'figma'],
+    tags: ['UI Design', 'Graphic Design', 'Social Media', 'Project Management', 'Canva', 'Figma'],
     image: 'src/assets/work/cssec/cssec000.jpg',
     facebook: 'https://www.facebook.com/addu.cs',
     instagram: 'https://www.instagram.com/addu_cs/',
@@ -414,7 +505,7 @@ export const projects: Project[] = [
     title: 'TEDxLanang Ave',
     subheading: 'The Official Branding for TEDxLanang Ave 2024',
     category: 'graphic design',
-    tags: ['UI Design', 'graphic design', 'branding', 'event branding', 'poster design', 'figma', 'procreate'],
+    tags: ['UI Design', 'Graphic Design', 'Branding', 'Event Branding', 'Poster Design', 'Figma', 'Procreate'],
     image: '/src/assets/work/tedx/tedx001.jpg',
     website: '',
     figma: '',
@@ -459,7 +550,7 @@ export const projects: Project[] = [
     title: 'MISSCON 2024',
     subheading: "Official website for the Mindanao-wide International Studies Students' Convention",
     category: 'uxui',
-    tags: ['UI Design', 'UI design', 'web design', 'figma', 'agile'],
+    tags: ['UI Design', 'UI Design', 'Web Design', 'Figma', 'Agile'],
     image: '/src/assets/work/mssc/mssc001.jpg',
     website: 'https://misscon2025.info',
     figma: '',

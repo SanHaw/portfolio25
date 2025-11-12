@@ -81,6 +81,178 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <section className="py-16 min-h-[65vh] max-w-[80vw] mx-auto">
+        <div className="content-wrap">
+          <h2 className="text-6xl font-light mb-12">Affiliations and Involvement</h2>
+          <div className="max-w-4xl mx-auto space-y-6">
+            {/* SAMAHAN SYSDEV - Active */}
+            <div className="grid items-start gap-x-3 gap-y-1 justify-center" style={{ gridTemplateColumns: '1rem minmax(200px, 350px) minmax(120px, 150px)' }}>
+              <div className="w-4 h-4 rounded-full bg-yellow-400 mt-1"></div>
+              <div>
+                <p className="font-semibold text-lg">SAMAHAN SYSDEV</p>
+                <p className="text-gray-600 ml-4">UX/UI Head</p>
+                <p className="text-gray-600 ml-4">QA Tester</p>
+                <p className="text-gray-600 ml-4">Project Manager</p>
+                <p className="text-gray-600 ml-4">UX/UI Member</p>
+              </div>
+              <div className="text-right whitespace-nowrap">
+                <p className="text-gray-600 invisible">.</p>
+                <p className="text-gray-600">2024 - present</p>
+                <p className="text-gray-600">2025 - present</p>
+                <p className="text-gray-600">2025 - present</p>
+                <p className="text-gray-600">2024 - 2025</p>
+              </div>
+            </div>
+
+            {/* UX Davao - Active */}
+            <div className="grid items-start gap-x-3 gap-y-1 justify-center" style={{ gridTemplateColumns: '1rem minmax(200px, 350px) minmax(120px, 150px)' }}>
+              <div className="w-4 h-4 rounded-full bg-yellow-400 mt-1"></div>
+              <div>
+                <p className="font-semibold text-lg">UX Davao</p>
+                <p className="text-gray-600 ml-4">Creatives Volunteer</p>
+                <p className="text-gray-600 ml-4">Video Editor</p>
+              </div>
+              <div className="text-right whitespace-nowrap">
+                <p className="text-gray-600 invisible">.</p>
+                <p className="text-gray-600">2025 - present</p>
+                <p className="text-gray-600">2025 - present</p>
+              </div>
+            </div>
+
+            {/* No-Code PH - Active */}
+            <div className="grid items-start gap-x-3 gap-y-1 justify-center" style={{ gridTemplateColumns: '1rem minmax(200px, 350px) minmax(120px, 150px)' }}>
+              <div className="w-4 h-4 rounded-full bg-yellow-400 mt-1"></div>
+              <div>
+                <p className="font-semibold text-lg">No-Code PH</p>
+                <p className="text-gray-600 ml-4">Creatives Volunteer</p>
+                <p className="text-gray-600 ml-4">UX/UI Designer</p>
+              </div>
+              <div className="text-right whitespace-nowrap">
+                <p className="text-gray-600 invisible">.</p>
+                <p className="text-gray-600">2025 - present</p>
+                <p className="text-gray-600">2025 - present</p>
+              </div>
+            </div>
+
+            {/* AFCC - Inactive */}
+            <div className="grid items-start gap-x-3 gap-y-1 justify-center" style={{ gridTemplateColumns: '1rem minmax(200px, 350px) minmax(120px, 150px)' }}>
+              <div className="w-4 h-4 rounded-full bg-yellow-400 mt-1"></div>
+              <div>
+                <p className="font-semibold text-lg">AFCC</p>
+                <p className="text-gray-600 ml-4">Deputy Creatives Director</p>
+                <p className="text-gray-600 ml-4">Creatives Director</p>
+              </div>
+              <div className="text-right whitespace-nowrap">
+                <p className="text-gray-600 invisible">.</p>
+                <p className="text-gray-600">2025 - present</p>
+                <p className="text-gray-600">2024 - 2025</p>
+              </div>
+            </div>
+
+            {/* Pycon - Inactive */}
+            <div className="grid items-start gap-x-3 gap-y-1 justify-center" style={{ gridTemplateColumns: '1rem minmax(200px, 350px) minmax(120px, 150px)' }}>
+              <div className="w-4 h-4 rounded-full border-2 border-gray-300 mt-1"></div>
+              <div>
+                <p className="font-semibold text-lg">Durian Py</p>
+                <p className="text-gray-600 ml-4">UX/UI Designer</p>
+                <p className="text-gray-600 ml-4">Graphic Designer</p>
+              </div>
+              <div className="text-right whitespace-nowrap">
+                <p className="text-gray-600 invisible">.</p>
+                <p className="text-gray-600">2025</p>
+                <p className="text-gray-600">2025</p>
+              </div>
+            </div>
+
+            {/* Tactiv - Inactive */}
+            <div className="grid items-start gap-x-3 gap-y-1 justify-center" style={{ gridTemplateColumns: '1rem minmax(200px, 350px) minmax(120px, 150px)' }}>
+              <div className="w-4 h-4 rounded-full border-2 border-gray-300 mt-1"></div>
+              <div>
+                <p className="font-semibold text-lg">Tactiv</p>
+                <p className="text-gray-600 ml-4">Usability Testing Intern</p>
+                <p className="text-gray-600 ml-4">UX/UI Intern</p>
+              </div>
+              <div className="text-right whitespace-nowrap">
+                <p className="text-gray-600 invisible">.</p>
+                <p className="text-gray-600">2025</p>
+                <p className="text-gray-600">2025</p>
+              </div>
+            </div>
+
+            {/* AWSUG Davao - Inactive */}
+            <div className="grid items-start gap-x-3 gap-y-1 justify-center" style={{ gridTemplateColumns: '1rem minmax(200px, 350px) minmax(120px, 150px)' }}>
+              <div className="w-4 h-4 rounded-full border-2 border-gray-300 mt-1"></div>
+              <div>
+                <p className="font-semibold text-lg">AWSUG Davao</p>
+                <p className="text-gray-600 ml-4">Creatives Volunteer</p>
+              </div>
+              <div className="text-right whitespace-nowrap">
+                <p className="text-gray-600 invisible">.</p>
+                <p className="text-gray-600">2025</p>
+              </div>
+            </div>
+
+            {/* Borderline Travel and Tours - Inactive */}
+            <div className="grid items-start gap-x-3 gap-y-1 justify-center" style={{ gridTemplateColumns: '1rem minmax(200px, 350px) minmax(120px, 150px)' }}>
+              <div className="w-4 h-4 rounded-full border-2 border-gray-300 mt-1"></div>
+              <div>
+                <p className="font-semibold text-lg">Borderline Travel and Tours</p>
+                <p className="text-gray-600 ml-4">Creatives Lead</p>
+              </div>
+              <div className="text-right whitespace-nowrap">
+                <p className="text-gray-600 invisible">.</p>
+                <p className="text-gray-600">2024</p>
+              </div>
+            </div>
+
+            {/* CSSEC - Inactive */}
+            <div className="grid items-start gap-x-3 gap-y-1 justify-center" style={{ gridTemplateColumns: '1rem minmax(200px, 350px) minmax(120px, 150px)' }}>
+              <div className="w-4 h-4 rounded-full border-2 border-gray-300 mt-1"></div>
+              <div>
+                <p className="font-semibold text-lg">CSSEC</p>
+                <p className="text-gray-600 ml-4">Creatives Head</p>
+              </div>
+              <div className="text-right whitespace-nowrap">
+                <p className="text-gray-600 invisible">.</p>
+                <p className="text-gray-600">2023 - 2024</p>
+              </div>
+            </div>
+
+            {/* POWER AdDU - Inactive */}
+            <div className="grid items-start gap-x-3 gap-y-1 justify-center" style={{ gridTemplateColumns: '1rem minmax(200px, 350px) minmax(120px, 150px)' }}>
+              <div className="w-4 h-4 rounded-full border-2 border-gray-300 mt-1"></div>
+              <div>
+                <p className="font-semibold text-lg">POWER AdDU</p>
+                <p className="text-gray-600 ml-4">CS Liaison</p>
+                <p className="text-gray-600 ml-4">Project Head</p>
+                <p className="text-gray-600 ml-4">Undersecretary</p>
+              </div>
+              <div className="text-right whitespace-nowrap">
+                <p className="text-gray-600 invisible">.</p>
+                <p className="text-gray-600">2022 - 2023</p>
+                <p className="text-gray-600">2022 - 2023</p>
+                <p className="text-gray-600">2023 - 2024</p>
+              </div>
+            </div>
+
+            {/* Cosmik Digital Solutions - Inactive */}
+            <div className="grid items-start gap-x-3 gap-y-1 justify-center" style={{ gridTemplateColumns: '1rem minmax(200px, 350px) minmax(120px, 150px)' }}>
+              <div className="w-4 h-4 rounded-full border-2 border-gray-300 mt-1"></div>
+              <div>
+                <p className="font-semibold text-lg">Cosmik Digital Solutions</p>
+                <p className="text-gray-600 ml-4">Graphic Design</p>
+                <p className="text-gray-600 ml-4">Video Editor</p>
+              </div>
+              <div className="text-right whitespace-nowrap">
+                <p className="text-gray-600 invisible">.</p>
+                <p className="text-gray-600">2022</p>
+                <p className="text-gray-600">2022</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   )
 }

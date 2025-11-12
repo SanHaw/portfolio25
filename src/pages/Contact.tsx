@@ -2,8 +2,9 @@ import Button from '../components/Button'
 
 export default function Contact() {
   return (
-  <div className="content-wrap px-6 py-12">
-      <h1 className="text-3xl font-bold">Find Me Here</h1>
+  <div className="content-wrap px-20 py-12">
+      <h1 className="text-6xl md:text-7xl lg:text-8xl font-light leading-snug tracking-tight text-center mb-12">Contact</h1>
+      <h2 className="text-3xl font-bold">Find Me Here</h2>
       <p className="mt-4 text-gray-600">Feel free to reach out on social or send an email.</p>
       <div className="mt-6">
         <a href="mailto:itssarahhaw@gmail.com" className="inline-block">

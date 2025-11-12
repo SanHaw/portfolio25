@@ -44,17 +44,16 @@ export default function Blogs() {
   }
 
   return (
-    <div className="bg-site mx-12 my-8">
-      {/* Header with increased margin and padding */}
-      <div className="content-wrap px-32 py-16 mx-8">
-        <h1 className="text-5xl md:text-6xl lg:text-7xl font-light leading-snug tracking-tight text-center mb-12">
+    <div className="bg-site-bg">
+      <div className="content-wrap px-20 py-12">
+        <h1 className="text-6xl md:text-7xl lg:text-8xl font-light leading-snug tracking-tight text-center mb-12">
           Blogs
         </h1>
 
         {/* Filters Section */}
         <div className="mb-8">
           {/* Category Filter */}
-          <div className="flex flex-wrap gap-3 justify-center">
+          <div className="flex flex-wrap gap-3 mb-4 justify-center px-12">
             {categories.map((category) => (
               <Button
                 key={category}
@@ -68,10 +67,10 @@ export default function Blogs() {
 
           {/* Clear Categories Button */}
           {selectedCategories.length > 0 && (
-            <div className="flex justify-end mt-4">
+            <div className="flex justify-end">
               <button
                 onClick={clearCategories}
-                className="text-lg text-gray-600 hover:text-gray-900 underline"
+                className="text-sm text-gray-600 hover:text-gray-900 underline"
               >
                 Clear categories
               </button>
@@ -144,9 +143,7 @@ export default function Blogs() {
                       </a>
                       {post.id === 'fighting-chance-itweek' && (
                         <a
-                          href="https://www.figma.com/community/file/1352123703664929342/block-diaries-the-winning-design"
-                          target="_blank"
-                          rel="noopener noreferrer"
+                          href="/projects/ux-003"
                           className="inline-flex"
                         >
                           <Button variant="secondary" className="inline-flex items-center gap-2">

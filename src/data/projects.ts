@@ -96,7 +96,12 @@ export const projects: Project[] = [
                   frontend and backend teams was constant; we synced daily to ensure
                   each transition from design to code was seamless.
                   
-                  [Add your new paragraph text here]`,
+                  My work didn't stop there. After handing off the design and after the devs had finished
+                  the website, I also assisted both in quality assurance testing and Usability testing. 
+                  unfortunately due to the time constraints, the website isn't as polished as I wouldv'e
+                  hoped, and as a designer there are definetly things I notice that I would much rather have
+                  had fixed, but the end result is still something I'm proud of given the time constraints 
+                  and resources we had.`,
     tech: 'Figma, React, Tailwind',
     images: [
       '/src/assets/work/duyog/duyog000.png',
@@ -149,7 +154,7 @@ export const projects: Project[] = [
     title: 'Block Diary',
     subheading: 'A mobile companion app for Minecraft players',
     category: 'uxui',
-    tags: ['UI Design', 'Web Design', 'Mobile Design', 'Prototype', 'Figma'],
+    tags: ['UI Design', 'Mobile Design', 'Prototype', 'Figma'],
     image: '/src/assets/work/bd/bd001.jpg',
     website: '',
     figma: 'https://embed.figma.com/design/4GeasETcLd8s7pIyNNZAyj/%F0%9F%8C%BB-Showcase--Block-Diary-%7C-Minecraft-Companion-App?node-id=8-1597&embed-host=share',
@@ -435,7 +440,7 @@ export const projects: Project[] = [
     title: 'SAMAHAN NewsFeed',
     subheading: 'An annual publication space for Ateneans to see their journeys reflected',
     category: 'uxui',
-    tags: ['UI Design', 'QA Testing', 'Web Design', 'Project Management', 'Figma'],
+    tags: ['QA Testing', 'Web Design', 'Project Management', 'Figma'],
     image: '/src/assets/work/nwsfd/nwsfd000.jpg',
     website: 'https://samahan.addu.edu.ph/newsfeed/archive/2025/',
     figma: 'https://embed.figma.com/design/VI1gzBAvqDpcXRVFTxJrOP/%F0%9F%8C%BB-Showcase--SMHN-Newsfeed?node-id=0-1&embed-host=share',

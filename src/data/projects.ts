@@ -358,7 +358,7 @@ export const projects: Project[] = [
         title: 'Background',
         description: `CosMediTour's website serves as the first touchpoint for potential clients seeking cosmetic surgery packages abroad. However, their previous design lacked cohesion and failed to visually convey the brand's blend of medical professionalism and luxurious travel experience.\n\nThe redesign aimed to build trust through an elevated user experience — improving readability, accessibility, and aesthetics while aligning with the brand's premium image.`,
         images: [
-          { src: '/src/assets/work/cmt/cmt000.png', align: 'center' }
+          { src: workImages.cmt.cmt000, align: 'center' }
         ],
         layout: 'custom-grid'
       },
@@ -366,9 +366,9 @@ export const projects: Project[] = [
         title: '',
         description: 'Design #1: Focusing more on nude tones, keeping the color palette and style of the original website.',
         images: [
-          '/src/assets/work/cmt/cmt100.png',
-          '/src/assets/work/cmt/cmt001.png',
-          '/src/assets/work/cmt/cmt003.png'
+          workImages.cmt.cmt100,
+          workImages.cmt.cmt001,
+          workImages.cmt.cmt003
         ],
         layout: 'custom-grid'
       },
@@ -376,9 +376,9 @@ export const projects: Project[] = [
         title: '',
         description: 'Design #2: A reinterpretation with a different take on their color palette and a slightly different style.',
         images: [
-          '/src/assets/work/cmt/cmt200.png',
-          '/src/assets/work/cmt/cmt005.png',
-          '/src/assets/work/cmt/cmt006.png'
+          workImages.cmt.cmt200,
+          workImages.cmt.cmt005,
+          workImages.cmt.cmt006
         ],
         layout: 'custom-grid'
       }
@@ -421,19 +421,19 @@ export const projects: Project[] = [
                   hand-drawn elements. Our stack adapts to what each project needs—
                   balancing efficiency, creativity, and quality every step of the way.`,
     images: [
-      '/src/assets/work/eds/eds001.jpg', // ImageSlider placeholder
-      '/src/assets/work/eds/eds101.jpg',
-      '/src/assets/work/eds/eds002.jpg',
-      '/src/assets/work/eds/eds103.jpg',
-      '/src/assets/work/eds/eds116.jpg',
-      '/src/assets/work/eds/eds000.mp4', // video
-      '/src/assets/work/eds/eds107.jpg',
-      '/src/assets/work/eds/eds105.jpg',
-      '/src/assets/work/eds/eds110.jpg',
-      '/src/assets/work/eds/eds114.jpg',
-      '/src/assets/work/eds/eds108.jpg',
-      '/src/assets/work/eds/eds102.jpg',
-      '/src/assets/work/eds/eds112.jpg'
+      workImages.eds.eds001, // ImageSlider placeholder
+      workImages.eds.eds101,
+      workImages.eds.eds002,
+      workImages.eds.eds103,
+      workImages.eds.eds116,
+      workImages.eds.eds000, // video
+      workImages.eds.eds107,
+      workImages.eds.eds105,
+      workImages.eds.eds110,
+      workImages.eds.eds114,
+      workImages.eds.eds108,
+      workImages.eds.eds102,
+      workImages.eds.eds112
     ],
     galleryLayout: 'eds-grid'
   },
@@ -469,11 +469,11 @@ export const projects: Project[] = [
                   Vercel's Geist font. On the backend, we use TypeScript with Supabase for authentication
                   and PostgreSQL storage, and Prisma for database management.`,
     images: [
-      '/src/assets/work/nwsfd/nwsfd000.jpg',
-      '/src/assets/work/nwsfd/smhnnwsfd001.jpg',
-      '/src/assets/work/nwsfd/smhnnwsfd003.jpg',
-      '/src/assets/work/nwsfd/smhnnwsfd004.jpg',
-      '/src/assets/work/nwsfd/smhnnwsfd005.jpg'
+      workImages.nwsfd.nwsfd000,
+      workImages.nwsfd.smhnnwsfd001,
+      workImages.nwsfd.smhnnwsfd003,
+      workImages.nwsfd.smhnnwsfd004,
+      workImages.nwsfd.smhnnwsfd005
     ],
     galleryLayout: 'custom-grid'
   },
@@ -524,70 +524,70 @@ export const projects: Project[] = [
       {
         title: 'Temporary Branding',
         images: [
-          '/src/assets/work/cssec/cssec001.jpg',
-          '/src/assets/work/cssec/cssec103.jpg',
-          '/src/assets/work/cssec/cssec101.jpg',
-          '/src/assets/work/cssec/cssec105.jpg',
-          '/src/assets/work/cssec/cssec106.jpg',
-          '/src/assets/work/cssec/cssec107.jpg',
-          '/src/assets/work/cssec/cssec108.jpg',
-          '/src/assets/work/cssec/cssec109.jpg',
-          '/src/assets/work/cssec/cssec104.jpg'
+          workImages.cssec.cssec001,
+          workImages.cssec.cssec103,
+          workImages.cssec.cssec101,
+          workImages.cssec.cssec105,
+          workImages.cssec.cssec106,
+          workImages.cssec.cssec107,
+          workImages.cssec.cssec108,
+          workImages.cssec.cssec109,
+          workImages.cssec.cssec104
         ],
         layout: 'fixed-grid'
       },
       {
         title: 'Main Branding',
         images: [
-          '/src/assets/work/cssec/cssec003.jpg',
-          '/src/assets/work/cssec/cssec300.jpg',
-          '/src/assets/work/cssec/cssec301.jpg',
-          '/src/assets/work/cssec/cssec303.jpg',
-          '/src/assets/work/cssec/cssec304.jpg',
-          '/src/assets/work/cssec/cssec305.jpg',
-          '/src/assets/work/cssec/cssec308.jpg',
-          '/src/assets/work/cssec/cssec307.jpg',
-          '/src/assets/work/cssec/cssec306.jpg'
+          workImages.cssec.cssec003,
+          workImages.cssec.cssec300,
+          workImages.cssec.cssec301,
+          workImages.cssec.cssec303,
+          workImages.cssec.cssec304,
+          workImages.cssec.cssec305,
+          workImages.cssec.cssec308,
+          workImages.cssec.cssec307,
+          workImages.cssec.cssec306
         ],
         layout: 'masonry'
       },
       {
         title: 'Cham Along With Us',
         images: [
-          '/src/assets/work/cssec/cssec401.jpg',
-          '/src/assets/work/cssec/cssec406.jpg',
-          '/src/assets/work/cssec/cssec403.jpg',
-          '/src/assets/work/cssec/cssec404.jpg',
-          '/src/assets/work/cssec/cssec408.jpg',
-          '/src/assets/work/cssec/cssec405.jpg'
+          workImages.cssec.cssec401,
+          workImages.cssec.cssec406,
+          workImages.cssec.cssec403,
+          workImages.cssec.cssec404,
+          workImages.cssec.cssec408,
+          workImages.cssec.cssec405
         ],
         layout: 'cham-grid'
       },
       {
         title: 'Purple Up: Kick-Off',
         images: [
-          '/src/assets/work/cssec/cssec501.jpg',//
-          '/src/assets/work/cssec/cssec500.jpg',//
-          '/src/assets/work/cssec/cssec509.jpg', ///
-          '/src/assets/work/cssec/cssec505.jpg',
-          '/src/assets/work/cssec/cssec507.jpg',
-          '/src/assets/work/cssec/cssec510.jpg',
-          '/src/assets/work/cssec/cssec512.jpg',
-          '/src/assets/work/cssec/cssec502.jpg',//
-          '/src/assets/work/cssec/cssec508.jpg',
-          '/src/assets/work/cssec/cssec514.jpg'
+          workImages.cssec.cssec501,//
+          workImages.cssec.cssec500,//
+          workImages.cssec.cssec509, ///
+          workImages.cssec.cssec505,
+          workImages.cssec.cssec507,
+          workImages.cssec.cssec510,
+          workImages.cssec.cssec512,
+          workImages.cssec.cssec502,//
+          workImages.cssec.cssec508,
+          workImages.cssec.cssec514
         ],
         layout: 'purple-grid'
       },
       {
         title: 'IT Week 2024',
         images: [
-          '/src/assets/work/cssec/cssec605.jpg', // top center image
-          '/src/assets/work/cssec/cssec601.jpg', // row 2 left
-          '/src/assets/work/cssec/cssec602.jpg', // row 2 center
-          '/src/assets/work/cssec/cssec603.jpg', // row 2 right
-          '/src/assets/work/cssec/cssec604.jpg', // row 3 left
-          '/src/assets/work/cssec/cssec606.jpg'  // row 3 right (wide)
+          workImages.cssec.cssec605, // top center image
+          workImages.cssec.cssec601, // row 2 left
+          workImages.cssec.cssec602, // row 2 center
+          workImages.cssec.cssec603, // row 2 right
+          workImages.cssec.cssec604, // row 3 left
+          workImages.cssec.cssec606  // row 3 right (wide)
         ],
         layout: 'itweek-grid'
       }
@@ -630,11 +630,11 @@ export const projects: Project[] = [
                   perfect for refining layouts, sharing feedback, and making quick 
                   iterations without versioning headaches.`,
     images: [
-      '/src/assets/work/tedx/tedx001.jpg',
-      '/src/assets/work/tedx/tedx008.jpg',
-      '/src/assets/work/tedx/tedx005.jpg',
-      '/src/assets/work/tedx/tedx004.jpg',
-      '/src/assets/work/tedx/tedx006.jpg'
+      workImages.tedx.tedx001,
+      workImages.tedx.tedx008,
+      workImages.tedx.tedx005,
+      workImages.tedx.tedx004,
+      workImages.tedx.tedx006
     ],
     galleryLayout: 'tedx-grid'
   },
@@ -664,12 +664,12 @@ export const projects: Project[] = [
                   user interface in Figma—translating ideas into clean, functional visuals while
                   keeping everything aligned with the event's identity.`,
     images: [
-      '/src/assets/work/mssc/mssc001.jpg',
-      '/src/assets/work/mssc/mssc003.jpg',
-      '/src/assets/work/mssc/mssc002.jpg',
-      '/src/assets/work/mssc/mssc004.jpg',
-      '/src/assets/work/mssc/mssc005.jpg',
-      '/src/assets/work/mssc/mssc006.jpg'
+      workImages.mssc.mssc001,
+      workImages.mssc.mssc003,
+      workImages.mssc.mssc002,
+      workImages.mssc.mssc004,
+      workImages.mssc.mssc005,
+      workImages.mssc.mssc006
     ],
     galleryLayout: 'nwsfd-grid'
   },

@@ -190,7 +190,7 @@ export const projects: Project[] = [
     title: 'PYCON 2025 Website',
     subheading: 'An official event microsite for PYCON Davao2025',
     category: 'uxui',
-    tags: ['UI Design', 'System Design', 'Web Design','Mobile Design', 'Figma'],
+    tags: ['UI Design', 'Case Study','System Design', 'Web Design','Mobile Design', 'Figma'],
     image: workImages.pycon.pycon000,
     website: 'https://pycon-davao.durianpy.org/',
     figma: 'https://embed.figma.com/design/pU0eCPgtF0TmdfG2PYChdc/%F0%9F%8C%BB-Showcase--PYCON-2025?node-id=0-1&embed-host=share',

@@ -1020,7 +1020,7 @@ export default function Gallery({ images, layout = 'grid' }: Props) {
       <>
         <div className="relative mt-6 flex justify-center">
           <div className="w-full lg:max-w-[75%]">
-            <div className="overflow-x-auto no-scrollbar -mx-6 px-6">
+            <div className="overflow-x-auto no-scrollbar -mx-2 md:-mx-6 px-2 md:px-6">
               <div className="inline-flex gap-4">
                 {images.map((item, i) => {
                   const src = typeof item === 'string' ? item : item.src

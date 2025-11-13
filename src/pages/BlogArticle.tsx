@@ -11,7 +11,7 @@ export default function BlogArticle() {
   const post = blogPosts[id]
 
   return (
-    <div className="content-wrap px-20 py-12">
+    <div className="content-wrap px-4 md:px-20 py-12">
       {/* Back Button */}
       <Link 
         to="/blogs"
@@ -25,7 +25,7 @@ export default function BlogArticle() {
 
       {/* Article Header */}
       <div className="max-w-4xl mx-auto">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-light leading-snug tracking-tight mb-4">
+        <h1 className="text-2xl md:text-4xl lg:text-5xl font-light leading-snug tracking-tight mb-4">
           {post.title}
         </h1>
         

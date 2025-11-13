@@ -7,7 +7,7 @@ type Props = {
 export default function ProjectHeader({ project }: Props) {
   return (
     <>
-      <h1 className="text-6xl md:text-7xl lg:text-8xl font-light leading-snug tracking-tight">
+      <h1 className="text-3xl md:text-6xl lg:text-7xl font-light leading-snug tracking-tight">
         {project.title}
       </h1>
       

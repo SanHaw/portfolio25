@@ -27,8 +27,8 @@ export default function About() {
 
   return (
   <>
-  <div className="content-wrap px-6 py-12 relative">
-      <h1 className="text-6xl md:text-7xl lg:text-8xl font-light leading-snug tracking-tight text-center mb-12">About Me</h1>
+    <div className="content-wrap px-3 md:px-6 py-12 relative">
+      <h1 className="text-3xl md:text-6xl lg:text-7xl font-light leading-snug tracking-tight text-center mb-12">About Me</h1>
 
       <section className="mt-8 grid grid-cols-1 lg:grid-cols-[1.5fr_1fr] gap-6 lg:items-center">
         <div className="order-1 lg:order-1">
@@ -82,7 +82,7 @@ export default function About() {
         </div>
       </section>
 
-      <section className="bg-gray-900 py-20 px-6 mt-12 rounded-lg my-16">
+      <section className="bg-gray-900 py-20 px-3 md:px-6 mt-12 rounded-lg my-16">
         <h2 className="text-3xl font-bold text-white mb-8">Find Me Here</h2>
         <div className="flex gap-4">
             <a 
@@ -144,7 +144,7 @@ export default function About() {
 
       <section className="">
         {/* <h2 className="text-2xl font-semibold mb-6">Photos</h2> */}
-        <div className="grid grid-cols-3 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-3 lg:grid-cols-4 gap-2">
           {[
             { title: 'SAMAHAN Systems Development', position: 'UX/UI Head', image: sysdevImg, link: 'https://www.facebook.com/SAMAHANSysDev' },
             { title: 'UXPH Mini', position: 'Volunteer', image: uxphImg, link: 'https://uxph.org' },

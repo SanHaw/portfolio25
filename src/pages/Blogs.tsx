@@ -45,8 +45,8 @@ export default function Blogs() {
 
   return (
     <div className="bg-site-bg">
-      <div className="content-wrap px-20 py-12">
-        <h1 className="text-6xl md:text-7xl lg:text-8xl font-light leading-snug tracking-tight text-center mb-12">
+      <div className="content-wrap px-4 md:px-20 py-12">
+        <h1 className="text-3xl md:text-6xl lg:text-7xl font-light leading-snug tracking-tight text-center mb-12">
           Blogs
         </h1>
 
@@ -86,7 +86,7 @@ export default function Blogs() {
             key={post.id}
             className="w-full py-8"
           >
-            <div className="content-wrap px-20">
+            <div className="content-wrap px-4 md:px-20">
               <div className="grid grid-cols-1 lg:grid-cols-[2fr_3fr] gap-8">
                 {/* Image - Left Column */}
                 <div className="w-full relative">
@@ -166,7 +166,7 @@ export default function Blogs() {
 
       {/* Pagination */}
       {totalPages > 1 && (
-        <div className="content-wrap px-20 py-12">
+        <div className="content-wrap px-4 md:px-20 py-12">
           <div className="flex justify-center items-center gap-2">
             {/* Previous Button */}
             <Button
@@ -210,7 +210,7 @@ export default function Blogs() {
 
       {/* No Results Message */}
       {filteredBlogs.length === 0 && (
-        <div className="content-wrap px-20">
+        <div className="content-wrap px-4 md:px-20">
           <p className="text-center text-gray-500 mt-12">
             No blog posts match the selected categories.
           </p>

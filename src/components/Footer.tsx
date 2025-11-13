@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import heroBg from '../assets/hero_bg.png'
+import footerImg from '../assets/footer.png'
 import logo from '../assets/logo/logo2.svg'
 
 export default function Footer() {
@@ -9,12 +9,12 @@ export default function Footer() {
       <div 
         className="absolute inset-0 w-full h-full bg-cover bg-bottom bg-no-repeat"
         style={{
-          backgroundImage: `url(${heroBg})`
+          backgroundImage: `url(${footerImg})`
         }}
       />
       
       {/* Content overlay */}
-      <div className="content-wrap px-6 pt-8 pb-16 flex flex-col gap-8 relative z-10">
+      <div className="content-wrap px-3 md:px-6 pt-8 pb-16 flex flex-col gap-8 relative z-10">
         <div className="flex flex-col md:flex-row justify-between gap-8">
         {/* Logo and Navigation Column */}
         <div className="flex flex-col md:flex-row justify-start gap-16">

@@ -10,13 +10,12 @@ export default function Home() {
   const recent = projects.slice(0, 3)
 
   return (
-    <div className="w-full px-6">
+    <div className="w-full px-2 md:px-6">
       <Hero />
-
-      <section className="py-16 bg-gray-900 text-white -mx-6 px-6 min-h-[85vh] flex items-center">
+      <section className="py-16 bg-gray-900 text-white -mx-2 md:-mx-6 px-2 md:px-6 min-h-[85vh] flex items-center">
         <div className="content-wrap">
           <div className="mt-8">
-            <h2 className="text-6xl font-light text-white text-center">Recent Projects</h2>
+            <h2 className="text-3xl md:text-6xl font-light text-white text-center">Recent Projects</h2>
             <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
               {recent.map((p) => (
                 <ProjectCard key={p.id} project={p} />
@@ -33,7 +32,7 @@ export default function Home() {
 
       <section className="py-8 min-h-[65vh] max-w-[80vw] mx-auto flex items-center">
         <div className="content-wrap">
-          <h2 className="text-6xl font-light mb-8">About me</h2>
+          <h2 className="text-3xl md:text-6xl font-light mb-8">About me</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
             
             {/* L column - Image */}
@@ -85,7 +84,7 @@ export default function Home() {
 
       <section className="py-16 min-h-[65vh] max-w-[80vw] mx-auto">
         <div className="content-wrap">
-          <h2 className="text-6xl font-light mb-12">Affiliations and Involvement</h2>
+          <h2 className="text-3xl md:text-6xl font-light mb-12">Affiliations and Involvement</h2>
           <div className="max-w-4xl mx-auto space-y-6">
             {/* SAMAHAN SYSDEV - Active */}
             <div className="grid items-start gap-x-3 gap-y-1 justify-center" style={{ gridTemplateColumns: '1rem minmax(200px, 350px) minmax(120px, 150px)' }}>

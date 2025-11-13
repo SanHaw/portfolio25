@@ -137,7 +137,7 @@ img, video, iframe { max-width: 100%; height: auto; display: block }
 	 - desktop/xl: 70%
 */
 .content-wrap {
-	width: 95%;
+	width: 98%;
 	margin-left: auto;
 	margin-right: auto;
 }

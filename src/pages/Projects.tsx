@@ -40,17 +40,17 @@ export default function Projects() {
 
   return (
     <>
-      <div className="content-wrap px-20 py-12">
-        <h1 className="text-6xl md:text-7xl lg:text-8xl font-light leading-snug tracking-tight text-center mb-12">Projects</h1>
+      <div className="content-wrap px-4 md:px-20 py-12">
+        <h1 className="text-3xl md:text-6xl lg:text-7xl font-light leading-snug tracking-tight text-center mb-8">Projects</h1>
         
         {/* Tag Filter Section */}
         <div className="mb-8">
-          <div className="flex flex-wrap gap-3 mb-4 justify-center px-12">
+          <div className="flex flex-wrap gap-3 mb-4 justify-center px-2 md:px-12">
             {allTags.map((tag) => (
               <button
                 key={tag}
                 onClick={() => toggleTag(tag)}
-                className={`px-6 py-3 rounded-full text-base font-medium transition-colors border-2 ${
+                className={`px-3 md:px-6 py-2 md:py-3 rounded-full text-sm md:text-base font-medium transition-colors border-2 ${
                   selectedTags.includes(tag)
                     ? 'bg-yellow-400 border-yellow-400 text-gray-900'
                     : 'bg-transparent border-gray-800 text-gray-800 hover:bg-gray-800 hover:text-white'
@@ -91,10 +91,10 @@ export default function Projects() {
 
       {/* CTA Section */}
       <div className="w-full py-16 md:py-20 bg-gray-900 text-center">
-        <h2 className="text-4xl md:text-5xl lg:text-6xl font-light leading-snug tracking-tight mb-6 text-white">
+        <h2 className="text-2xl md:text-4xl lg:text-5xl font-light leading-snug tracking-tight mb-6 text-white">
           Let's build something amazing together
         </h2>
-        <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl mx-auto px-6">
+        <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl mx-auto px-2 md:px-6">
           Have a project in mind? I'd love to hear about it and explore how we can bring your vision to life.
         </p>
         <a

@@ -53,12 +53,13 @@ export default function Blogs() {
         {/* Filters Section */}
         <div className="mb-8">
           {/* Category Filter */}
-          <div className="flex flex-wrap gap-3 mb-4 justify-center px-12">
+          <div className="flex flex-wrap gap-3 mb-4 justify-center px-12 md:px-12">
             {categories.map((category) => (
               <Button
                 key={category}
                 onClick={() => toggleCategory(category)}
                 variant={selectedCategories.includes(category) ? 'primary' : 'outline'}
+                className="px-3 md:px-6 py-2 md:py-3 text-sm md:text-base"
               >
                 {category}
               </Button>

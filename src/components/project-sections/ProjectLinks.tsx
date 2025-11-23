@@ -5,7 +5,7 @@ type Props = {
 }
 
 export default function ProjectLinks({ project }: Props) {
-  const hasLinks = project.website || project.figma || project.facebook || project.instagram || project.tiktok
+  const hasLinks = project.website || project.secondaryWebsite || project.figma || project.facebook || project.instagram || project.tiktok
 
   if (!hasLinks) return null
 
@@ -23,6 +23,21 @@ export default function ProjectLinks({ project }: Props) {
             <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" stroke="currentColor" strokeWidth="2"/>
           </svg>
           Website
+        </a>
+      )}
+      
+      {project.secondaryWebsite && (
+        <a 
+          href={project.secondaryWebsite.url} 
+          target="_blank" 
+          rel="noreferrer"
+          className="inline-flex items-center gap-2 px-3 md:px-6 py-2 md:py-3 text-sm md:text-base bg-transparent border-2 border-gray-900 text-gray-900 hover:bg-yellow-200 hover:border-gray-900 transition-colors rounded-full font-medium"
+        >
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2"/>
+            <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" stroke="currentColor" strokeWidth="2"/>
+          </svg>
+          {project.secondaryWebsite.label}
         </a>
       )}
       

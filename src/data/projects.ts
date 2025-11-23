@@ -1,4 +1,3 @@
-import { workImages } from '../assets'
 
 export type ProjectImage =
   | string
@@ -46,6 +45,10 @@ export type Project = {
   tags?: string[]
   image?: string
   website?: string
+  secondaryWebsite?: {
+    url: string
+    label: string
+  }
   figma?: string
   facebook?: string
   instagram?: string
@@ -73,7 +76,30 @@ export function text(strings: TemplateStringsArray, ...values: any[]) {
   return lines.map((l) => l.slice(minIndent)).join(' ').replace(/\s+/g, ' ').trim()
 }
 
+// Import individual projects
+import { blockDiary } from './projects/block-diary'
+import { cosmeditour } from './projects/cosmeditour'
+import { cssec } from './projects/cssec'
+import { djPos } from './projects/dj-pos'
+import { duyog } from './projects/duyog'
+import { eds } from './projects/eds'
+import { misscon } from './projects/misscon'
+import { pycon } from './projects/pycon'
+import { tedx } from './projects/tedx'
+
 export const projects: Project[] = [
+  cosmeditour,
+  pycon,
+  blockDiary,
+  duyog,
+  djPos,
+  eds,
+  cssec,
+  tedx,
+  misscon
+]
+
+/* OLD PROJECTS DATA - KEEPING FOR REFERENCE DURING TRANSITION
   {
     id: 'ux-007',
     title: 'CosMediTour',
@@ -711,3 +737,4 @@ export const projects: Project[] = [
   //   galleryLayout: 'masonry'
   // }
 ]
+*/

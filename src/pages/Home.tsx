@@ -1,257 +1,117 @@
-import { Link } from 'react-router-dom'
-import aboutMeGif from '../assets/about_me.GIF?url'
-import Button from '../components/Button'
+import { useState } from 'react'
 import Hero from '../components/Hero'
 import ProjectCard from '../components/ProjectCard'
-import Tag from '../components/Tag'
 import { projects } from '../data/projects'
 
 export default function Home() {
-  const recent = projects.slice(0, 3)
+  const allTags = [
+    'UI Design',
+    'Case Study',
+    'QA Testing',
+    'Project Management',
+    'Graphic Design',
+    'Branding Design',
+    'System Design',
+    'Web Design',
+    'Mobile Design',
+    'Social Media',
+    'Figma',
+    'Canva'
+  ]
+
+  const [selectedTags, setSelectedTags] = useState<string[]>([])
+
+  const toggleTag = (tag: string) => {
+    if (selectedTags.includes(tag)) {
+      setSelectedTags(selectedTags.filter(t => t !== tag))
+    } else {
+      setSelectedTags([...selectedTags, tag])
+    }
+  }
+
+  const clearSelection = () => {
+    setSelectedTags([])
+  }
+
+  const filteredProjects = selectedTags.length === 0
+    ? projects
+    : projects.filter(project => 
+        project.tags?.some(tag => selectedTags.includes(tag))
+      )
 
   return (
     <div className="w-full px-2 md:px-6">
       <Hero />
-      <section className="py-16 bg-gray-900 text-white -mx-2 md:-mx-6 px-2 md:px-6 min-h-[85vh] flex items-center">
+      
+      {/* Projects Section */}
+      <section id="projects" className="pt-24 pb-16 bg-gray-50 text-gray-900 -mx-2 md:-mx-6 px-2 md:px-6">
         <div className="content-wrap">
-          <div className="mt-8">
-            <h2 className="text-3xl md:text-6xl font-light text-white text-center">Recent Projects</h2>
-            <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
-              {recent.map((p) => (
-                <ProjectCard key={p.id} project={p} />
+          {/* Section Title */}
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-light mb-12 text-center">
+            Projects
+          </h2>
+
+          {/* Tag Filter Section */}
+          <div className="mb-8">
+            <div className="flex flex-wrap gap-3 mb-4 justify-center px-2 md:px-12">
+              {allTags.map((tag) => (
+                <button
+                  key={tag}
+                  onClick={() => toggleTag(tag)}
+                  className={`px-3 md:px-6 py-2 md:py-3 rounded-full text-sm md:text-base font-medium transition-colors border-2 ${
+                    selectedTags.includes(tag)
+                      ? 'bg-yellow-400 border-yellow-400 text-gray-900'
+                      : 'bg-transparent border-gray-800 text-gray-800 hover:bg-gray-800 hover:text-white'
+                  }`}
+                >
+                  {tag}
+                </button>
               ))}
             </div>
-            <div className="mt-12 flex justify-center">
-              <Link to="/projects">
-                <Button size="lg">View all projects</Button>
-              </Link>
-            </div>
+            
+            {/* Clear Selection Button */}
+            {selectedTags.length > 0 && (
+              <div className="flex justify-end">
+                <button
+                  onClick={clearSelection}
+                  className="text-sm text-gray-600 hover:text-gray-900 underline"
+                >
+                  Clear selection
+                </button>
+              </div>
+            )}
           </div>
+
+          {/* Projects Grid */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-3 gap-6">
+            {filteredProjects.map((p) => (
+              <ProjectCard key={p.id} project={p} />
+            ))}
+          </div>
+
+          {/* No Results Message */}
+          {filteredProjects.length === 0 && (
+            <p className="text-center text-gray-600 mt-12">
+              No projects match the selected tags.
+            </p>
+          )}
         </div>
       </section>
 
-      <section className="py-8 min-h-[65vh] max-w-[80vw] mx-auto flex items-center">
-        <div className="content-wrap">
-          <h2 className="text-3xl md:text-6xl font-light mb-8">About me</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
-            
-            {/* L column - Image */}
-            <div className="flex items-center justify-center">
-              <img src={aboutMeGif} alt="Profile photo" className="w-auto h-auto rounded-lg" />
-            </div>
-          
-          {/* R column - Text */}
-            <div className="flex flex-col justify-center">
-              <p className="text-xl text-gray-600" >Hi, I'm Sarah („• ᴗ •„)♡ 
-                            An artist and designer from Davao City, Philippines. 
-                            ･ʚ˚✧˖ With a background in graphic design, ux/ui design, 
-                            front-end development, project management, social media 
-                            marketing, and customer service. (*´∇｀*)♡ I actively 
-                            participate in organizations within and outside of school 
-                            and have led numerous projects since entering college. ⋆✺⋆｡
-                            </p>
-                            <br />
-                            <p className="text-xl text-gray-600">
-                            When I'm not rushing off to the next project, I'm 
-                            collecting smiskis, reading, playing games, watching 
-                            movies, and--my favorite-- writing in my burn book 
-                            (scrapbooking in my journal).</p>
-            </div></div>
-
-            
-
-          {/* Tags and button below the grid */}
-          <div className="mt-8">
-            <div className="flex flex-wrap gap-2">
-              <Tag>UX/UI Design</Tag>
-              <Tag>Figma</Tag>
-              <Tag>Prototyping</Tag>
-              <Tag>Project Management</Tag>
-              <Tag>QA Testing</Tag>
-              <Tag>Agile</Tag>
-              <Tag>Wireframing</Tag>
-              <Tag>Canva</Tag>
-            </div>
-
-            <div className="mt-6 flex justify-center">
-              <Link to="/about">
-                <Button size="lg">Read more about me</Button>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 min-h-[65vh] max-w-[80vw] mx-auto">
-        <div className="content-wrap">
-          <h2 className="text-3xl md:text-6xl font-light mb-12">Affiliations and Involvement</h2>
-          <div className="max-w-4xl mx-auto space-y-6">
-            {/* SAMAHAN SYSDEV - Active */}
-            <div className="grid items-start gap-x-3 gap-y-1 justify-center" style={{ gridTemplateColumns: '1rem minmax(200px, 350px) minmax(120px, 150px)' }}>
-              <div className="w-4 h-4 rounded-full bg-yellow-400 mt-1"></div>
-              <div>
-                <p className="font-semibold text-lg">SAMAHAN SYSDEV</p>
-                <p className="text-gray-600 ml-4">UX/UI Head</p>
-                <p className="text-gray-600 ml-4">QA Tester</p>
-                <p className="text-gray-600 ml-4">Project Manager</p>
-                <p className="text-gray-600 ml-4">UX/UI Member</p>
-              </div>
-              <div className="text-right whitespace-nowrap">
-                <p className="text-gray-600 invisible">.</p>
-                <p className="text-gray-600">2024 - present</p>
-                <p className="text-gray-600">2025 - present</p>
-                <p className="text-gray-600">2025 - present</p>
-                <p className="text-gray-600">2024 - 2025</p>
-              </div>
-            </div>
-
-            {/* UX Davao - Active */}
-            <div className="grid items-start gap-x-3 gap-y-1 justify-center" style={{ gridTemplateColumns: '1rem minmax(200px, 350px) minmax(120px, 150px)' }}>
-              <div className="w-4 h-4 rounded-full bg-yellow-400 mt-1"></div>
-              <div>
-                <p className="font-semibold text-lg">UX Davao</p>
-                <p className="text-gray-600 ml-4">Creatives Volunteer</p>
-                <p className="text-gray-600 ml-4">Video Editor</p>
-              </div>
-              <div className="text-right whitespace-nowrap">
-                <p className="text-gray-600 invisible">.</p>
-                <p className="text-gray-600">2025 - present</p>
-                <p className="text-gray-600">2025 - present</p>
-              </div>
-            </div>
-
-            {/* No-Code PH - Active */}
-            <div className="grid items-start gap-x-3 gap-y-1 justify-center" style={{ gridTemplateColumns: '1rem minmax(200px, 350px) minmax(120px, 150px)' }}>
-              <div className="w-4 h-4 rounded-full bg-yellow-400 mt-1"></div>
-              <div>
-                <p className="font-semibold text-lg">No-Code PH</p>
-                <p className="text-gray-600 ml-4">Creatives Volunteer</p>
-                <p className="text-gray-600 ml-4">UX/UI Designer</p>
-              </div>
-              <div className="text-right whitespace-nowrap">
-                <p className="text-gray-600 invisible">.</p>
-                <p className="text-gray-600">2025 - present</p>
-                <p className="text-gray-600">2025 - present</p>
-              </div>
-            </div>
-
-            {/* AFCC - Inactive */}
-            <div className="grid items-start gap-x-3 gap-y-1 justify-center" style={{ gridTemplateColumns: '1rem minmax(200px, 350px) minmax(120px, 150px)' }}>
-              <div className="w-4 h-4 rounded-full bg-yellow-400 mt-1"></div>
-              <div>
-                <p className="font-semibold text-lg">AFCC</p>
-                <p className="text-gray-600 ml-4">Deputy Creatives Director</p>
-                <p className="text-gray-600 ml-4">Creatives Director</p>
-              </div>
-              <div className="text-right whitespace-nowrap">
-                <p className="text-gray-600 invisible">.</p>
-                <p className="text-gray-600">2025 - present</p>
-                <p className="text-gray-600">2024 - 2025</p>
-              </div>
-            </div>
-
-            {/* Pycon - Inactive */}
-            <div className="grid items-start gap-x-3 gap-y-1 justify-center" style={{ gridTemplateColumns: '1rem minmax(200px, 350px) minmax(120px, 150px)' }}>
-              <div className="w-4 h-4 rounded-full border-2 border-gray-300 mt-1"></div>
-              <div>
-                <p className="font-semibold text-lg">Durian Py</p>
-                <p className="text-gray-600 ml-4">UX/UI Designer</p>
-                <p className="text-gray-600 ml-4">Graphic Designer</p>
-              </div>
-              <div className="text-right whitespace-nowrap">
-                <p className="text-gray-600 invisible">.</p>
-                <p className="text-gray-600">2025</p>
-                <p className="text-gray-600">2025</p>
-              </div>
-            </div>
-
-            {/* Tactiv - Inactive */}
-            <div className="grid items-start gap-x-3 gap-y-1 justify-center" style={{ gridTemplateColumns: '1rem minmax(200px, 350px) minmax(120px, 150px)' }}>
-              <div className="w-4 h-4 rounded-full border-2 border-gray-300 mt-1"></div>
-              <div>
-                <p className="font-semibold text-lg">Tactiv</p>
-                <p className="text-gray-600 ml-4">Usability Testing Intern</p>
-                <p className="text-gray-600 ml-4">UX/UI Intern</p>
-              </div>
-              <div className="text-right whitespace-nowrap">
-                <p className="text-gray-600 invisible">.</p>
-                <p className="text-gray-600">2025</p>
-                <p className="text-gray-600">2025</p>
-              </div>
-            </div>
-
-            {/* AWSUG Davao - Inactive */}
-            <div className="grid items-start gap-x-3 gap-y-1 justify-center" style={{ gridTemplateColumns: '1rem minmax(200px, 350px) minmax(120px, 150px)' }}>
-              <div className="w-4 h-4 rounded-full border-2 border-gray-300 mt-1"></div>
-              <div>
-                <p className="font-semibold text-lg">AWSUG Davao</p>
-                <p className="text-gray-600 ml-4">Creatives Volunteer</p>
-              </div>
-              <div className="text-right whitespace-nowrap">
-                <p className="text-gray-600 invisible">.</p>
-                <p className="text-gray-600">2025</p>
-              </div>
-            </div>
-
-            {/* Borderline Travel and Tours - Inactive */}
-            <div className="grid items-start gap-x-3 gap-y-1 justify-center" style={{ gridTemplateColumns: '1rem minmax(200px, 350px) minmax(120px, 150px)' }}>
-              <div className="w-4 h-4 rounded-full border-2 border-gray-300 mt-1"></div>
-              <div>
-                <p className="font-semibold text-lg">Borderline Travel and Tours</p>
-                <p className="text-gray-600 ml-4">Creatives Lead</p>
-              </div>
-              <div className="text-right whitespace-nowrap">
-                <p className="text-gray-600 invisible">.</p>
-                <p className="text-gray-600">2024</p>
-              </div>
-            </div>
-
-            {/* CSSEC - Inactive */}
-            <div className="grid items-start gap-x-3 gap-y-1 justify-center" style={{ gridTemplateColumns: '1rem minmax(200px, 350px) minmax(120px, 150px)' }}>
-              <div className="w-4 h-4 rounded-full border-2 border-gray-300 mt-1"></div>
-              <div>
-                <p className="font-semibold text-lg">CSSEC</p>
-                <p className="text-gray-600 ml-4">Creatives Head</p>
-              </div>
-              <div className="text-right whitespace-nowrap">
-                <p className="text-gray-600 invisible">.</p>
-                <p className="text-gray-600">2023 - 2024</p>
-              </div>
-            </div>
-
-            {/* POWER AdDU - Inactive */}
-            <div className="grid items-start gap-x-3 gap-y-1 justify-center" style={{ gridTemplateColumns: '1rem minmax(200px, 350px) minmax(120px, 150px)' }}>
-              <div className="w-4 h-4 rounded-full border-2 border-gray-300 mt-1"></div>
-              <div>
-                <p className="font-semibold text-lg">POWER AdDU</p>
-                <p className="text-gray-600 ml-4">CS Liaison</p>
-                <p className="text-gray-600 ml-4">Project Head</p>
-                <p className="text-gray-600 ml-4">Undersecretary</p>
-              </div>
-              <div className="text-right whitespace-nowrap">
-                <p className="text-gray-600 invisible">.</p>
-                <p className="text-gray-600">2022 - 2023</p>
-                <p className="text-gray-600">2022 - 2023</p>
-                <p className="text-gray-600">2023 - 2024</p>
-              </div>
-            </div>
-
-            {/* Cosmik Digital Solutions - Inactive */}
-            <div className="grid items-start gap-x-3 gap-y-1 justify-center" style={{ gridTemplateColumns: '1rem minmax(200px, 350px) minmax(120px, 150px)' }}>
-              <div className="w-4 h-4 rounded-full border-2 border-gray-300 mt-1"></div>
-              <div>
-                <p className="font-semibold text-lg">Cosmik Digital Solutions</p>
-                <p className="text-gray-600 ml-4">Graphic Design</p>
-                <p className="text-gray-600 ml-4">Video Editor</p>
-              </div>
-              <div className="text-right whitespace-nowrap">
-                <p className="text-gray-600 invisible">.</p>
-                <p className="text-gray-600">2022</p>
-                <p className="text-gray-600">2022</p>
-              </div>
-            </div>
-          </div>
-        </div>
+      {/* CTA Section */}
+      <section className="py-16 md:py-20 text-center bg-gray-50">
+        <h2 className="text-2xl md:text-4xl lg:text-5xl font-light leading-snug tracking-tight mb-6">
+          Let's build something amazing together
+        </h2>
+        <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-2xl mx-auto px-2 md:px-6">
+          Have a project in mind? I'd love to hear about it and explore how we can bring your vision to life.
+        </p>
+        <a
+          href="mailto:itssarahhaw@gmail.com"
+          className="inline-block px-8 py-4 bg-gray-900 text-gray-50 rounded-full text-lg font-medium hover:bg-gray-800 transition-colors"
+        >
+          Get in touch
+        </a>
       </section>
     </div>
   )

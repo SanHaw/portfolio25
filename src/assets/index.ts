@@ -121,6 +121,7 @@ import beyondTheWireframe from './blog/beyond-the-wireframe.jpg'
 import buildingForwardSysdev from './blog/building-forward-sysdev.jpg'
 import fightingChanceItweek from './blog/fighting-chance-itweek.jpg'
 import gdgDavaoInnovation from './blog/gdg-davao-innovation.jpg'
+import pycon2025 from './blog/pycon-2025.jpg'
 import sohwakhaengJournaling from './blog/sohwakhaeng-journaling.jpg'
 import tactivInternship from './blog/tactiv-internship.jpg'
 import theFrameAiDesign from './blog/the-frame-ai-design.jpg'
@@ -258,4 +259,5 @@ export const blogImages = {
   fightingChanceItweek,
   uxDavaoProjectManagement,
   gdgDavaoInnovation,
+  pycon2025,
 }

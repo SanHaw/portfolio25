@@ -116,6 +116,17 @@ export const blogPosts: Record<string, Blog> = {
     preview: `My first Google Developer Group Davao event was an inspiring deep dive into the future of tech — from learning about Flutter and LangChain on Vertex AI to understanding the importance of accessibility and leadership in design. Grateful to the incredible speakers for sharing their insights and sparking new ideas I can't wait to explore further.`,
     content: ``,
     linkedinUrl: 'https://www.linkedin.com/posts/sanhaw_attended-my-first-google-developer-group-activity-7220430906908459010-TYGH?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEka1JEBxHaiWphlT2C_qlFXY_c0meLf9aA'
+  },
+  'pycon-2025': {
+    id: 'pycon-2025',
+    title: 'Incredible experiences with PyCon Davao 2025',
+    date: '2025-11-18',
+    category: ['Events', 'Tech','Volunteering','Community'],
+    image: blogImages.pycon2025,
+    preview: `PyCon Davao 2025 was one of the most inspiring events I've ever volunteered for. I worked on the event website and social media, where I learned a ton about web design, branding, and building for a community. Beyond the work, I met so many passionate people—from students to founders to engineers—all brought together by the spirit of "building with Python, together.'
+`,
+    content: ``,
+    linkedinUrl: 'https://www.linkedin.com/posts/sanhaw_what-an-incredible-experience-being-part-activity-7395309588683816960-e2Bi?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEka1JEBxHaiWphlT2C_qlFXY_c0meLf9aA'
   }
   // Add more blog posts here
 }
@@ -129,7 +140,8 @@ export const blogDisplayOrder = [
   'fighting-chance-itweek',
   'ux-davao-project-management',
   'uxph-mini-davao',
-  'the-frame-ai-design'
+  'the-frame-ai-design',
+  'pycon-2025'
   // Add more IDs in the order you want them displayed
 ]
 

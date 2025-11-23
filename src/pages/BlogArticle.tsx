@@ -58,20 +58,33 @@ export default function BlogArticle() {
           </div>
         </div>
 
-        {/* LinkedIn Link */}
-        {post.linkedinUrl && (
-          <div className="mt-8 pt-8 border-t">
-            <a
-              href={post.linkedinUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800"
-            >
-              Read original post on LinkedIn
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </a>
+        {/* Action Links */}
+        {(post.linkedinUrl || post.secondaryLink) && (
+          <div className="mt-8 pt-8 border-t flex flex-wrap gap-3">
+            {post.linkedinUrl && (
+              <a
+                href={post.linkedinUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-yellow-400 text-gray-900 rounded-full font-medium hover:bg-yellow-500 transition-colors"
+              >
+                Read full article here
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </a>
+            )}
+            {post.secondaryLink && (
+              <Link
+                to={post.secondaryLink.url}
+                className="inline-flex items-center gap-2 px-6 py-3 bg-transparent border-2 border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-white transition-colors rounded-full font-medium"
+              >
+                {post.secondaryLink.label}
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </Link>
+            )}
           </div>
         )}
       </div>

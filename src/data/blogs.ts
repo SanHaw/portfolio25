@@ -9,6 +9,10 @@ export type Blog = {
   preview: string
   content: string
   linkedinUrl?: string
+  secondaryLink?: {
+    url: string
+    label: string
+  }
 }
 
 // All blog posts with their full content
@@ -95,7 +99,11 @@ export const blogPosts: Record<string, Blog> = {
     image: blogImages.fightingChanceItweek,
     preview: `At IT Week 2025, what struck me most wasn't the talks or tools — it was the crowd. A packed room of aspiring designers made me realize just how competitive the UX/UI field really is. For a moment, doubt crept in. But less than a day later, our team won first place in a UX/UI design competition — proof that growth isn't about having everything figured out, but about showing up, trying anyway, and giving yourself a fighting chance.`,
     content: ``,
-    linkedinUrl: 'https://www.linkedin.com/posts/sanhaw_during-the-it-week-2025-event-at-ateneo-de-activity-7301449003093696512-O8po?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEka1JEBxHaiWphlT2C_qlFXY_c0meLf9aA'
+    linkedinUrl: 'https://www.linkedin.com/posts/sanhaw_during-the-it-week-2025-event-at-ateneo-de-activity-7301449003093696512-O8po?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEka1JEBxHaiWphlT2C_qlFXY_c0meLf9aA',
+    secondaryLink: {
+      url: '/projects/ux-003',
+      label: 'the design that won'
+    }
   },
   'ux-davao-project-management': {
     id: 'ux-davao-project-management',
@@ -123,10 +131,14 @@ export const blogPosts: Record<string, Blog> = {
     date: '2025-11-18',
     category: ['Events', 'Tech','Volunteering','Community'],
     image: blogImages.pycon2025,
-    preview: `PyCon Davao 2025 was one of the most inspiring events I've ever volunteered for. I worked on the event website and social media, where I learned a ton about web design, branding, and building for a community. Beyond the work, I met so many passionate people—from students to founders to engineers—all brought together by the spirit of "building with Python, together.'
+    preview: `PyCon Davao 2025 was one of the most inspiring events I've ever volunteered for. I worked on the event website and social media, where I learned a ton about web design, branding, and building for a community. Beyond the work, I met so many passionate people—from students to founders to engineers—all brought together by the spirit of "building with Python, together.' 
 `,
     content: ``,
-    linkedinUrl: 'https://www.linkedin.com/posts/sanhaw_what-an-incredible-experience-being-part-activity-7395309588683816960-e2Bi?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEka1JEBxHaiWphlT2C_qlFXY_c0meLf9aA'
+    linkedinUrl: 'https://www.linkedin.com/posts/sanhaw_what-an-incredible-experience-being-part-activity-7395309588683816960-e2Bi?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEka1JEBxHaiWphlT2C_qlFXY_c0meLf9aA',
+    secondaryLink: {
+      url: '/projects/ux-002',
+      label: 'Read about the website'
+    }
   }
   // Add more blog posts here
 }

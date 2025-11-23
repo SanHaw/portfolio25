@@ -126,29 +126,31 @@ export default function Blogs() {
                   </div>
 
                   {/* Read Full Article Button - Fixed at Bottom */}
-                  {post.linkedinUrl && (
+                  {(post.linkedinUrl || post.secondaryLink) && (
                     <div className="flex flex-col sm:flex-row gap-4 justify-start mt-6">
-                      <a
-                        href={post.linkedinUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex"
-                      >
-                        <Button size="lg" className="inline-flex items-center gap-2">
-                          Read full article here
-                          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M7 17L17 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                            <path d="M7 7h10v10" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                          </svg>
-                        </Button>
-                      </a>
-                      {post.id === 'fighting-chance-itweek' && (
+                      {post.linkedinUrl && (
                         <a
-                          href="/projects/ux-003"
+                          href={post.linkedinUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
                           className="inline-flex"
                         >
-                          <Button variant="secondary" className="inline-flex items-center gap-2">
-                            the design that won
+                          <Button size="lg" className="inline-flex items-center gap-2">
+                            Read full article here
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M7 17L17 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                              <path d="M7 7h10v10" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                            </svg>
+                          </Button>
+                        </a>
+                      )}
+                      {post.secondaryLink && (
+                        <a
+                          href={post.secondaryLink.url}
+                          className="inline-flex"
+                        >
+                          <Button variant="secondary" className="inline-flex items-center gap-2 hover:!bg-gray-900 hover:!text-white">
+                            {post.secondaryLink.label}
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path d="M7 17L17 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                               <path d="M7 7h10v10" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>

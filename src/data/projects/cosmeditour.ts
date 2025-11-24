@@ -95,21 +95,19 @@ export const cosmeditour: Project = {
       title: '',
       description: 'Design #1: Focusing more on nude tones, keeping the color palette and style of the original website.',
       images: [
-        workImages.cmt.cmt100,
-        workImages.cmt.cmt001,
-        workImages.cmt.cmt003
+        workImages.cmt.cmt101,
+        workImages.cmt.cmt100
       ],
-      layout: 'custom-grid'
+      layout: 'cmt-grid'
     },
     {
       title: '',
       description: 'Design #2: A reinterpretation with a different take on their color palette and a slightly different style.',
       images: [
-        workImages.cmt.cmt200,
-        workImages.cmt.cmt005,
-        workImages.cmt.cmt006
+        workImages.cmt.cmt201,
+        workImages.cmt.cmt200
       ],
-      layout: 'custom-grid'
+      layout: 'cmt-grid'
     }
   ]
 }

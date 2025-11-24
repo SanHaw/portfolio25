@@ -455,17 +455,16 @@ export default function Gallery({ images, layout = 'grid' }: Props) {
 
   if (layout === 'cmt-grid') {
     // Special grid for CosMediTour project
-    // All images: aspect ratio 1920/1080, object-cover object-center
-    // Pattern: [full], [full], [1/3][1/3][1/3], [full], [1/3][1/3][1/3]
+    // Pattern: [full], [full], [half][half]
     return (
       <>
         <div className="mt-6 flex justify-center">
           <div className="w-full lg:max-w-[75%]">
             <div className="w-full pt-8">
-              <div className="grid grid-cols-6 gap-4 w-full">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
                 {/* Row 1: Image 1 - Full width */}
                 {images[0] && (
-                  <div className="col-span-6 col-start-1 flex rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity" style={{ aspectRatio: '1920/1080' }} onClick={() => openImage(typeof images[0] === 'string' ? images[0] : images[0].src)}>
+                  <div className="col-span-1 md:col-span-2 flex rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity" style={{ aspectRatio: '1920/1080' }} onClick={() => openImage(typeof images[0] === 'string' ? images[0] : images[0].src)}>
                     <img
                       src={typeof images[0] === 'string' ? images[0] : images[0].src}
                       alt="Gallery 1"
@@ -476,7 +475,7 @@ export default function Gallery({ images, layout = 'grid' }: Props) {
 
                 {/* Row 2: Image 2 - Full width */}
                 {images[1] && (
-                  <div className="col-span-6 col-start-1 flex rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity" style={{ aspectRatio: '1920/1080' }} onClick={() => openImage(typeof images[1] === 'string' ? images[1] : images[1].src)}>
+                  <div className="col-span-1 md:col-span-2 flex rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity" style={{ aspectRatio: '1920/1080' }} onClick={() => openImage(typeof images[1] === 'string' ? images[1] : images[1].src)}>
                     <img
                       src={typeof images[1] === 'string' ? images[1] : images[1].src}
                       alt="Gallery 2"
@@ -485,9 +484,9 @@ export default function Gallery({ images, layout = 'grid' }: Props) {
                   </div>
                 )}
 
-                {/* Row 3: Images 3, 4, 5 - Three columns */}
+                {/* Row 3: Images 3, 4 - Two half-width columns */}
                 {images[2] && (
-                  <div className="col-span-2 col-start-1 flex rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity" style={{ aspectRatio: '1920/1080' }} onClick={() => openImage(typeof images[2] === 'string' ? images[2] : images[2].src)}>
+                  <div className="col-span-1 flex rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity" style={{ aspectRatio: '1920/1080' }} onClick={() => openImage(typeof images[2] === 'string' ? images[2] : images[2].src)}>
                     <img
                       src={typeof images[2] === 'string' ? images[2] : images[2].src}
                       alt="Gallery 3"
@@ -497,62 +496,10 @@ export default function Gallery({ images, layout = 'grid' }: Props) {
                 )}
 
                 {images[3] && (
-                  <div className="col-span-2 col-start-3 flex rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity" style={{ aspectRatio: '1920/1080' }} onClick={() => openImage(typeof images[3] === 'string' ? images[3] : images[3].src)}>
+                  <div className="col-span-1 flex rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity" style={{ aspectRatio: '1920/1080' }} onClick={() => openImage(typeof images[3] === 'string' ? images[3] : images[3].src)}>
                     <img
                       src={typeof images[3] === 'string' ? images[3] : images[3].src}
                       alt="Gallery 4"
-                      className="w-full h-full object-cover object-center pointer-events-none"
-                    />
-                  </div>
-                )}
-
-                {images[4] && (
-                  <div className="col-span-2 col-start-5 flex rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity" style={{ aspectRatio: '1920/1080' }} onClick={() => openImage(typeof images[4] === 'string' ? images[4] : images[4].src)}>
-                    <img
-                      src={typeof images[4] === 'string' ? images[4] : images[4].src}
-                      alt="Gallery 5"
-                      className="w-full h-full object-cover object-center pointer-events-none"
-                    />
-                  </div>
-                )}
-
-                {/* Row 4: Image 6 - Full width */}
-                {images[5] && (
-                  <div className="col-span-6 col-start-1 flex rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity" style={{ aspectRatio: '1920/1080' }} onClick={() => openImage(typeof images[5] === 'string' ? images[5] : images[5].src)}>
-                    <img
-                      src={typeof images[5] === 'string' ? images[5] : images[5].src}
-                      alt="Gallery 6"
-                      className="w-full h-full object-cover object-top pointer-events-none"
-                    />
-                  </div>
-                )}
-
-                {/* Row 5: Images 7, 8, 9 - Three columns */}
-                {images[6] && (
-                  <div className="col-span-2 col-start-1 flex rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity" style={{ aspectRatio: '1920/1080' }} onClick={() => openImage(typeof images[6] === 'string' ? images[6] : images[6].src)}>
-                    <img
-                      src={typeof images[6] === 'string' ? images[6] : images[6].src}
-                      alt="Gallery 7"
-                      className="w-full h-full object-cover object-center pointer-events-none"
-                    />
-                  </div>
-                )}
-
-                {images[7] && (
-                  <div className="col-span-2 col-start-3 flex rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity" style={{ aspectRatio: '1920/1080' }} onClick={() => openImage(typeof images[7] === 'string' ? images[7] : images[7].src)}>
-                    <img
-                      src={typeof images[7] === 'string' ? images[7] : images[7].src}
-                      alt="Gallery 8"
-                      className="w-full h-full object-cover object-center pointer-events-none"
-                    />
-                  </div>
-                )}
-
-                {images[8] && (
-                  <div className="col-span-2 col-start-5 flex rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity" style={{ aspectRatio: '1920/1080' }} onClick={() => openImage(typeof images[8] === 'string' ? images[8] : images[8].src)}>
-                    <img
-                      src={typeof images[8] === 'string' ? images[8] : images[8].src}
-                      alt="Gallery 9"
                       className="w-full h-full object-cover object-center pointer-events-none"
                     />
                   </div>

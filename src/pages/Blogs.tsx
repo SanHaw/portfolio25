@@ -79,7 +79,6 @@ export default function Blogs() {
           )}
         </div>
       </div>
-
       {/* Blog Articles - Full Width */}
       <div className="flex flex-col gap-0">
         {currentBlogs.map((post, index) => (

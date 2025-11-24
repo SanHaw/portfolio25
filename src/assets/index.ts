@@ -33,7 +33,9 @@ import cmt003 from './work/cmt/cmt003.png'
 import cmt005 from './work/cmt/cmt005.png'
 import cmt006 from './work/cmt/cmt006.png'
 import cmt100 from './work/cmt/cmt100.png'
+import cmt101 from './work/cmt/cmt101.jpg'
 import cmt200 from './work/cmt/cmt200.png'
+import cmt201 from './work/cmt/cmt201.jpg'
 
 // Work images - Elysan Design Studios
 import eds from './work/eds/eds.jpg'
@@ -164,7 +166,9 @@ export const workImages = {
     cmt005,
     cmt006,
     cmt100,
+    cmt101,
     cmt200,
+    cmt201,
   },
   eds: {
     eds,

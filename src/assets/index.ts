@@ -36,6 +36,14 @@ import cmt100 from './work/cmt/cmt100.png'
 import cmt101 from './work/cmt/cmt101.jpg'
 import cmt200 from './work/cmt/cmt200.png'
 import cmt201 from './work/cmt/cmt201.jpg'
+// Work images - Midnight Files
+import mf000 from './work/mf/mf000.jpg'
+import mf001 from './work/mf/mf001.jpg'
+import mf002 from './work/mf/mf002.jpg'
+import mf003 from './work/mf/mf003.jpg'
+import mf004 from './work/mf/mf004.jpg'
+import mf100 from './work/mf/mf100.gif'
+import mf101 from './work/mf/mf101.gif'
 
 // Work images - Elysan Design Studios
 import eds from './work/eds/eds.jpg'
@@ -169,6 +177,15 @@ export const workImages = {
     cmt101,
     cmt200,
     cmt201,
+  },
+  mf: {
+    mf000,
+    mf001,
+    mf002,
+    mf003,
+    mf004,
+    mf100,
+    mf101,
   },
   eds: {
     eds,

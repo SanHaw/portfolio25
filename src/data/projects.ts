@@ -12,7 +12,7 @@ export type GallerySection = {
   title: string
   description?: string
   images: ProjectImage[]
-  layout?: 'grid' | 'masonry' | 'carousel' | 'fixed-grid' | 'hero-grid' | 'cham-grid' | 'purple-grid' | 'itweek-grid' | 'eds-grid' | 'tedx-grid' | 'nwsfd-grid' | 'cmt-grid' | 'custom-grid' | 'bd-grid'
+  layout?: 'grid' | 'masonry' | 'carousel' | 'fixed-grid' | 'hero-grid' | 'cham-grid' | 'purple-grid' | 'itweek-grid' | 'eds-grid' | 'tedx-grid' | 'nwsfd-grid' | 'cmt-grid' | 'custom-grid' | 'bd-grid' | 'mf-grid'
 }
 
 export type ProblemSolutionRow = {
@@ -83,6 +83,7 @@ import { cssec } from './projects/cssec'
 import { djPos } from './projects/dj-pos'
 import { duyog } from './projects/duyog'
 import { eds } from './projects/eds'
+import { midnightFiles } from './projects/midnight-files'
 import { misscon } from './projects/misscon'
 import { pycon } from './projects/pycon'
 import { tedx } from './projects/tedx'
@@ -90,6 +91,7 @@ import { tedx } from './projects/tedx'
 export const projects: Project[] = [
   cosmeditour,
   pycon,
+  midnightFiles,
   blockDiary,
   duyog,
   djPos,

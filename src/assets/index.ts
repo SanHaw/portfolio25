@@ -64,6 +64,7 @@ import eds116 from './work/eds/eds116.jpg'
 // Work images - SAMAHAN NewsFeed
 import nwsfd000 from './work/nwsfd/nwsfd000.jpg'
 import smhnnwsfd001 from './work/nwsfd/smhnnwsfd001.jpg'
+import smhnnwsfd002 from './work/nwsfd/smhnnwsfd002.jpg'
 import smhnnwsfd003 from './work/nwsfd/smhnnwsfd003.jpg'
 import smhnnwsfd004 from './work/nwsfd/smhnnwsfd004.jpg'
 import smhnnwsfd005 from './work/nwsfd/smhnnwsfd005.jpg'
@@ -206,6 +207,7 @@ export const workImages = {
   nwsfd: {
     nwsfd000,
     smhnnwsfd001,
+    smhnnwsfd002,
     smhnnwsfd003,
     smhnnwsfd004,
     smhnnwsfd005,

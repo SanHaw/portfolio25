@@ -1,105 +1,120 @@
-import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import Hero from '../components/Hero'
 import ProjectCard from '../components/ProjectCard'
 import { projects } from '../data/projects'
+import uxCert from '../assets/certs/UX.png'
+import networksCert from '../assets/certs/Networks.png'
+
+// Certifications data - add your certificate images and links here
+const certifications = [
+  {
+    id: 1,
+    title: 'Foundations of User Experience (UX) Design',
+    image: uxCert,
+    link: 'https://www.coursera.org/account/accomplishments/verify/OUFFRSB9HJGF',
+    issued: 'November 2025'
+  },
+  {
+    id: 2,
+    title: 'CCNA: Introduction to Networks',
+    image: networksCert,
+    link: 'https://www.credly.com/badges/3d701633-29b5-474f-b5ea-34395a2585d3/public_url',
+    issued: 'May 2025'
+  }
+]
 
 export default function Home() {
-  const allTags = [
-    'UI Design',
-    'Case Study',
-    'QA Testing',
-    'Project Management',
-    'Graphic Design',
-    'Branding Design',
-    'System Design',
-    'Web Design',
-    'Mobile Design',
-    'Social Media',
-    'Figma',
-    'Canva'
+  // Featured projects to display on home page - add your project IDs here
+  const featuredProjectIds = [
+    'ux-007', // Cosmeditour
+    'ux-008', // PyCon
+    'ux-003', // Block Diary
+    'gd-001', // Elysan Design Studio
+    'gd-004', // Midnight Files
+    'ux-001'  // Duyog
   ]
-
-  const [selectedTags, setSelectedTags] = useState<string[]>([])
-
-  const toggleTag = (tag: string) => {
-    if (selectedTags.includes(tag)) {
-      setSelectedTags(selectedTags.filter(t => t !== tag))
-    } else {
-      setSelectedTags([...selectedTags, tag])
-    }
-  }
-
-  const clearSelection = () => {
-    setSelectedTags([])
-  }
-
-  const filteredProjects = selectedTags.length === 0
-    ? projects
-    : projects.filter(project => 
-        project.tags?.some(tag => selectedTags.includes(tag))
-      )
+  
+  // Filter projects to show only featured ones
+  const featuredProjects = projects.filter(p => featuredProjectIds.includes(p.id))
 
   return (
     <div className="w-full px-2 md:px-6">
       <Hero />
       
       {/* Projects Section */}
-      <section id="projects" className="pt-24 pb-16 bg-gray-50 text-gray-900 -mx-2 md:-mx-6 px-2 md:px-6">
+      <section id="projects" className="pt-24 pb-16 bg-site-bg text-gray-900 -mx-2 md:-mx-6 px-2 md:px-6">
         <div className="content-wrap">
           {/* Section Title */}
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-light mb-12 text-center">
-            Projects
+            Recent Projects
           </h2>
-
-          {/* Tag Filter Section */}
-          <div className="mb-8">
-            <div className="flex flex-wrap gap-3 mb-4 justify-center px-2 md:px-12">
-              {allTags.map((tag) => (
-                <button
-                  key={tag}
-                  onClick={() => toggleTag(tag)}
-                  className={`px-3 md:px-6 py-2 md:py-3 rounded-full text-sm md:text-base font-medium transition-colors border-2 ${
-                    selectedTags.includes(tag)
-                      ? 'bg-yellow-400 border-yellow-400 text-gray-900'
-                      : 'bg-transparent border-gray-800 text-gray-800 hover:bg-gray-800 hover:text-white'
-                  }`}
-                >
-                  {tag}
-                </button>
-              ))}
-            </div>
-            
-            {/* Clear Selection Button */}
-            {selectedTags.length > 0 && (
-              <div className="flex justify-end">
-                <button
-                  onClick={clearSelection}
-                  className="text-sm text-gray-600 hover:text-gray-900 underline"
-                >
-                  Clear selection
-                </button>
-              </div>
-            )}
-          </div>
 
           {/* Projects Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-3 gap-6">
-            {filteredProjects.map((p) => (
+            {featuredProjects.map((p) => (
               <ProjectCard key={p.id} project={p} />
             ))}
           </div>
 
-          {/* No Results Message */}
-          {filteredProjects.length === 0 && (
-            <p className="text-center text-gray-600 mt-12">
-              No projects match the selected tags.
-            </p>
-          )}
+          {/* See More Button */}
+          <div className="flex justify-center mt-12">
+            <Link
+              to="/projects"
+              className="px-8 py-4 bg-gray-900 text-gray-50 rounded-full text-lg font-medium hover:bg-gray-800 transition-colors"
+            >
+              See More Projects
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Certifications & Training Section */}
+      <section className="py-16 md:py-20 bg-site-bg -mx-2 md:-mx-6 px-2 md:px-6">
+        <div className="content-wrap">
+          {/* Section Title */}
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-light mb-12 text-center">
+            Certifications & Training
+          </h2>
+
+          {/* Certifications Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {certifications.map((cert) => (
+              <div key={cert.id} className="flex flex-col h-full">
+                <div className="relative w-full aspect-[4/3] rounded-lg mb-4 bg-gray-100 flex items-center justify-center">
+                  <img
+                    src={cert.image}
+                    alt={cert.title}
+                    className="h-full w-auto object-contain hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-4">
+                  {cert.title}
+                </h3>
+                <div className="mt-auto space-y-2">
+                  <p className="text-sm text-gray-600">
+                    Issued: {cert.issued}
+                  </p>
+                  <a
+                    href={cert.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm text-gray-900 underline hover:text-gray-700 inline-flex items-center gap-1"
+                  >
+                    View Certificate
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                      <path d="M7 17L17 7" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path d="M7 7h10v10" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 md:py-20 text-center bg-gray-50">
+      <section className="py-16 md:py-20 text-center bg-site-bg">
         <h2 className="text-2xl md:text-4xl lg:text-5xl font-light leading-snug tracking-tight mb-6">
           Let's build something amazing together
         </h2>

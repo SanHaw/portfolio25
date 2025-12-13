@@ -85,12 +85,14 @@ import { duyog } from './projects/duyog'
 import { eds } from './projects/eds'
 import { midnightFiles } from './projects/midnight-files'
 import { misscon } from './projects/misscon'
+import { nwsfd } from './projects/nwsfd'
 import { pycon } from './projects/pycon'
 import { tedx } from './projects/tedx'
 
 export const projects: Project[] = [
   cosmeditour,
   pycon,
+  nwsfd,
   midnightFiles,
   blockDiary,
   duyog,

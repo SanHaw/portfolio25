@@ -46,9 +46,9 @@ export default function Navbar() {
           <img src={logo} alt="logo" className="h-10" />
         </Link>
         <div className="space-x-8">
-          <Link to="/projects" onClick={handleNavClick('/projects')} className="text-site">Projects</Link>
-          <Link to="/blogs" onClick={handleNavClick('/blogs')} className="text-site">Blogs</Link>
-          <Link to="/about" onClick={handleNavClick('/about')} className="text-site">About</Link>
+          <Link to="/projects" onClick={handleNavClick('/projects')} className="text-site hover:underline active:text-yellow-400 transition-colors">Projects</Link>
+          <Link to="/blogs" onClick={handleNavClick('/blogs')} className="text-site hover:underline active:text-yellow-400 transition-colors">Blogs</Link>
+          <Link to="/about" onClick={handleNavClick('/about')} className="text-site hover:underline active:text-yellow-400 transition-colors">About</Link>
         </div>
       </div>
     </nav>

@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom'
+import networksCert from '../assets/certs/Networks.png'
+import uxCert from '../assets/certs/UX.png'
 import Hero from '../components/Hero'
 import ProjectCard from '../components/ProjectCard'
 import { projects } from '../data/projects'
-import uxCert from '../assets/certs/UX.png'
-import networksCert from '../assets/certs/Networks.png'
 
 // Certifications data - add your certificate images and links here
 const certifications = [

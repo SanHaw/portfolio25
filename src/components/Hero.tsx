@@ -23,7 +23,7 @@ export default function Hero() {
           <div className="max-w-3xl mx-auto">
             <p className="text-3xl md:text-4xl text-white text-center uppercase" style={{ textShadow: '0px 0px 8px rgba(0, 0, 0, 0.5)' }}>UX/UI Designer | Graphic Designer</p>
             <div className="mt-8 text-center">
-              <Link to="/blogs">
+              <Link to="/projects">
                 <Button size="lg">What i've been up to</Button>
               </Link>
             </div>

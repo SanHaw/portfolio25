@@ -26,9 +26,10 @@ export default function Footer() {
         <div className="text-white">
           <h4 className="font-bold mt-7">Quick Links</h4>
           <nav className="flex flex-col mt-2">
-            <Link to="/" className="block">Home</Link>
-            <Link to="/projects" className="block">Projects</Link>
-            <Link to="/about" className="block">About</Link>
+            <Link to="/" className="block hover:underline active:text-yellow-400 transition-colors">Home</Link>
+            <Link to="/projects" className="block hover:underline active:text-yellow-400 transition-colors">Projects</Link>
+            <Link to="/blogs" className="block hover:underline active:text-yellow-400 transition-colors">Blogs</Link>
+            <Link to="/about" className="block hover:underline active:text-yellow-400 transition-colors">About</Link>
           </nav>
         </div>
         </div>
@@ -37,10 +38,8 @@ export default function Footer() {
         <div className="text-white">
           <h4 className="font-bold mt-7">Socials</h4>
           <div className="mt-2">
-            <a href="#" className="block">Instagram</a>
-            <a href="#" className="block">Linkedin</a>
-            <a href="#" className="block">Twitter</a>
-            <a href="#" className="block"></a>
+            <a href="https://www.instagram.com/_sannyyyyyy/" target="_blank" rel="noopener noreferrer" className="block hover:underline active:text-yellow-400 transition-colors">Instagram</a>
+            <a href="https://www.linkedin.com/in/sanhaw/" target="_blank" rel="noopener noreferrer" className="block hover:underline active:text-yellow-400 transition-colors">Linkedin</a>
           </div>
         </div>
         </div>

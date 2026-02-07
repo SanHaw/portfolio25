@@ -17,6 +17,17 @@ export type Blog = {
 
 // All blog posts with their full content
 export const blogPosts: Record<string, Blog> = {
+  'funny-how-things-turn-out': {
+    id: 'funny-how-things-turn-out',
+    title: 'Funny how things turn out',
+    date: '2025-11-25',
+    category: ['Personal', 'Volunteering', 'Leadership'],
+    image: blogImages.funnyHowThingsTurnOut,
+    preview: `When I entered college, I wasn't in the best place. I was tired, unsure of what I wanted, and I honestly chose Computer Science without thinking too much about it. I finished high school feeling both proud and a little lost.`,
+    content: `When I entered college, I wasn't in the best place. I was tired, unsure of what I wanted, and I honestly chose Computer Science without thinking too much about it. I finished high school feeling both proud and a little lost. I knew I hadn't focused on my academics the way I should have, putting more of my energy into joining communities, meeting people, and taking on different projects.
+
+Somewhere along the way, I started giving myself space to learn and grow without comparing myself to everyone else. I stopped treating college like something I had to "catch up" on and started seeing it as a chance to rebuild, try new things, and figure out what actually makes me excited to show up.`
+  },
   'uxph-mini-davao': {
     id: 'uxph-mini-davao',
     title: 'UXPH Mini in Davao',

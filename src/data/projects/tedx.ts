@@ -13,7 +13,6 @@ export const tedx: Project = {
   figma: '',
   facebook: 'https://www.facebook.com/TEDxLanang',
   role: 'Branding Head',
-  date: '2024',
   organization: '',
   description: text`TEDxLanang Ave is an independently organized TEDx event 
                 held in Davao City that brings together thought leaders, creatives, 

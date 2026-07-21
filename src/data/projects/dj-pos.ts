@@ -12,7 +12,6 @@ export const djPos: Project = {
   website: '',
   figma: 'https://embed.figma.com/design/Nq800CNDFQMzJnFhkHWNRa/Divine-Jewels-POS?node-id=0-1&embed-host=share',
   role: 'UX/UI Designer',
-  date: '2023',
   organization: '-',
   description: text`Divine Jewels is a local small business specializing in handcrafted
                 trinkets and accessories. As the business grew, so did the need

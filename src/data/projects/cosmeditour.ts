@@ -12,7 +12,6 @@ export const cosmeditour: Project = {
   website: '',
   figma: 'https://embed.figma.com/design/OdoqbDS41EDMAMNeam3AA6/%F0%9F%8C%BB-Showcase--CosMediTour-Website?node-id=0-1&embed-host=share',
   role: 'UX/UI Designer',
-  date: '2025',
   organization: '',
   description: text``,
   background: text`CosMediTour's website serves as the first touchpoint for potential clients seeking cosmetic surgery packages abroad. However, their previous design lacked cohesion and failed to visually convey the brand's blend of medical professionalism and luxurious travel experience.

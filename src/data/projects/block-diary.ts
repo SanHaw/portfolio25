@@ -12,7 +12,6 @@ export const blockDiary: Project = {
   website: '',
   figma: 'https://embed.figma.com/design/4GeasETcLd8s7pIyNNZAyj/%F0%9F%8C%BB-Showcase--Block-Diary-%7C-Minecraft-Companion-App?node-id=8-1597&embed-host=share',
   role: 'Lead UX/UI Designer',
-  date: '2025',
   organization: '',
   description: text`Block Diary is a mobile companion app for Minecraft players designed to help
                 them log adventures, track coordinates, and save build ideas. Created in just four

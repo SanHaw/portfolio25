@@ -12,7 +12,6 @@ export const midnightFiles: Project = {
   website: '',
   figma: '',
   role: 'Graphic Designer',
-  date: '2024',
   organization: 'Sorelia Collettiva',
   description: text`
     Midnight Files is a Halloween pop-up market inspired by classic detective thrillers, crime documentaries, and investigative procedurals. Organized by Sorelia Collettiva, the event transformed Paramount Coffee at Crocodile Park into a full-scale mystery experience — complete with case files, red-string boards, evidence bags, and interrogation-style visuals.

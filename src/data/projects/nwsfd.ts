@@ -12,7 +12,6 @@ export const nwsfd: Project = {
   website: 'https://samahan.addu.edu.ph/newsfeed/',
   figma: 'https://embed.figma.com/design/5NhXWcr44GGvOvLbpW2cWr/-SYSDEV--NewsFeed-Website--Copy-?node-id=446-871&embed-host=share',
   role: 'Project Manager',
-  date: '2025',
   organization: 'SAMAHAN',
   description: text`
     The SAMAHAN NewsFeed is an annual publication led by the SAMAHAN Communications, the official public affairs and information arm of SAMAHAN.

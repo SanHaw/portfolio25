@@ -12,7 +12,6 @@ export const cssec: Project = {
   facebook: 'https://www.facebook.com/addu.cs',
   instagram: 'https://www.instagram.com/addu_cs/',
   role: 'UX/UI Designer',
-  date: '2023 - 2024',
   organization: 'Computer Studies Student Executive Council (CSSEC)',
   description: text`The Computer Studies Student Executive Council (CSSEC) at 
                 Ateneo de Davao University is the official student leadership 

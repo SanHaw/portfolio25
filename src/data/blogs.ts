@@ -19,7 +19,7 @@ export type Blog = {
 export const blogPosts: Record<string, Blog> ={
   'is-this-a-portfolio-career': {
     id: 'is-this-a-portfolio-career',
-    title: 'Is the is a portfolio career?',
+    title: 'Is this is a portfolio career?',
     date: '2026-07-19',
     category: ['Personal', 'UX/UI', 'Reflection'],
     image: blogImages.portfolioCareer,

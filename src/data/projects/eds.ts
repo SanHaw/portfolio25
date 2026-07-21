@@ -13,7 +13,6 @@ export const eds: Project = {
   instagram: 'https://www.instagram.com/elysan.designstudios/',
   tiktok: 'https://www.tiktok.com/@elysan.designstudios',
   role: 'Founder | Graphic Designer | Customer Service | Social Media Manager',
-  date: 'ongoing since 2022',
   organization: '',
   description: text`Elysan Design Studios, a digital design brand I launched 
                 in 2022 on TikTok. What started as a creative outlet has now 

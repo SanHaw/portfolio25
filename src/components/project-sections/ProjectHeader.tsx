@@ -11,9 +11,9 @@ export default function ProjectHeader({ project }: Props) {
         {project.title}
       </h1>
       
-      {(project.role || project.date || project.organization) && (
+      {(project.role || project.organization) && (
         <div className="text-base text-gray-600 mt-2">
-          {[project.role, project.date, project.organization].filter(Boolean).join(' • ')}
+          {[project.role, project.organization].filter(Boolean).join(' • ')}
         </div>
       )}
     </>

@@ -54,7 +54,6 @@ export type Project = {
   instagram?: string
   tiktok?: string
   role?: string
-  date?: string
   organization?: string
   description?: string
   background?: string

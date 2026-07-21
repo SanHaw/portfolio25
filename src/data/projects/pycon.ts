@@ -16,7 +16,6 @@ export const pycon: Project = {
   },
   figma: 'https://embed.figma.com/design/pU0eCPgtF0TmdfG2PYChdc/%F0%9F%8C%BB-Showcase--PYCON-2025?node-id=0-1&embed-host=share',
   role: 'UX/UI Designer',
-  date: '2025',
   organization: 'Durian Py',
   description: text`PyCon Davao 2025 is the first-ever regional Python Conference
                 in Mindanao — a two-day celebration of technology, collaboration,

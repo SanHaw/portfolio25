@@ -12,7 +12,6 @@ export const misscon: Project = {
   website: 'https://misscon2025.info',
   figma: '',
   role: 'UX/UI Designer',
-  date: '2024',
   organization: '',
   description: text`The official website for MISSCon 2025 provides a sleek, responsive platform for
                 attendees to explore event details, speaker highlights, and program timelines.

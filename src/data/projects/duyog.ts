@@ -12,7 +12,6 @@ export const duyog: Project = {
   website: 'https://duyog2025.addu.edu.ph',
   figma: 'https://embed.figma.com/design/n7At6dIqG4GtaT4BL7Y6Ds/%F0%9F%8C%BB-Showcase--Duyog?node-id=0-1&embed-host=share',
   role: 'Lead UX/UI Designer',
-  date: '2025',
   organization: 'SAMAHAN Systems Development',
   description: text`Duyog is the theme of this year's Ateneo U-Fest, the university's
                 biggest annual festival. The official website serves as the event's

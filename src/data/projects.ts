@@ -12,7 +12,9 @@ export type GallerySection = {
   title: string
   description?: string
   images: ProjectImage[]
-  layout?: 'grid' | 'masonry' | 'carousel' | 'fixed-grid' | 'hero-grid' | 'cham-grid' | 'purple-grid' | 'itweek-grid' | 'eds-grid' | 'tedx-grid' | 'nwsfd-grid' | 'cmt-grid' | 'custom-grid' | 'bd-grid' | 'mf-grid'
+  layout?: 'grid' | 'masonry' | 'carousel' | 'fixed-grid' | 'hero-grid' | 
+    'cham-grid' | 'purple-grid' | 'itweek-grid' | 'eds-grid' | 'tedx-grid' | 
+    'nwsfd-grid' | 'cmt-grid' | 'custom-grid' | 'bd-grid' | 'mf-grid'
 }
 
 export type ProblemSolutionRow = {

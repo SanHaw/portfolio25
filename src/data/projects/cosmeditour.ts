@@ -10,7 +10,7 @@ export const cosmeditour: Project = {
   tags: ['UI Design', 'Web Design', 'Figma'],
   image: workImages.cmt.cmt000,
   website: '',
-  figma: 'https://embed.figma.com/design/OdoqbDS41EDMAMNeam3AA6/%F0%9F%8C%BB-Showcase--CosMediTour-Website?node-id=0-1&embed-host=share',
+  figma: 'https://embed.figma.com/design/OdoqbDS41EDMAMNeam3AA6/%F0%9F%8C%BB-Showcase--CosMediTour-Website?node-id=1-13&embed-host=share',
   role: 'UX/UI Designer',
   organization: '',
   description: text``,

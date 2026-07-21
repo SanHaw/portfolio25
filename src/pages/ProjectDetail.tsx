@@ -5,11 +5,13 @@ import ProjectBackground from '../components/project-sections/ProjectBackground'
 import ProjectDescription from '../components/project-sections/ProjectDescription'
 import ProjectDesignSolution from '../components/project-sections/ProjectDesignSolution'
 import ProjectFigmaEmbed from '../components/project-sections/ProjectFigmaEmbed'
+import ProjectGallery from '../components/project-sections/ProjectGallery'
 import ProjectHeader from '../components/project-sections/ProjectHeader'
 import ProjectLinks from '../components/project-sections/ProjectLinks'
 import ProjectProblemSolution from '../components/project-sections/ProjectProblemSolution'
 import ProjectProcess from '../components/project-sections/ProjectProcess'
 import ProjectTechStack from '../components/project-sections/ProjectTechStack'
+import ProjectUxInsights from '../components/project-sections/ProjectUxInsights'
 import { projects } from '../data/projects'
 
 export default function ProjectDetail() {
@@ -102,9 +104,21 @@ export default function ProjectDetail() {
                 <ProjectGallery project={{ ...project, gallerySections: [section] }} />
               </div>
             ))}
+
+            {project.figma && <ProjectFigmaEmbed figmaUrl={project.figma} />}
           </>
         ) : (
           <>
+            {project.gallerySections && project.gallerySections.length > 0 && (
+              <div className="mt-8">
+                {project.gallerySections.map((section, idx) => (
+                  <div key={idx} className={idx > 0 ? 'mt-12' : ''}>
+                    <ProjectGallery project={{ ...project, gallerySections: [section] }} />
+                  </div>
+                ))}
+              </div>
+            )}
+
             {project.images && project.images.length > 0 && (
               <div className="mt-8">
                 <Gallery images={project.images} layout={project.galleryLayout} />
@@ -115,7 +129,7 @@ export default function ProjectDetail() {
             
             {project.designSolution && <ProjectDesignSolution solution={project.designSolution} />}
             
-            {project.figmaEmbed && <ProjectFigmaEmbed url={project.figmaEmbed} />}
+            {project.figmaEmbed && <ProjectFigmaEmbed figmaUrl={project.figmaEmbed} />}
             
             {project.process && <ProjectProcess process={project.process} />}
             

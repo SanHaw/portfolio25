@@ -5,7 +5,7 @@ import { text } from '../projects'
 export const eds: Project = {
   id: 'gd-001',
   title: 'Elysan Design Studios',
-  subheading: 'Online Business',
+  subheading: 'Graphic Design',
   category: 'graphic design',
   tags: ['Graphic Design', 'Social Media', 'Canva'],
   image: workImages.eds.eds,

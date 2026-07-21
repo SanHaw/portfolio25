@@ -130,11 +130,15 @@ import mssc006 from './work/mssc/mssc006.jpg'
 // Blog images
 import beyondTheWireframe from './blog/beyond-the-wireframe.jpg'
 import buildingForwardSysdev from './blog/building-forward-sysdev.jpg'
+import designInStructure from './blog/designInStructure.png'
 import fightingChanceItweek from './blog/fighting-chance-itweek.jpg'
 import funnyHowThingsTurnOut from './blog/funny-how-things-turn-out.jpg'
 import gdgDavaoInnovation from './blog/gdg-davao-innovation.jpg'
+import graduation from './blog/graduation.jpeg'
+import portfolioCareer from './blog/portfolioCareer.png'
 import pycon2025 from './blog/pycon-2025.jpg'
 import sohwakhaengJournaling from './blog/sohwakhaeng-journaling.jpg'
+import symphInternship from './blog/symphInternship.png'
 import tactivInternship from './blog/tactiv-internship.jpg'
 import theFrameAiDesign from './blog/the-frame-ai-design.jpg'
 import uxDavaoProjectManagement from './blog/ux-davao-project-management.jpg'
@@ -278,6 +282,8 @@ export const blogImages = {
   theFrameAiDesign,
   beyondTheWireframe,
   buildingForwardSysdev,
+  designInStructure,
+  symphInternship,
   tactivInternship,
   sohwakhaengJournaling,
   fightingChanceItweek,
@@ -285,4 +291,6 @@ export const blogImages = {
   uxDavaoProjectManagement,
   gdgDavaoInnovation,
   pycon2025,
+  portfolioCareer,
+  graduation,
 }

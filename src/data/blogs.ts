@@ -16,7 +16,47 @@ export type Blog = {
 }
 
 // All blog posts with their full content
-export const blogPosts: Record<string, Blog> = {
+export const blogPosts: Record<string, Blog> ={
+  'is-this-a-portfolio-career': {
+    id: 'is-this-a-portfolio-career',
+    title: 'Is the is a portfolio career?',
+    date: '2026-07-19',
+    category: ['Personal', 'UX/UI', 'Reflection'],
+    image: blogImages.portfolioCareer,
+    preview: `It had always been my childhood dream to create dashboards, maximize KPIs, and stare at analytics until the numbers start to blur.`,
+    content: ``,
+    linkedinUrl: 'https://www.linkedin.com/posts/sanhaw_it-had-always-been-my-childhood-dream-to-activity-7482267589037969408-Htrv?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEka1JEBxHaiWphlT2C_qlFXY_c0meLf9aA'
+  },
+  'symph-internship-1': {
+    id: 'symph-internship-1',
+    title: 'Symph Internship Experience',
+    date: '2026-07-14',
+    category: ['UX/UI', 'Volunteering', 'Leadership'],
+    image: blogImages.symphInternship,
+    preview: `As I say goodbye to Symph, I’ve been thinking about just how much life happened during the five months I spent there.`,
+    content: ``,
+    linkedinUrl: 'https://www.linkedin.com/posts/sanhaw_as-i-say-goodbye-to-symph-ive-been-thinking-activity-7481527690819186689-PSRb?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEka1JEBxHaiWphlT2C_qlFXY_c0meLf9aA'
+  },
+  'graduation': {
+    id: 'graduation',
+    title: 'The Version of Me That Made It Through',
+    date: '2026-06-25',
+    category: ['Personal', 'Reflection'],
+    image: blogImages.graduation,
+    preview: `College became so much more than academics for me. It became the space that shaped how I lead, create, communicate, collaborate, and show up for people. It pushed me outside my comfort zone and gave me opportunities I never would have expected when I first started.`,
+    content: ``,
+    linkedinUrl: 'https://www.linkedin.com/posts/sanhaw_sarah-haw-bs-computer-science-ateneo-de-davao-activity-7476977998131499009-ChOv?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEka1JEBxHaiWphlT2C_qlFXY_c0meLf9aA'
+  },
+  'design-in-structure': {
+    id: 'design-in-structure',
+    title: '',
+    date: '2026-04-03',
+    category: ['Personal', 'Reflection'],
+    image: blogImages.designInStructure,
+    preview: `Last Saturday, I had the chance to attend Design in Structure, hosted by UX Davao, where I also got to meet Kaye Jose and William Tolbize`,
+    content: `From Instinct to Intention: Learning the “Why” Behind Design`,
+    linkedinUrl: 'https://www.linkedin.com/posts/sanhaw_last-saturday-i-had-the-chance-to-attend-activity-7445111208967503872-wkcI?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEka1JEBxHaiWphlT2C_qlFXY_c0meLf9aA'
+  },
   'funny-how-things-turn-out': {
     id: 'funny-how-things-turn-out',
     title: 'Funny how things turn out',
@@ -24,9 +64,8 @@ export const blogPosts: Record<string, Blog> = {
     category: ['Personal', 'Volunteering', 'Leadership'],
     image: blogImages.funnyHowThingsTurnOut,
     preview: `When I entered college, I wasn't in the best place. I was tired, unsure of what I wanted, and I honestly chose Computer Science without thinking too much about it. I finished high school feeling both proud and a little lost.`,
-    content: `When I entered college, I wasn't in the best place. I was tired, unsure of what I wanted, and I honestly chose Computer Science without thinking too much about it. I finished high school feeling both proud and a little lost. I knew I hadn't focused on my academics the way I should have, putting more of my energy into joining communities, meeting people, and taking on different projects.
-
-Somewhere along the way, I started giving myself space to learn and grow without comparing myself to everyone else. I stopped treating college like something I had to "catch up" on and started seeing it as a chance to rebuild, try new things, and figure out what actually makes me excited to show up.`
+    content: ``,
+    linkedinUrl: 'https://www.linkedin.com/posts/sanhaw_funny-how-things-turn-out-when-i-entered-activity-7400383023168548864-3WyY?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEka1JEBxHaiWphlT2C_qlFXY_c0meLf9aA'
   },
   'uxph-mini-davao': {
     id: 'uxph-mini-davao',

@@ -34,14 +34,110 @@ export default function Gallery({ images, layout = 'grid' }: Props) {
   }
 
   if (layout === 'eds-grid') {
-    // Special grid for Elysan Design Studios - matches exact layout from reference
-    return (
+       return (
       <>
         <div className="mt-6 flex justify-center">
         <div className="w-full lg:max-w-[75%]">
+          <div className="grid grid-cols-6 gap-4 w-full">
+            {/* ImageSlider: col 1-2, row 1-2 */}
+            <div className="col-start-1 col-span-2 row-start-1 row-span-2 rounded-lg overflow-hidden flex items-center justify-center aspect-square cursor-pointer hover:opacity-90 transition-opacity" onClick={() => openImage(typeof images[0] === 'string' ? images[0] : images[0].src)}>
+              <img src={typeof images[0] === 'string' ? images[0] : images[0].src} alt="Gallery 1" className="w-full h-full object-cover object-right pointer-events-none" />
+            </div>
+            
+            {/* Thyroid cancer: col 3-4, row 1 */}
+            <div className="col-start-3 col-span-2 row-start-1 row-span-1 rounded-lg overflow-hidden flex items-center justify-center aspect-[2/1] cursor-pointer hover:opacity-90 transition-opacity" onClick={() => openImage(typeof images[1] === 'string' ? images[1] : images[1].src)}>
+              <img src={typeof images[1] === 'string' ? images[1] : images[1].src} alt="Gallery 2" className="w-full h-full object-cover object-top pointer-events-none" />
+            </div>
+            
+            {/* Check out: col 6, row 1 */}
+            <div className="col-start-6 col-span-1 row-start-1 row-span-1 rounded-lg overflow-hidden flex items-center justify-center aspect-square cursor-pointer hover:opacity-90 transition-opacity" onClick={() => openImage(typeof images[2] === 'string' ? images[2] : images[2].src)}>
+              <img src={typeof images[2] === 'string' ? images[2] : images[2].src} alt="Gallery 3" className="w-full h-full object-cover object-right pointer-events-none" />
+            </div>
+            
+            {/* Ethanol: col 3, row 2 */}
+            <div className="col-start-3 col-span-1 row-start-2 row-span-1 rounded-lg overflow-hidden flex items-center justify-center aspect-square cursor-pointer hover:opacity-90 transition-opacity" onClick={() => openImage(typeof images[3] === 'string' ? images[3] : images[3].src)}>
+                 <img src={typeof images[3] === 'string' ? images[3] : images[3].src} alt="Gallery 4" className="w-full h-full object-cover object-top pointer-events-none" />
+            </div>
+            
+            {/* Construction: col 4, row 2-3 */}
+            <div className="col-start-4 col-span-1 row-start-2 row-span-2 rounded-lg overflow-hidden flex items-center justify-center aspect-[1/2] cursor-pointer hover:opacity-90 transition-opacity" onClick={() => openImage(typeof images[4] === 'string' ? images[4] : images[4].src)}>
+              <img src={typeof images[4] === 'string' ? images[4] : images[4].src} alt="Gallery 5" className="w-full h-full object-cover object-top pointer-events-none" />
+            </div>
+            
+            {/* Video: col 5-6, row 2-4 - videos are not clickable */}
+            <div className="relative col-start-5 col-span-2 row-start-2 row-span-3 rounded-lg overflow-hidden flex items-center justify-center aspect-[2/3]">
+              {images[5] && typeof images[5] === 'string' && images[5].endsWith('.mp4') ? (
+                <video autoPlay loop muted playsInline className="absolute top-0 left-0 w-full h-full object-cover">
+                  <source src={images[5]} type="video/mp4" />
+                </video>
+              ) : (
+                <img src={typeof images[5] === 'string' ? images[5] : images[5].src} alt="Gallery 6" className="w-full h-full object-cover object-top cursor-pointer hover:opacity-90 transition-opacity" onClick={() => openImage(typeof images[5] === 'string' ? images[5] : images[5].src)} />
+              )}
+            </div>
+            
+            {/* Defend the press: col 2-3, row 3-5 */}
+            <div className="col-start-2 col-span-2 row-start-3 row-span-3 rounded-lg overflow-hidden flex items-center justify-center aspect-[2/3] cursor-pointer hover:opacity-90 transition-opacity" onClick={() => openImage(typeof images[6] === 'string' ? images[6] : images[6].src)}>
+              <img src={typeof images[6] === 'string' ? images[6] : images[6].src} alt="Gallery 7" className="w-full h-full object-cover object-top pointer-events-none" />
+            </div>
+            
+            {/* International business: col 1, row 4 */}
+            <div className="col-start-1 col-span-1 row-start-4 row-span-1 rounded-lg overflow-hidden flex items-center justify-center aspect-square cursor-pointer hover:opacity-90 transition-opacity" onClick={() => openImage(typeof images[7] === 'string' ? images[7] : images[7].src)}>
+              <img src={typeof images[7] === 'string' ? images[7] : images[7].src} alt="Gallery 8" className="w-full h-full object-cover object-top pointer-events-none" />
+            </div>
+            
+            {/* Sex health: col 1, row 5-6 */}
+            <div className="col-start-1 col-span-1 row-start-5 row-span-2 rounded-lg overflow-hidden flex items-center justify-center aspect-[1/2] cursor-pointer hover:opacity-90 transition-opacity" onClick={() => openImage(typeof images[8] === 'string' ? images[8] : images[8].src)}>
+              <img src={typeof images[8] === 'string' ? images[8] : images[8].src} alt="Gallery 9" className="w-full h-full object-cover object-top pointer-events-none" />
+            </div>
+            
+            {/* Christmas camp: col 4-5, row 5 */}
+            <div className="col-start-4 col-span-2 row-start-5 row-span-1 rounded-lg overflow-hidden flex items-center justify-center aspect-[2/1] cursor-pointer hover:opacity-90 transition-opacity" onClick={() => openImage(typeof images[9] === 'string' ? images[9] : images[9].src)}>
+              <img src={typeof images[9] === 'string' ? images[9] : images[9].src} alt="Gallery 10" className="w-full h-full object-cover object-top pointer-events-none" />
+            </div>
+            
+            {/* F1: col 6, row 5 */}
+               <div className="col-start-6 col-span-1 row-start-5 row-span-1 rounded-lg overflow-hidden flex items-center justify-center aspect-square cursor-pointer hover:opacity-90 transition-opacity" onClick={() => openImage(typeof images[10] === 'string' ? images[10] : images[10].src)}>
+              <img src={typeof images[10] === 'string' ? images[10] : images[10].src} alt="Gallery 11" className="w-full h-full object-cover object-top pointer-events-none" />
+            </div>
+            
+            {/* Periodic table: col 2, row 7 */}
+            <div className="col-start-2 col-span-1 row-start-7 row-span-1 rounded-lg overflow-hidden flex items-center justify-center aspect-square cursor-pointer hover:opacity-90 transition-opacity" onClick={() => openImage(typeof images[11] === 'string' ? images[11] : images[11].src)}>
+              <img src={typeof images[11] === 'string' ? images[11] : images[11].src} alt="Gallery 12" className="w-full h-full object-cover object-top pointer-events-none" />
+            </div>
+            
+            {/* Wide image: col 3-5, row 6-7 */}
+            <div className="col-start-3 col-span-3 row-start-6 row-span-2 rounded-lg overflow-hidden flex items-center justify-center aspect-[3/2] cursor-pointer hover:opacity-90 transition-opacity" onClick={() => openImage(typeof images[12] === 'string' ? images[12] : images[12].src)}>
+              <img src={typeof images[12] === 'string' ? images[12] : images[12].src} alt="Gallery 13" className="w-full h-full object-cover object-top pointer-events-none" />
+            </div>
+          </div>
           {/* ...existing code for eds-grid... */}
         </div>
         </div>
+
+        {/* Image Modal */}
+        {selectedImage && (
+          <div 
+            className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm"
+            onClick={handleBackdropClick}
+          >
+            <button
+              onClick={closeImage}
+              className="fixed top-4 right-4 z-[101] w-10 h-10 flex items-center justify-center bg-white/10 hover:bg-white/20 rounded-full text-white backdrop-blur-sm transition-colors"
+              aria-label="Close image"
+            >
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </button>
+            <div className="relative max-h-[90vh] max-w-[90vw]">
+              <img 
+                src={selectedImage} 
+                alt="Enlarged view" 
+                className="max-h-[90vh] max-w-full object-contain rounded-lg"
+              />
+            </div>
+          </div>
+        )}
       </>
     );
   }

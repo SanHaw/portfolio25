@@ -1,10 +1,10 @@
 import { useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
+import Gallery from '../components/Gallery'
 import ProjectBackground from '../components/project-sections/ProjectBackground'
 import ProjectDescription from '../components/project-sections/ProjectDescription'
 import ProjectDesignSolution from '../components/project-sections/ProjectDesignSolution'
 import ProjectFigmaEmbed from '../components/project-sections/ProjectFigmaEmbed'
-import ProjectGallery from '../components/project-sections/ProjectGallery'
 import ProjectHeader from '../components/project-sections/ProjectHeader'
 import ProjectLinks from '../components/project-sections/ProjectLinks'
 import ProjectProblemSolution from '../components/project-sections/ProjectProblemSolution'
@@ -105,28 +105,27 @@ export default function ProjectDetail() {
           </>
         ) : (
           <>
-            <ProjectGallery project={project} />
+            {project.images && project.images.length > 0 && (
+              <div className="mt-8">
+                <Gallery images={project.images} layout={project.galleryLayout} />
+              </div>
+            )}
             
             {project.background && <ProjectBackground background={project.background} />}
             
-            {project.problemSolution && <ProjectProblemSolution rows={project.problemSolution} />}
+            {project.designSolution && <ProjectDesignSolution solution={project.designSolution} />}
+            
+            {project.figmaEmbed && <ProjectFigmaEmbed url={project.figmaEmbed} />}
+            
+            {project.process && <ProjectProcess process={project.process} />}
+            
+            {project.tech && <ProjectTechStack tech={project.tech} />}
+            
+            {project.uxInsights && <ProjectUxInsights insights={project.uxInsights} />}
+
+            {project.figma && <ProjectFigmaEmbed figmaUrl={project.figma} />}
           </>
         )}
-        
-        {project.uxInsights && (
-          <ProjectDesignSolution
-            insights={project.uxInsights.insights}
-            solutionIntro={project.uxInsights.solutionIntro}
-            coreFeatures={project.uxInsights.coreFeatures}
-            closingText={project.uxInsights.closingText}
-          />
-        )}
-        
-        {project.process && <ProjectProcess process={project.process} />}
-        
-        {project.tech && <ProjectTechStack tech={project.tech} />}
-        
-        {project.figma && <ProjectFigmaEmbed figmaUrl={project.figma} />}
       </div>
 
       {/* Image Modal */}

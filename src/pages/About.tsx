@@ -29,7 +29,7 @@ export default function About() {
           </p>
           <br />
           <p className="mt-3 text-gray-700">
-            I’m a multidisciplinary designer who enjoys turning rough ideas into 
+            Hi! I'm Sarah Haw, a multidisciplinary designer who enjoys turning rough ideas into 
             thoughtful, engaging experiences. My work moves between UX/UI, branding, 
             graphic design, and marketing—so one day I might be mapping out a user 
             flow, and the next, I’m refining a visual identity or planning content.

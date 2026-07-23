@@ -65,7 +65,8 @@ export type Project = {
   tech?: string
   images?: ProjectImage[]
   gallerySections?: GallerySection[]
-  galleryLayout?: 'grid' | 'masonry' | 'carousel' | 'fixed-grid' | 'hero-grid' | 'eds-grid' | 'tedx-grid' | 'nwsfd-grid' | 'cmt-grid' | 'bd-grid' | 'custom-grid'
+  galleryLayout?: 'grid' | 'masonry' | 'carousel' | 'fixed-grid' | 'hero-grid' 
+    | 'eds-grid' | 'tedx-grid' | 'nwsfd-grid' | 'cmt-grid' | 'bd-grid' | 'custom-grid'
 }
 
 export function text(strings: TemplateStringsArray, ...values: any[]) {

@@ -19,6 +19,12 @@ import bd004 from './work/bd/bd004.jpg'
 import bd005 from './work/bd/bd005.jpg'
 import bd008 from './work/bd/bd008.jpg'
 
+// Work images - Borderline
+import borderline001 from './work/borderline/1.png'
+import borderline002 from './work/borderline/1 copy.png'
+import borderline003 from './work/borderline/1 copy 2.png'
+import borderline004 from './work/borderline/1 copy 3.png'
+
 // Work images - DJ POS
 import djpos001 from './work/djpos/djpos001.jpg'
 import djpos003 from './work/djpos/djpos003.jpg'
@@ -165,6 +171,12 @@ export const workImages = {
     bd004,
     bd005,
     bd008,
+  },
+  borderline: {
+    borderline001,
+    borderline002,
+    borderline003,
+    borderline004,
   },
   djpos: {
     djpos001,

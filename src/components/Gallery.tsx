@@ -966,22 +966,20 @@ export default function Gallery({ images, layout = 'grid' }: Props) {
   }
 
   if (layout === 'fixed-grid') {
-    // Fixed 3-column grid that never changes
+    // Fixed 3-column square grid that never changes
     return (
       <>
         <div className="mt-6 flex justify-center">
-          <div className="w-full lg:max-w-[75%]">
+          <div className="w-full max-w-6xl">
             <div className="grid grid-cols-3 gap-4">
               {images.map((item, i) => {
                 const src = typeof item === 'string' ? item : item.src
-                // First 3 images (top row) are square, rest preserve aspect ratio
-                const isTopRow = i < 3
                 return (
-                  <div key={i} className="cursor-pointer hover:opacity-90 transition-opacity" onClick={() => openImage(src)}>
+                  <div key={i} className="aspect-square overflow-hidden rounded-lg cursor-pointer hover:opacity-90 transition-opacity" onClick={() => openImage(src)}>
                     <img 
                       src={src} 
                       alt={`gallery-${i}`} 
-                      className={`w-full ${isTopRow ? 'aspect-square object-cover' : 'object-cover'} pointer-events-none`}
+                      className="w-full h-full object-cover pointer-events-none"
                     />
                   </div>
                 )
@@ -1163,26 +1161,22 @@ export default function Gallery({ images, layout = 'grid' }: Props) {
   // Default grid layout (for other projects)
   return (
     <>
-      <div className="mt-6">
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-4 auto-rows-[200px] items-center">
-          {images.map((item, i) => {
-            const img = typeof item === 'string' ? { src: item } : item
-            const cols = Math.min(5, Math.max(1, img.cols || 1))
-            const rows = Math.min(5, Math.max(1, img.rows || 1))
-            
-            const gridColStyle = `lg:[grid-column:span_${cols}]`
-            const gridRowStyle = `lg:[grid-row:span_${rows}]`
-            
-            return (
-              <img
-                key={i}
-                src={img.src}
-                alt={`gallery-${i}`}
-                className={`w-full h-full object-contain cursor-pointer hover:opacity-90 transition-opacity ${gridColStyle} ${gridRowStyle}`}
-                onClick={() => openImage(img.src)}
-              />
-            )
-          })}
+      <div className="mt-6 flex justify-center">
+        <div className="w-full max-w-6xl">
+          <div className="grid grid-cols-3 gap-4">
+            {images.slice(0, 9).map((item, i) => {
+              const img = typeof item === 'string' ? { src: item } : item
+              return (
+                <div key={i} className="aspect-square overflow-hidden rounded-lg cursor-pointer hover:opacity-90 transition-opacity" onClick={() => openImage(img.src)}>
+                  <img
+                    src={img.src}
+                    alt={`gallery-${i}`}
+                    className="w-full h-full object-cover pointer-events-none"
+                  />
+                </div>
+              )
+            })}
+          </div>
         </div>
       </div>
 

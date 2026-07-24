@@ -80,6 +80,7 @@ export function text(strings: TemplateStringsArray, ...values: any[]) {
 
 // Import individual projects
 import { blockDiary } from './projects/block-diary'
+import { borderline } from './projects/borderline'
 import { cosmeditour } from './projects/cosmeditour'
 import { cssec } from './projects/cssec'
 import { djPos } from './projects/dj-pos'
@@ -102,7 +103,8 @@ export const projects: Project[] = [
   eds,
   cssec,
   tedx,
-  misscon
+  misscon,
+  borderline
 ]
 
 /* OLD PROJECTS DATA - KEEPING FOR REFERENCE DURING TRANSITION

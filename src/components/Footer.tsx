@@ -39,7 +39,7 @@ export default function Footer() {
           <h4 className="font-bold mt-7">Socials</h4>
           <div className="mt-2">
             <a href="https://www.instagram.com/_sannyyyyyy/" target="_blank" rel="noopener noreferrer" className="block hover:underline active:text-yellow-400 transition-colors">Instagram</a>
-            <a href="https://www.linkedin.com/in/sanhaw/" target="_blank" rel="noopener noreferrer" className="block hover:underline active:text-yellow-400 transition-colors">Linkedin</a>
+            <a href="https://www.linkedin.com/in/hawsarah/" target="_blank" rel="noopener noreferrer" className="block hover:underline active:text-yellow-400 transition-colors">Linkedin</a>
           </div>
         </div>
         </div>
